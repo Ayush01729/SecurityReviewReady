@@ -68,10 +68,10 @@ export function Footer() {
                 Contact
               </span>
               <a
-                href="mailto:hello@securityreviewready.com"
+                href="mailto:ayush@securityreviewready.com"
                 className="hover:text-[#1A1C19] transition-colors font-mono text-[12px]"
               >
-                hello@securityreviewready.com
+                ayush@securityreviewready.com
               </a>
               {/* <span className="text-[#696B66] text-[12px]">San Francisco, CA</span> */}
               <div className="mt-2 pt-2 border-t border-[#E7E5DE] text-[11px] text-[#074E34] font-medium">
