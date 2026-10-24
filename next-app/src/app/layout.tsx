@@ -18,7 +18,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const iconUrl = `${basePath}/icon.svg`;
 
 export const metadata: Metadata = {
-  title: "Security Review Ready — Parallel Security Questionnaire Engine for B2B SaaS",
+  title: "Security Review Ready — Security Questionnaire Engine for B2B Teams",
   description:
     "Feed in your security documentation once. Ingest policies, live trust center URLs, and SOC 2 audits to continuously fill customer security questionnaires for all enterprise buyers in parallel with exact source citations.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Security Review Ready" }],
   openGraph: {
-    title: "Security Review Ready — Parallel Security Questionnaire Engine for B2B SaaS",
+    title: "Security Review Ready — Security Questionnaire Engine for B2B Teams",
     description:
       "Stop putting deals on hold for repetitive questionnaires. 100% cited source evidence and human-in-the-loop review.",
     url: "https://securityreviewready.com",
