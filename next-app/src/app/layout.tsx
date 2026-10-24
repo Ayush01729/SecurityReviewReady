@@ -14,12 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const isDev = process.env.NODE_ENV !== "production";
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-const isUserSite = repoName?.toLowerCase().endsWith(".github.io");
-const basePath = isDev
-  ? ""
-  : (process.env.NEXT_PUBLIC_BASE_PATH ?? (repoName && !isUserSite ? `/${repoName}` : "/SecurityReviewReady"));
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const iconUrl = `${basePath}/icon.svg`;
 
 export const metadata: Metadata = {
