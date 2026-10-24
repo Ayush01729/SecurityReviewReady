@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowDown, Check, CheckCircle2, RotateCw, ShieldCheck, Zap } from "lucide-react";
+import { ArrowDown, Check, CheckCircle2, Mail, RotateCw, ShieldCheck, Zap } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
@@ -82,10 +82,10 @@ export function Hero() {
             all enterprise buyers.
           </p>
 
-          {/* Action Row: Direct Email Field + Explore Visual */}
+          {/* Action Area: Unified Early Access Input + Secondary Discovery Link */}
           <div className="pt-2 w-full max-w-xl">
             {submitted ? (
-              <div className="p-4 rounded-lg bg-white border border-[#28664A]/30 text-left flex items-start gap-3.5 shadow-sm">
+              <div className="p-4 sm:p-5 rounded-xl bg-white border border-[#28664A]/30 text-left flex items-start gap-3.5 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-[#28664A] shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <span className="font-sans font-semibold text-[14px] text-[#1A1C19] block">
@@ -105,25 +105,28 @@ export function Hero() {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-2.5">
-                <form onSubmit={handleSubmit} className="flex-1 flex flex-col items-start">
-                  <div className="w-full flex flex-col sm:flex-row items-stretch gap-2">
-                    <input
-                      type="email"
-                      value={email}
-                      disabled={loading}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        if (error) setError("");
-                      }}
-                      placeholder="Enter work email"
-                      required
-                      className="flex-1 h-[42px] px-3.5 rounded bg-white border border-[#E7E5DE] text-[#1A1C19] text-[14px] placeholder-[#696B66] focus:outline-none focus:border-[#28664A] focus:ring-2 focus:ring-[#28664A]/15 shadow-inner disabled:opacity-60 disabled:cursor-not-allowed"
-                    />
+              <div className="flex flex-col gap-3">
+                <form onSubmit={handleSubmit} className="w-full">
+                  <div className="p-1.5 rounded-xl bg-white border border-[#E7E5DE] focus-within:border-[#28664A] focus-within:ring-2 focus-within:ring-[#28664A]/15 shadow-[0_2px_8px_rgba(32,34,31,0.06)] transition-all flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                    <div className="flex-1 flex items-center px-3 min-h-[46px]">
+                      <Mail className="w-4 h-4 text-[#696B66] shrink-0 mr-2.5" />
+                      <input
+                        type="email"
+                        value={email}
+                        disabled={loading}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (error) setError("");
+                        }}
+                        placeholder="Enter work email"
+                        required
+                        className="w-full h-full bg-transparent text-[#1A1C19] text-[15px] placeholder-[#696B66] focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed"
+                      />
+                    </div>
                     <button
                       type="submit"
                       disabled={loading}
-                      className="h-[42px] px-5 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[13.5px] font-medium rounded border border-[#1B4D36] transition-colors flex items-center justify-center whitespace-nowrap shadow-sm focus:outline-none focus:ring-2 focus:ring-[#28664A]/25 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="h-[44px] px-6 rounded-lg bg-[#28664A] hover:bg-[#1B4D36] text-white text-[14px] font-medium transition-colors flex items-center justify-center whitespace-nowrap shadow-sm focus:outline-none focus:ring-2 focus:ring-[#28664A]/25 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       {loading ? (
                         <RotateCw className="w-4 h-4 text-white animate-spin" />
@@ -133,19 +136,21 @@ export function Hero() {
                     </button>
                   </div>
                   {error && (
-                    <span className="text-[#BA1A1A] font-sans text-[12px] mt-1.5 text-left">
+                    <span className="text-[#BA1A1A] font-sans text-[12px] mt-2 block text-left">
                       {error}
                     </span>
                   )}
                 </form>
 
-                <a
-                  href="#parallel-pipeline"
-                  className="h-[42px] px-4 bg-white hover:bg-[#F4F4EF] text-[#566155] hover:text-[#1A1C19] text-[13.5px] font-medium rounded border border-[#E7E5DE] transition-colors flex items-center justify-center whitespace-nowrap focus:outline-none shrink-0 shadow-sm"
-                >
-                  Explore Visual
-                  <ArrowDown className="w-3.5 h-3.5 ml-1 text-[#566155]" />
-                </a>
+                <div className="flex items-center gap-2 pt-0.5">
+                  <a
+                    href="#parallel-pipeline"
+                    className="inline-flex items-center gap-1.5 text-[13px] text-[#566155] hover:text-[#1A1C19] font-medium transition-colors group"
+                  >
+                    <span>Explore live parallel engine</span>
+                    <ArrowDown className="w-3.5 h-3.5 text-[#28664A] group-hover:translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
             )}
           </div>
