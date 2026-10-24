@@ -1,12 +1,77 @@
-import React from "react";
-import { ArrowDown, Check, ShieldCheck, Zap } from "lucide-react";
+"use client";
+
+import React, { useState } from "react";
+import { ArrowDown, Check, CheckCircle2, RotateCw, ShieldCheck, Zap } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
 export function Hero() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    const trimmed = email.trim();
+    if (!trimmed || !trimmed.includes("@") || !trimmed.includes(".")) {
+      setError("Please enter a valid work email address.");
+      return;
+    }
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error("EmailJS environment variables are missing.");
+      setError("Configuration error: EmailJS environment variables are not set.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const templateParams = {
+        email: trimmed,
+        user_email: trimmed,
+        to_email: trimmed,
+        reply_to: trimmed,
+        from_name: trimmed,
+        name: trimmed.split("@")[0] || "Early Access Subscriber",
+        message: `New early access waitlist signup from SecurityReviewReady Hero: ${trimmed}`,
+        submitted_at: new Date().toISOString(),
+        source: "SecurityReviewReady Hero Input",
+      };
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, {
+        publicKey: PUBLIC_KEY,
+      });
+
+      setSubmitted(true);
+    } catch (err: unknown) {
+      console.error("EmailJS submission error:", err);
+      const message =
+        err && typeof err === "object" && "text" in err
+          ? String((err as { text: string }).text)
+          : "We encountered a temporary connection issue. Please try again or reach out directly.";
+      setError(message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleReset = () => {
+    setSubmitted(false);
+    setEmail("");
+    setError("");
+  };
+
   return (
     <section className="pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="max-w-3xl flex flex-col items-start gap-5">
-          {/* Main Title - No ban-violating kickers/eyebrows */}
+          {/* Main Title */}
           <h1 className="font-sans text-[36px] sm:text-[46px] md:text-[56px] leading-[1.12] font-medium text-[#1A1C19] tracking-[-0.03em]">
             Security questionnaires shouldn&apos;t slow down a deal.
           </h1>
@@ -17,25 +82,76 @@ export function Hero() {
             all enterprise buyers.
           </p>
 
-          {/* Action Row */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2 w-full sm:w-auto">
-            <a
-              href="#early-access"
-              className="inline-flex items-center justify-center h-[42px] px-6 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[14px] font-medium rounded border border-[#1B4D36] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[#28664A]/20"
-            >
-              Get Early Access
-            </a>
-            <a
-              href="#parallel-pipeline"
-              className="inline-flex items-center justify-center h-[42px] px-5 bg-white hover:bg-[#F4F4EF] text-[#1A1C19] text-[14px] font-medium rounded border border-[#E7E5DE] transition-colors focus:outline-none"
-            >
-              Explore Engine Visual
-              <ArrowDown className="w-4 h-4 ml-1.5 text-[#566155]" />
-            </a>
+          {/* Action Row: Direct Email Field + Explore Visual */}
+          <div className="pt-2 w-full max-w-xl">
+            {submitted ? (
+              <div className="p-4 rounded-lg bg-white border border-[#28664A]/30 text-left flex items-start gap-3.5 shadow-sm">
+                <CheckCircle2 className="w-5 h-5 text-[#28664A] shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <span className="font-sans font-semibold text-[14px] text-[#1A1C19] block">
+                    You&apos;re on the priority onboarding list.
+                  </span>
+                  <p className="font-sans text-[13px] text-[#566155] mt-1 leading-relaxed">
+                    We sent a confirmation to <strong className="text-[#1A1C19]">{email}</strong>. Our
+                    team will reach out within 24 hours with your onboarding details.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="mt-2.5 text-[12px] font-mono text-[#28664A] hover:underline cursor-pointer focus:outline-none"
+                  >
+                    ← Register another email
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-2.5">
+                <form onSubmit={handleSubmit} className="flex-1 flex flex-col items-start">
+                  <div className="w-full flex flex-col sm:flex-row items-stretch gap-2">
+                    <input
+                      type="email"
+                      value={email}
+                      disabled={loading}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (error) setError("");
+                      }}
+                      placeholder="Enter work email"
+                      required
+                      className="flex-1 h-[42px] px-3.5 rounded bg-white border border-[#E7E5DE] text-[#1A1C19] text-[14px] placeholder-[#696B66] focus:outline-none focus:border-[#28664A] focus:ring-2 focus:ring-[#28664A]/15 shadow-inner disabled:opacity-60 disabled:cursor-not-allowed"
+                    />
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="h-[42px] px-5 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[13.5px] font-medium rounded border border-[#1B4D36] transition-colors flex items-center justify-center whitespace-nowrap shadow-sm focus:outline-none focus:ring-2 focus:ring-[#28664A]/25 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {loading ? (
+                        <RotateCw className="w-4 h-4 text-white animate-spin" />
+                      ) : (
+                        <span>Get Early Access</span>
+                      )}
+                    </button>
+                  </div>
+                  {error && (
+                    <span className="text-[#BA1A1A] font-sans text-[12px] mt-1.5 text-left">
+                      {error}
+                    </span>
+                  )}
+                </form>
+
+                <a
+                  href="#parallel-pipeline"
+                  className="h-[42px] px-4 bg-white hover:bg-[#F4F4EF] text-[#566155] hover:text-[#1A1C19] text-[13.5px] font-medium rounded border border-[#E7E5DE] transition-colors flex items-center justify-center whitespace-nowrap focus:outline-none shrink-0 shadow-sm"
+                >
+                  Explore Visual
+                  <ArrowDown className="w-3.5 h-3.5 ml-1 text-[#566155]" />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Micro-guarantee strip */}
-          <div className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-[#566155]">
+          <div className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-[#566155]">
             <span className="flex items-center gap-1.5">
               <Check className="w-4 h-4 text-[#28664A] stroke-[2.5]" />
               No copy-pasting
