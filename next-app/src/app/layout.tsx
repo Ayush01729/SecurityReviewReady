@@ -14,6 +14,11 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "SecurityReviewReady";
+const isUserSite = repoName.toLowerCase().endsWith(".github.io");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (repoName && !isUserSite ? `/${repoName}` : "");
+const iconUrl = `${basePath}/icon.svg`;
+
 export const metadata: Metadata = {
   title: "Security Review Ready — Parallel Security Questionnaire Engine for B2B SaaS",
   description:
@@ -36,9 +41,11 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: iconUrl, type: "image/svg+xml" },
+    ],
+    shortcut: iconUrl,
+    apple: iconUrl,
   },
 };
 
