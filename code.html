@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Security Review Ready — Automated Security Review Workspace</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Custom keyframe animations for the Core Engine Flow System */
+@keyframes flowIn {
+  0% { transform: translateX(0) scale(0.9); opacity: 0; }
+  25% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(110%) scale(1.05); opacity: 0; }
+}
+@keyframes flowOut {
+  0% { transform: translateX(0) scale(1); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(110%) scale(0.95); opacity: 0; }
+}
+@keyframes engineRadar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.08); }
+}
+@keyframes dashStream {
+  to { stroke-dashoffset: -40; }
+}
+.stream-line-in {
+  stroke-dasharray: 6 6;
+  animation: dashStream 1.8s linear infinite;
+}
+.stream-line-out {
+  stroke-dasharray: 6 6;
+  animation: dashStream 1.4s linear infinite;
+}
+.engine-pulse {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+.radar-ring {
+  animation: engineRadar 12s linear infinite;
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#dae6d6","surface-container-low":"#f4f4ef","primary-container":"#28664a","inverse-on-surface":"#f1f1ec","on-background":"#1a1c19","on-tertiary-container":"#aadfc0","surface-container-high":"#e8e8e3","secondary-container":"#dae6d6","on-error":"#ffffff","on-tertiary-fixed-variant":"#1e5038","surface-bright":"#fafaf4","on-primary-fixed":"#002113","tertiary-fixed-dim":"#9ed2b4","surface-container":"#eeeee9","surface-variant":"#e2e3de","on-primary":"#ffffff","on-secondary":"#ffffff","tertiary":"#1a4c35","on-primary-container":"#a1e1be","on-primary-fixed-variant":"#0d5137","surface-container-highest":"#e2e3de","on-tertiary-fixed":"#002113","surface-tint":"#2c694d","error":"#ba1a1a","on-secondary-container":"#5c675b","tertiary-fixed":"#b9efcf","secondary":"#566155","on-secondary-fixed-variant":"#3f4a3e","inverse-surface":"#2f312e","surface":"#fafaf4","on-surface":"#1a1c19","outline-variant":"#bfc9c1","on-tertiary":"#ffffff","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary":"#074e34","on-error-container":"#93000a","secondary-fixed-dim":"#becabb","outline":"#707972","primary-fixed":"#b0f1cd","tertiary-container":"#33644b","surface-dim":"#dadad5","inverse-primary":"#95d4b1","on-secondary-fixed":"#141e14","primary-fixed-dim":"#95d4b1","background":"#fafaf4","on-surface-variant":"#404943"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{gutter:"1.5rem","space-xl":"2.5rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem",margin:"3rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem"},fontFamily:{"label-sm":["Geist"],"headline-xl-mobile":["Geist"],"code-snippet":["JetBrains Mono"],"headline-lg":["Geist"],"display-hero":["Geist"],"headline-md":["Geist"],"display-hero-mobile":["Geist"],"body-lg":["Geist"],"headline-sm":["Geist"],"headline-xl":["Geist"],"body-sm":["Geist"],"label-md":["Geist"],"body-md":["Geist"]},fontSize:{"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"500"}],"code-snippet":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"500"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"500"}],"display-hero-mobile":["38px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"500"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-surface-container-highest"><div class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="home" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1W_zxpoF80YkNJiYhAuf3hiGXMrA1VOnNYBnRk9UlTU1hFOR69sWnmLWRFXkVjCx3MF1_dMvSYpKI6Y1abx3g_3vYwu8V22vmQ1TeM491-jZ_Dm3zFzL4nVwpRHLOXfyEumKJR5VwOdCqwKkdyB_rP-ENiBa3NnJudk7cdsfuW1tJqfxBnwGHdXtx4DoAFQKZ6xK25ipV43nxFAGBuFCTz80jro6vtYgw6l9wZ0GGNOHEfXPkSl4LORKb47"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Security Review Ready</span></a></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-on-surface font-label-md text-label-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="how-it-works" href="#how-it-works">How it works</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="pipeline" href="#parallel-pipeline">Pipeline Engine</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="security" href="#security">Security</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="faq" href="#faq">FAQ</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center h-[38px] px-space-md bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md rounded border border-tertiary transition-colors shadow-[0_1px_3px_rgba(32,34,31,0.04)] focus:outline-none" data-path="early-access" href="#early-access">Get Early Access</a></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="w-full pt-12 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<!-- Eyebrow & Headline Header -->
+<div class="max-w-3xl flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-secondary-container text-tertiary border border-outline-variant/60">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">PARALLEL COMPLIANCE ENGINE FOR B2B SAAS</span>
+</div>
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface tracking-tight">
+          Security questionnaires shouldn't slow down a deal.
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+          Feed in your security documentation once. Our core engine ingests policies, live trust center URLs, and SOC 2 audits to continuously fill customer questionnaires for all enterprise buyers in parallel.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-2">
+<a class="inline-flex items-center justify-center h-[38px] px-6 bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md rounded border border-tertiary transition-colors shadow-sm focus:outline-none" href="#early-access">
+            Get Early Access
+          </a>
+<a class="inline-flex items-center justify-center h-[38px] px-5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-surface-container-highest transition-colors focus:outline-none" href="#parallel-pipeline">
+            Explore Engine Visual <span class="ml-1 text-secondary">↓</span>
+</a>
+</div>
+<span class="font-label-md text-label-md text-secondary">
+          No copy-pasting. Full source traceability. 100% human-verified before export.
+        </span>
+</div>
+<!-- ========================================================================= -->
+<!-- FEATURED ANIMATED MOTION GRAPHICS: CORE ENGINE INGESTION & PARALLEL FILLING -->
+<!-- ========================================================================= -->
+<div class="mt-12 rounded-xl bg-surface-container-lowest border border-surface-container-highest shadow-sm overflow-hidden" id="parallel-pipeline">
+<!-- Mockup Top Bar / Telemetry Ribbon -->
+<div class="h-11 bg-surface-container-low border-b border-surface-container-highest px-4 sm:px-6 flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<div class="flex items-center gap-1.5 text-secondary font-code-snippet text-code-snippet">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-on-surface font-medium">pipeline: live_stream_v4</span>
+<span class="text-secondary">· 5 inputs connected · 4 questionnaires filling in parallel</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2">
+<span class="font-code-snippet text-code-snippet text-secondary">Throughput:</span>
+<span class="font-code-snippet text-code-snippet text-primary font-medium" id="telemetry-speed">48 answers/min</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-tertiary font-label-sm text-label-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">hub</span>
+        Parallel Dispatch Active
+      </span>
+</div>
+</div>
+<!-- Interactive Visual Architecture Stage -->
+<div class="relative p-4 sm:p-6 lg:p-8 bg-surface-bright/50">
+<!-- SVG Connection Streams (Desktop/Tablet) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0" preserveaspectratio="none" viewbox="0 0 1200 520">
+<defs>
+<lineargradient id="streamInGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#bfc9c1" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#28664a" stop-opacity="0.9"></stop>
+</lineargradient>
+<lineargradient id="streamOutGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#28664a" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#33644b" stop-opacity="0.45"></stop>
+</lineargradient>
+</defs>
+<!-- Paths connecting Left nodes (approx x: 340) to Center Engine (x: 600, y: 260) -->
+<path class="stream-line-in" d="M 320 85 C 460 85, 480 230, 560 250" fill="none" stroke="url(#streamInGrad)" stroke-width="2"></path>
+<path class="stream-line-in" d="M 320 170 C 440 170, 480 250, 560 255" fill="none" stroke="url(#streamInGrad)" stroke-width="2"></path>
+<path class="stream-line-in" d="M 320 255 C 430 255, 490 260, 560 260" fill="none" stroke="url(#streamInGrad)" stroke-width="2.5"></path>
+<path class="stream-line-in" d="M 320 340 C 440 340, 480 270, 560 265" fill="none" stroke="url(#streamInGrad)" stroke-width="2"></path>
+<path class="stream-line-in" d="M 320 425 C 460 425, 480 290, 560 270" fill="none" stroke="url(#streamInGrad)" stroke-width="2"></path>
+<!-- Paths connecting Center Engine (x: 640, y: 260) to Right Questionnaire cards (approx x: 880) -->
+<path class="stream-line-out" d="M 640 250 C 720 230, 760 90, 880 90" fill="none" stroke="url(#streamOutGrad)" stroke-width="2.5"></path>
+<path class="stream-line-out" d="M 640 255 C 720 250, 760 195, 880 195" fill="none" stroke="url(#streamOutGrad)" stroke-width="2"></path>
+<path class="stream-line-out" d="M 640 265 C 720 270, 760 305, 880 305" fill="none" stroke="url(#streamOutGrad)" stroke-width="2.5"></path>
+<path class="stream-line-out" d="M 640 270 C 720 290, 760 415, 880 415" fill="none" stroke="url(#streamOutGrad)" stroke-width="2"></path>
+</svg>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- ============================================================== -->
+<!-- LEFT COLUMN: INCOMING DOCUMENTS & LIVE URLs (FLYING IN) -->
+<!-- ============================================================== -->
+<div class="lg:col-span-4 flex flex-col justify-between space-y-3">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">1. Multi-Source Ingestion</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-primary bg-secondary-container px-2 py-0.5 rounded">Continuous Sync</span>
+</div>
+<div class="space-y-2.5 flex-grow flex flex-col justify-between" id="doc-source-container">
+<!-- Source Item 1: SOC 2 PDF -->
+<div class="doc-card group relative p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest hover:border-primary-container/80 transition-all duration-300 shadow-sm cursor-pointer" data-doc="soc2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">description</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">SOC 2 Type II Report 2024.pdf</div>
+<div class="font-code-snippet text-code-snippet text-secondary">Schellman &amp; Co. · 84 pages indexed</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-code-snippet text-code-snippet text-primary bg-surface-container-low px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-primary">arrow_forward</span>
+                streaming
+              </span>
+</div>
+<!-- Flying micro-packet indicator -->
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary-container shadow-sm hidden lg:block animate-ping"></div>
+</div>
+<!-- Source Item 2: Public Trust Center URL -->
+<div class="doc-card group relative p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest hover:border-primary-container/80 transition-all duration-300 shadow-sm cursor-pointer" data-doc="trust">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">language</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span>trust.yourdomain.com</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<div class="font-code-snippet text-code-snippet text-secondary">Live URL · 99.98% uptime, subprocessors</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-code-snippet text-code-snippet text-primary bg-surface-container-low px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-primary">sync</span>
+                live sync
+              </span>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary-container shadow-sm hidden lg:block animate-ping" style="animation-delay: 0.3s;"></div>
+</div>
+<!-- Source Item 3: Internal Security & Encryption Policies -->
+<div class="doc-card group relative p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest hover:border-primary-container/80 transition-all duration-300 shadow-sm cursor-pointer" data-doc="policy">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">lock</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Security &amp; Encryption Policy v2.4</div>
+<div class="font-code-snippet text-code-snippet text-secondary">Sec 4.2: AES-256 KMS Key Rotation</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-code-snippet text-code-snippet text-primary bg-surface-container-low px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-primary">arrow_forward</span>
+                parsed
+              </span>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary-container shadow-sm hidden lg:block animate-ping" style="animation-delay: 0.6s;"></div>
+</div>
+<!-- Source Item 4: AWS Infrastructure & Architecture Specs -->
+<div class="doc-card group relative p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest hover:border-primary-container/80 transition-all duration-300 shadow-sm cursor-pointer" data-doc="infra">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">cloud</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">AWS Terraform &amp; VPC Architecture</div>
+<div class="font-code-snippet text-code-snippet text-secondary">Git repo sync · TLS 1.3, Ephemeral SRE bastion</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-code-snippet text-code-snippet text-primary bg-surface-container-low px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-primary">code</span>
+                indexed
+              </span>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary-container shadow-sm hidden lg:block animate-ping" style="animation-delay: 0.9s;"></div>
+</div>
+<!-- Source Item 5: Past Completed Questionnaires -->
+<div class="doc-card group relative p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest hover:border-primary-container/80 transition-all duration-300 shadow-sm cursor-pointer" data-doc="past">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[17px]">history_edu</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Enterprise Past Reviews (200+ Qs)</div>
+<div class="font-code-snippet text-code-snippet text-secondary">Verified vendor responses &amp; legal notes</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-code-snippet text-code-snippet text-primary bg-surface-container-low px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                aligned
+              </span>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary-container shadow-sm hidden lg:block animate-ping" style="animation-delay: 1.2s;"></div>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-surface-container-highest text-secondary font-code-snippet text-code-snippet flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">folder_open</span>
+            5 connected knowledge silos
+          </span>
+<span class="text-on-surface font-medium">Auto-embedding...</span>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- CENTER COLUMN: CORE ENGINE (THE BRAIN / DISPATCHER) -->
+<!-- ============================================================== -->
+<div class="lg:col-span-4 flex flex-col justify-center items-center py-4 lg:py-0">
+<div class="w-full h-full max-w-sm rounded-xl border border-primary-container/30 bg-surface-container-low p-5 flex flex-col justify-between relative shadow-md overflow-hidden">
+<!-- Background Radar Wave Ring Animation -->
+<div class="absolute -inset-10 flex items-center justify-center pointer-events-none opacity-20">
+<div class="w-72 h-72 rounded-full border border-dashed border-primary-container radar-ring"></div>
+<div class="absolute w-52 h-52 rounded-full border border-primary-container/40 engine-pulse"></div>
+</div>
+<!-- Top Engine Status -->
+<div class="relative z-10 flex items-center justify-between border-b border-surface-container-highest pb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">SRR Neural Core Engine</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary bg-secondary-container px-2 py-0.5 rounded">Grounded AI</span>
+</div>
+<!-- Center Engine Core Visual -->
+<div class="relative z-10 my-5 flex flex-col items-center text-center">
+<div class="relative w-24 h-24 rounded-2xl bg-surface-container-lowest border-2 border-primary-container shadow-lg flex items-center justify-center mb-3 group">
+<!-- Pulsing Engine Core -->
+<div class="absolute inset-2 rounded-xl bg-secondary-container/40 engine-pulse"></div>
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-inner relative z-10">
+<span class="material-symbols-outlined text-[28px] animate-spin" style="animation-duration: 16s;">memory</span>
+</div>
+<!-- Floating tiny telemetry badge -->
+<span class="absolute -top-2 -right-2 px-1.5 py-0.2 rounded-full bg-primary text-on-primary font-code-snippet text-[10px] tracking-tight">Active</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+              Evidence Matching Engine
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 max-w-xs">
+              Deconstructs questionnaires, links exact policy sentences, and outputs citations in real-time.
+            </p>
+</div>
+<!-- Live Real-Time Telemetry Log Box -->
+<div class="relative z-10 bg-surface-container-lowest border border-surface-container-highest rounded-lg p-3 space-y-2">
+<div class="flex items-center justify-between text-secondary font-code-snippet text-code-snippet border-b border-surface-container-highest pb-1.5">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Telemetry Log
+              </span>
+<span class="text-[11px] text-tertiary" id="engine-timer">0.12s latency</span>
+</div>
+<div class="space-y-1 font-code-snippet text-code-snippet text-secondary leading-snug" id="engine-log-stream">
+<div class="text-on-surface flex items-center gap-1.5 truncate">
+<span class="text-primary-container">✓</span> [SOC 2 p.48] → Matched to Acme Corp REQ-42
+              </div>
+<div class="text-secondary flex items-center gap-1.5 truncate">
+<span class="text-primary-container">⚡</span> Verifying AES-256 KMS key rotation policy...
+              </div>
+<div class="text-tertiary flex items-center gap-1.5 truncate">
+<span class="text-primary-container">✓</span> Parallel dispatching to 4 vendor queues
+              </div>
+</div>
+</div>
+<!-- Engine Footer Controls -->
+<div class="relative z-10 mt-3 pt-2.5 border-t border-surface-container-highest flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Zero hallucinations guarantee</span>
+<span class="font-code-snippet text-code-snippet text-primary font-semibold">100% cited</span>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- RIGHT COLUMN: PARALLEL VENDOR QUESTIONNAIRES GETTING FILLED -->
+<!-- ============================================================== -->
+<div class="lg:col-span-4 flex flex-col justify-between space-y-3">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">3. Parallel Vendor Filling</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-primary bg-secondary-container px-2 py-0.5 rounded">All in Parallel</span>
+</div>
+<div class="space-y-2.5 flex-grow flex flex-col justify-between" id="vendor-questionnaire-list">
+<!-- Vendor 1: Acme Corp Enterprise RFP (140 questions) -->
+<div class="vendor-card p-3 rounded-lg border border-primary-container/80 bg-surface-container-lowest shadow-sm hover:shadow transition-all duration-300">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Acme Corp Enterprise RFP</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary font-medium vendor-progress-pct" id="v1-pct">92% filled</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-2 line-clamp-1">
+              "Is customer data encrypted at rest?" → <span class="text-on-surface font-medium text-primary">Yes, AES-256 via KMS [Verified]</span>
+</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-1000 ease-out" id="v1-bar" style="width: 92%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 text-secondary font-code-snippet text-[11px]">
+<span>129 of 140 questions</span>
+<span class="text-tertiary flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">check</span> Review ready</span>
+</div>
+</div>
+<!-- Vendor 2: Stripe / FinTech Security Assessment (45 questions) -->
+<div class="vendor-card p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest shadow-sm hover:border-primary-container/80 transition-all duration-300">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">FinTech Partner Review</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary font-medium vendor-progress-pct" id="v2-pct">84% filled</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-2 line-clamp-1">
+              "Are penetration tests performed annually?" → <span class="text-on-surface font-medium text-primary">Yes, by Bishop Fox [Cited]</span>
+</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-1000 ease-out" id="v2-bar" style="width: 84%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 text-secondary font-code-snippet text-[11px]">
+<span>38 of 45 questions</span>
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] animate-spin">sync</span> Filling now</span>
+</div>
+</div>
+<!-- Vendor 3: Healthcare HIPAA Assessment (80 questions) -->
+<div class="vendor-card p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest shadow-sm hover:border-primary-container/80 transition-all duration-300">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">HealthTech HIPAA Assessment</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary font-medium vendor-progress-pct" id="v3-pct">78% filled</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-2 line-clamp-1">
+              "Audit logs retention period?" → <span class="text-on-surface font-medium text-primary">365 days immutable S3 [Source linked]</span>
+</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-1000 ease-out" id="v3-bar" style="width: 78%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 text-secondary font-code-snippet text-[11px]">
+<span>62 of 80 questions</span>
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] animate-spin">sync</span> Filling now</span>
+</div>
+</div>
+<!-- Vendor 4: Global Bank Procurement CAIQ v4.0 (180 questions) -->
+<div class="vendor-card p-3 rounded-lg border border-surface-container-highest bg-surface-container-lowest shadow-sm hover:border-primary-container/80 transition-all duration-300">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Global Bank CAIQ v4.0</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary font-medium vendor-progress-pct" id="v4-pct">65% filled</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-2 line-clamp-1">
+              "Multi-factor authentication mandatory?" → <span class="text-on-surface font-medium text-primary">Enforced via FIDO2 WebAuthn</span>
+</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-1000 ease-out" id="v4-bar" style="width: 65%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 text-secondary font-code-snippet text-[11px]">
+<span>117 of 180 questions</span>
+<span class="text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] animate-spin">sync</span> Streaming</span>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-surface-container-highest text-secondary font-code-snippet text-code-snippet flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">task_alt</span>
+            4 parallel buyer questionnaires
+          </span>
+<span class="text-tertiary font-semibold">0 duplicate work</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Control Footer / Action Banner -->
+<div class="p-4 bg-surface-container-low border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[20px]">bolt</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold">Simultaneous Multi-Vendor Pipeline:</span> Ingest once from your real company docs. When five buyers send questionnaires at once, they all fill simultaneously with exact page references.
+      </span>
+</div>
+<div class="flex items-center gap-2 whitespace-nowrap">
+<button class="h-8 px-3 rounded border border-surface-container-highest bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" id="btn-trigger-pulse" type="button">
+        Simulate Ingestion Pulse
+      </button>
+<a class="h-8 px-3.5 bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md rounded border border-tertiary transition-colors flex items-center gap-1" href="#early-access">
+        Start Parallel Trial
+      </a>
+</div>
+</div>
+</div>
+<!-- Secondary Interactive Split Workspace Detail Mockup -->
+<div class="mt-8 rounded-lg bg-surface-container-lowest border border-surface-container-highest shadow-sm overflow-hidden">
+<!-- Mockup Toolbar -->
+<div class="h-11 bg-surface-container-low border-b border-surface-container-highest px-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shield</span>
+<span class="text-on-surface font-medium">Verified Evidence &amp; Human Approval Inspector</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-code-snippet text-code-snippet text-secondary">Inspection View</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-tertiary font-label-sm text-label-sm">Live Workspace</span>
+</div>
+</div>
+<!-- Split 2-Panel Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[420px]">
+<!-- Left Panel: Customer Questionnaire (5 cols) -->
+<div class="lg:col-span-5 bg-surface-bright border-b lg:border-b-0 lg:border-r border-surface-container-highest flex flex-col">
+<div class="p-4 border-b border-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-medium">Vendor Questionnaire</span>
+<span class="text-secondary font-code-snippet text-code-snippet">(CAIQ &amp; Custom)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Auto-matched</span>
+</div>
+<!-- Question List Items -->
+<div class="p-3 flex flex-col gap-2 flex-grow overflow-y-auto" id="hero-questions-list">
+<!-- Item 1 (Active) -->
+<button class="hero-q-btn w-full text-left p-3.5 rounded border border-primary-container bg-surface-container-lowest shadow-sm transition-all text-on-surface group" data-q="0" type="button">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<span class="font-code-snippet text-code-snippet text-secondary">REQ-042</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                    Verified
+                  </span>
+</div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Is customer data encrypted at rest?</p>
+<div class="mt-2 flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary-container">article</span>
+<span>Security Policy.pdf · Sec 4.2</span>
+</div>
+</button>
+<!-- Item 2 -->
+<button class="hero-q-btn w-full text-left p-3.5 rounded border border-surface-container-highest bg-surface-container-low hover:bg-surface-container-lowest transition-all text-on-surface group" data-q="1" type="button">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<span class="font-code-snippet text-code-snippet text-secondary">REQ-043</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-variant text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline animate-pulse"></span>
+                    Searching sources
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">How is access to production systems controlled?</p>
+<div class="mt-2 flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">search</span>
+<span>Scanning Access Controls docs...</span>
+</div>
+</button>
+<!-- Item 3 -->
+<button class="hero-q-btn w-full text-left p-3.5 rounded border border-surface-container-highest bg-surface-container-low hover:bg-surface-container-lowest transition-all text-on-surface group" data-q="2" type="button">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<span class="font-code-snippet text-code-snippet text-secondary">REQ-044</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container/50 text-tertiary font-label-sm text-label-sm">
+                    Ready for review
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Do you maintain an incident response policy?</p>
+<div class="mt-2 flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>SOC 2 Type II Report · 99% match</span>
+</div>
+</button>
+<!-- Item 4 -->
+<div class="w-full p-3.5 rounded border border-surface-container-highest/60 bg-surface-container-low/40 opacity-75">
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<span class="font-code-snippet text-code-snippet text-secondary">REQ-045</span>
+<span class="px-2 py-0.5 rounded bg-surface-variant/60 text-secondary font-label-sm text-label-sm">In queue</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">How often are backups performed and tested?</p>
+</div>
+</div>
+</div>
+<!-- Right Panel: Suggested Response & Evidence (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 flex flex-col justify-between">
+<div class="space-y-5">
+<div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-secondary-container text-tertiary rounded font-label-sm text-label-sm font-semibold">Suggested Response</span>
+<span class="text-secondary font-code-snippet text-code-snippet">Auto-drafted from approved sources</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Evidence linked</span>
+</div>
+</div>
+<!-- Question Echo -->
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Target Assessment Question</span>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1" id="hero-active-q-text">
+                  Is customer data encrypted at rest?
+                </p>
+</div>
+<!-- Answer Box -->
+<div class="p-4 rounded bg-surface-container-low border border-surface-container-highest relative">
+<span class="absolute top-2 right-3 font-code-snippet text-code-snippet text-secondary">Draft</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed pr-10" id="hero-active-answer">
+                  Yes. Customer data is encrypted at rest using AES-256 with key management via AWS KMS, per Section 4.2 of our verified Security Policy. Encryption keys are rotated automatically on an annual basis with strict multi-party access authorization.
+                </p>
+</div>
+<!-- Verified Source Metadata Card -->
+<div class="p-3.5 rounded border border-surface-container-highest bg-surface-bright flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface font-medium" id="hero-source-file">Security Policy.pdf</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary bg-secondary-container px-2 py-0.5 rounded">98% match</span>
+</div>
+<div class="text-secondary font-body-sm text-body-sm pl-6">
+<span class="font-medium text-on-surface">Section 4.2: Data Encryption &amp; Key Management</span> — "All persistent datastores containing tenant or PII data are provisioned with AES-256 block-level encryption."
+                </div>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="pt-5 mt-4 border-t border-surface-container-highest flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded border border-surface-container-highest bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" id="hero-btn-edit" type="button">
+                  Edit answer
+                </button>
+<button class="h-8 px-3 rounded border border-surface-container-highest bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" id="hero-btn-view" type="button">
+                  Review original PDF
+                </button>
+</div>
+<button class="h-8 px-4 rounded bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md border border-tertiary transition-colors flex items-center gap-1.5" id="hero-btn-approve" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Approve answer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROBLEM SECTION ("SOUND FAMILIAR?") -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest bg-surface-bright">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<!-- Section Header -->
+<div class="max-w-2xl flex flex-col gap-2 mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SOUND FAMILIAR?</span>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+          You've answered these questions before. Why answer them again?
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+          Your next customer sends a 150-question security assessment. The information already exists in your policies, trust center, and previous responses. But someone still has to find it, rewrite it, and check every answer.
+        </p>
+</div>
+<!-- 3 Structured Workflow Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 1 Card -->
+<div class="rounded-lg bg-surface-container-lowest border border-surface-container-highest p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-snippet text-code-snippet text-secondary">01 / RECEIVE</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">inbox</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Another questionnaire lands.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              A deal hits a sudden pause. The procurement team drops a custom spreadsheet with 140 questions into your inbox.
+            </p>
+</div>
+<!-- Card Visual -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-2">
+<div class="flex items-center justify-between text-secondary font-code-snippet text-code-snippet">
+<span>Security_Review_Q4_v2.xlsx</span>
+<span class="text-error font-medium">120 pending</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-error w-1/12 h-full"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-secondary pt-1">
+<span>Cloud Infrastructure</span>
+<span>Due in 4 days</span>
+</div>
+</div>
+</div>
+<!-- Step 2 Card -->
+<div class="rounded-lg bg-surface-container-lowest border border-surface-container-highest p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-snippet text-code-snippet text-secondary">02 / SEARCH</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">tab_unselected</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Hours disappear into searching.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Your CTO opens four tabs at once: Trust Center, Notion policies, last quarter's enterprise review, and the SOC 2 audit PDF.
+            </p>
+</div>
+<!-- Card Visual -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-1.5">
+<div class="flex items-center gap-2 p-1.5 rounded bg-surface-container-lowest border border-surface-container-highest font-code-snippet text-code-snippet text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="truncate">SOC2_Type_II_2024.pdf (p. 48)</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded bg-surface-container-lowest border border-surface-container-highest font-code-snippet text-code-snippet text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="truncate">Notion / Internal Security Handbook</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded bg-surface-container-lowest border border-surface-container-highest font-code-snippet text-code-snippet text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="truncate">Buyer_A_Vendor_Assessment_Done.xlsx</span>
+</div>
+</div>
+</div>
+<!-- Step 3 Card -->
+<div class="rounded-lg bg-surface-container-lowest border border-surface-container-highest p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-snippet text-code-snippet text-secondary">03 / DUPLICATION</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">content_copy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">The same answers. Again.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Buyers phrase the exact same compliance inquiries with slightly different wording, forcing manual rewriting every cycle.
+            </p>
+</div>
+<!-- Card Visual -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-2">
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-container-highest">
+<span class="font-label-sm text-label-sm text-secondary">Buyer A:</span>
+<p class="font-body-sm text-body-sm text-on-surface">"What cipher suites are enforced in transit?"</p>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-container-highest">
+<span class="font-label-sm text-label-sm text-secondary">Buyer B:</span>
+<p class="font-body-sm text-body-sm text-on-surface">"Is TLS 1.2+ mandatory for all client API calls?"</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Concluding callout banner -->
+<div class="mt-8 p-6 rounded-lg bg-surface-container border border-surface-container-highest flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[24px]">lightbulb</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">The information isn't missing. It's just scattered across silos.</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline whitespace-nowrap" href="#how-it-works">
+          How Security Review Ready fixes this →
+        </a>
+</div>
+</div>
+</section>
+<!-- PRODUCT DEMONSTRATION / TRANSFORMATION SECTION -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest" id="how-it-works">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<!-- Section Header -->
+<div class="max-w-3xl flex flex-col gap-2 mb-10">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">MEET SECURITY REVIEW READY</span>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+          From scattered documentation to review-ready answers.
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+          Connect the information you already maintain. Get suggested answers grounded in your documentation, with the evidence available for your team to review.
+        </p>
+</div>
+<!-- Interactive 3-Stage Workflow Tabs -->
+<div class="w-full rounded-lg border border-surface-container-highest bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- Tab Navigation Buttons -->
+<div class="grid grid-cols-1 md:grid-cols-3 border-b border-surface-container-highest bg-surface-bright">
+<button class="stage-tab px-6 py-4 text-left border-b-2 md:border-b-0 md:border-r border-surface-container-highest transition-colors flex items-center gap-3 border-primary-container bg-surface-container-lowest" data-stage="1" type="button">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-code-snippet text-code-snippet">1</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Bring sources together</p>
+<p class="font-body-sm text-body-sm text-secondary">Sync your policies &amp; reports</p>
+</div>
+</button>
+<button class="stage-tab px-6 py-4 text-left border-b-2 md:border-b-0 md:border-r border-surface-container-highest transition-colors flex items-center gap-3 hover:bg-surface-container-low" data-stage="2" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-secondary flex items-center justify-center font-code-snippet text-code-snippet">2</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Find relevant evidence</p>
+<p class="font-body-sm text-body-sm text-secondary">Exact citations highlighted</p>
+</div>
+</button>
+<button class="stage-tab px-6 py-4 text-left transition-colors flex items-center gap-3 hover:bg-surface-container-low" data-stage="3" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-secondary flex items-center justify-center font-code-snippet text-code-snippet">3</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Review and complete</p>
+<p class="font-body-sm text-body-sm text-secondary">Human approval before export</p>
+</div>
+</button>
+</div>
+<!-- Stage 1 Content: Bring sources together -->
+<div class="stage-panel p-6 md:p-8 block" id="stage-panel-1">
+<div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Connected Knowledge Base</h3>
+<p class="font-body-sm text-body-sm text-secondary">Security Review Ready indexes approved documents and references them verbatim.</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-tertiary font-label-sm text-label-sm self-start">4 Knowledge Bases Active</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-4 rounded border border-surface-container-highest bg-surface-bright flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary-container mb-3">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<h4 class="font-label-md text-label-md font-medium text-on-surface">Public Trust Center</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Live URL sync with public uptime, status, and subprocessor list.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-secondary">trust.company.com</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+</div>
+<div class="p-4 rounded border border-surface-container-highest bg-surface-bright flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary-container mb-3">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<h4 class="font-label-md text-label-md font-medium text-on-surface">Internal Policies</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">PDF &amp; Markdown files covering Access, Incident, and Key Policies.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-secondary">18 verified files</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+</div>
+<div class="p-4 rounded border border-surface-container-highest bg-surface-bright flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary-container mb-3">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<h4 class="font-label-md text-label-md font-medium text-on-surface">Engineering Specs</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Architecture overviews, VPC boundaries, and backup configurations.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-secondary">Git repository sync</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+</div>
+<div class="p-4 rounded border border-surface-container-highest bg-surface-bright flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary-container mb-3">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<h4 class="font-label-md text-label-md font-medium text-on-surface">Prior Questionnaires</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Past completed assessments from Fortune 500 reviews.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between">
+<span class="font-code-snippet text-code-snippet text-secondary">6 reviewed sheets</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 2 Content: Find relevant evidence -->
+<div class="stage-panel p-6 md:p-8 hidden" id="stage-panel-2">
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Semantic Match &amp; Grounding</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Incoming Question: "How do you restrict access to production data?"</h3>
+</div>
+<div class="p-5 rounded border border-surface-container-highest bg-surface-bright space-y-4">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Matched Source Document</span>
+<span class="font-code-snippet text-code-snippet text-secondary">Access Control Policy v2.4</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-tertiary bg-secondary-container px-2 py-0.5 rounded">Exact Paragraph Highlighted</span>
+</div>
+<div class="p-4 rounded bg-surface-container-low border border-surface-container-highest font-body-md text-body-md leading-relaxed text-secondary">
+<p>Section 3.1: Principle of Least Privilege and MFA requirements.</p>
+<div class="mt-2 p-3 bg-secondary-fixed/50 border-l-4 border-primary-container text-on-surface font-medium rounded-r">
+                "Production database and runtime cluster access is strictly restricted to designated Site Reliability Engineers. Access requires hardware-backed multi-factor authentication (WebAuthn/FIDO2) through an ephemeral zero-trust bastion with automated 8-hour credential revocation."
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Audited by Schellman &amp; Co. · Valid through Dec 2025</span>
+<span class="text-primary font-medium">Confidence: 99.4%</span>
+</div>
+</div>
+</div>
+<!-- Stage 3 Content: Review and complete -->
+<div class="stage-panel p-6 md:p-8 hidden" id="stage-panel-3">
+<div class="p-5 rounded border border-surface-container-highest bg-surface-bright space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-variant text-secondary font-label-sm text-label-sm font-semibold" id="stage3-badge">Review Pending</span>
+<span class="font-code-snippet text-code-snippet text-secondary">Question 14 of 120</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Human-in-the-loop guarantee</span>
+</div>
+<div class="p-4 rounded bg-surface-container-lowest border border-surface-container-highest">
+<p class="font-headline-sm text-headline-sm text-on-surface mb-2">How do you restrict access to production data?</p>
+<p class="font-body-md text-body-md text-on-surface" id="stage3-answer-preview">
+                Production access is restricted to authorized SRE personnel via hardware-backed MFA (WebAuthn/FIDO2). Bastion sessions are ephemeral with an automatic 8-hour session lifetime per our Access Control Policy v2.4 (Sec 3.1).
+              </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded border border-surface-container-highest bg-surface-container-lowest text-secondary font-label-md text-label-md hover:text-on-surface" type="button">
+                  View raw policy PDF
+                </button>
+<button class="h-8 px-3 rounded border border-surface-container-highest bg-surface-container-lowest text-secondary font-label-md text-label-md hover:text-on-surface" type="button">
+                  Edit wording
+                </button>
+</div>
+<button class="h-9 px-5 rounded bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md border border-tertiary transition-all flex items-center gap-1.5" id="stage3-approve-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span id="stage3-btn-label">Approve answer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BENEFITS SECTION -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest bg-surface-bright">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="max-w-2xl mb-12">
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+          Get through security reviews without putting deals on hold.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Benefit 1 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary-container mb-4">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Give your CTO their time back.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Stop pulling engineers into repetitive security paperwork. Let your team focus on building and shipping.
+            </p>
+</div>
+<!-- Benefit UI Graphic -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-2">
+<div class="flex items-center justify-between text-secondary font-code-snippet text-code-snippet">
+<span>Time saved per review</span>
+<span class="text-tertiary font-medium">8.5 hrs avg</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">engineering</span>
+<span>0 CTO interruptions for standard items</span>
+</div>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary-container mb-4">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Know where every answer comes from.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Review the supporting document and relevant evidence before you send an answer to a customer.
+            </p>
+</div>
+<!-- Benefit UI Graphic -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-1.5">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest border border-surface-container-highest text-tertiary font-code-snippet text-code-snippet">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>SOC_2_Report.pdf § 2.14</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">
+              "Continuous vulnerability scanning is conducted weekly..."
+            </p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-primary-container mb-4">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Keep answers consistent.</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">
+              Reuse approved information instead of rewriting responses from memory every time a new buyer asks.
+            </p>
+</div>
+<!-- Benefit UI Graphic -->
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-highest space-y-2">
+<div class="flex items-center justify-between text-secondary font-code-snippet text-code-snippet">
+<span>Enterprise Buyer A &amp; B</span>
+<span class="text-tertiary">100% aligned</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>No conflicting claims between sales cycles</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECURITY & PRIVACY SECTION -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest" id="security">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="max-w-3xl flex flex-col gap-2 mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SECURITY &amp; PRIVACY</span>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+          Your security answers should be grounded in your own evidence.
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+          Security Review Ready is designed to help your team work from existing documentation, keep sources visible, and review suggested responses before sharing them.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Principle 1 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex gap-4">
+<div class="w-8 h-8 rounded bg-surface-container flex-shrink-0 flex items-center justify-center text-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Source-backed responses</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Every suggested sentence links back directly to a verified excerpt in your company's documents. No hallucinations or ungrounded assertions.
+            </p>
+</div>
+</div>
+<!-- Principle 2 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex gap-4">
+<div class="w-8 h-8 rounded bg-surface-container flex-shrink-0 flex items-center justify-center text-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">person_check</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Human review by default</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Suggestions remain in draft mode until approved or edited by an authorized team member. You maintain full control over what is communicated.
+            </p>
+</div>
+</div>
+<!-- Principle 3 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex gap-4">
+<div class="w-8 h-8 rounded bg-surface-container flex-shrink-0 flex items-center justify-center text-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Controlled access</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Granular workspace permissions ensure only authorized teammates can view or manage sensitive compliance files and customer audit spreadsheets.
+            </p>
+</div>
+</div>
+<!-- Principle 4 -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest flex gap-4">
+<div class="w-8 h-8 rounded bg-surface-container flex-shrink-0 flex items-center justify-center text-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[18px]">shield_person</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Clear data handling</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Explicit document boundary policies, transparent deletion, and zero third-party model retraining on your private documentation.
+            </p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-start">
+<a class="inline-flex items-center justify-center h-[38px] px-5 bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md rounded border border-tertiary transition-colors shadow-sm focus:outline-none" href="#early-access">
+          Get Early Access
+        </a>
+</div>
+</div>
+</section>
+<!-- TARGET AUDIENCE SECTION ("BUILT FOR THE TEAM BEHIND THE DEAL") -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest bg-surface-bright">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="max-w-2xl mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">WHO IT'S FOR</span>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+          Built for the team behind the deal.
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Segment 1: Founders -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest">
+<div class="font-code-snippet text-code-snippet text-secondary mb-3">ROLE 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Founders</h3>
+<p class="font-body-md text-body-md text-secondary">
+            You're answering customer security questions yourself and need that time back to run the business. Stop spending Sunday evenings combing through vendor PDFs.
+          </p>
+</div>
+<!-- Segment 2: CTOs -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest">
+<div class="font-code-snippet text-code-snippet text-secondary mb-3">ROLE 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">CTOs &amp; Engineering Leads</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Your engineers should not spend afternoons digging through policies to answer questions they've seen before. Keep roadmap velocity uninterrupted.
+          </p>
+</div>
+<!-- Segment 3: Lean B2B SaaS Teams -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-container-highest">
+<div class="font-code-snippet text-code-snippet text-secondary mb-3">ROLE 03</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Lean B2B SaaS Teams</h3>
+<p class="font-body-md text-body-md text-secondary">
+            You're starting to sell into larger companies and need a repeatable, dependable way to handle security reviews without hiring full-time compliance staff.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ SECTION -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest" id="faq">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="max-w-2xl mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">QUESTIONS &amp; ANSWERS</span>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+          Frequently asked questions.
+        </h2>
+</div>
+<div class="max-w-3xl divide-y divide-surface-container-highest border-t border-b border-surface-container-highest">
+<!-- FAQ 1 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">What is Security Review Ready?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            Security Review Ready is a purpose-built workspace that helps B2B SaaS teams complete customer security reviews faster. It ingests your verified security documentation (policies, SOC 2 reports, trust centers) and generates accurate, source-cited responses to incoming enterprise questionnaires.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">How does it work?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            You upload or link your security documentation. When a customer sends a questionnaire (spreadsheet or list), Security Review Ready matches each requirement against your verified evidence, drafts grounded responses, and points your reviewer directly to the exact source paragraph.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">Does it automatically send answers to customers?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            No. We follow a strict "human-in-the-loop" model. Suggested answers remain drafts until someone from your team reviews and approves them. You never risk sending an unverified claim to an enterprise buyer.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">What documents can I use?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            You can connect public trust center URLs, internal security policies (PDF, Markdown, Word), SOC 2 Type II audit reports, ISO 27001 certifications, CAIQ v4 spreadsheets, and previous completed questionnaires.
+          </div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">Are the answers reviewed by a human?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            Yes, always. The platform is designed around rapid human verification. Instead of writing from scratch, your reviewer simply validates the grounded citation and approves with a single click.
+          </div>
+</div>
+<!-- FAQ 6 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">Is my company's information secure?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            Yes. We enforce strict multi-tenant data isolation, AES-256 encryption at rest, TLS 1.3 in transit, and role-based permissions. Your sensitive security policies are never used to train public models.
+          </div>
+</div>
+<!-- FAQ 7 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">Who is this for?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            Early-stage to growth B2B SaaS teams (seed to Series B) selling into mid-market and enterprise accounts where procurement requires formal vendor risk assessments.
+          </div>
+</div>
+<!-- FAQ 8 -->
+<div class="faq-item py-4">
+<button class="faq-trigger w-full flex items-center justify-between text-left py-1 text-on-surface focus:outline-none group" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">How can I get access?</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-on-surface transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden pt-2 pb-2 text-secondary font-body-md text-body-md">
+            We are onboarding pilot customers in rolling cohorts. Submit your work email in the early access form below and our founders will reach out within 24 hours.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA & WAITLIST FORM SECTION -->
+<section class="w-full py-16 md:py-24 border-t border-surface-container-highest bg-surface-bright" id="early-access">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="rounded-lg bg-surface-container-low border border-primary-container/20 p-8 md:p-12 max-w-3xl mx-auto text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-tertiary font-label-sm text-label-sm mb-4">
+<span>Early Access Program</span>
+</div>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface tracking-tight mb-3">
+          Stop answering the same security questions from scratch.
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mb-8">
+          Get your documentation working for you, so your next customer review takes less effort.
+        </p>
+<!-- Functional Waitlist Form -->
+<form class="w-full max-w-md flex flex-col sm:flex-row items-stretch gap-2" id="waitlist-form" novalidate="">
+<div class="flex-grow flex flex-col items-start">
+<input class="w-full h-[40px] px-3.5 rounded bg-surface-container-lowest border border-surface-container-highest text-on-surface font-body-md text-body-md placeholder-secondary focus:outline-none focus:border-primary-container" id="waitlist-email" name="email" placeholder="you@company.com" required="" type="email"/>
+<span class="text-error font-body-sm text-body-sm mt-1.5 hidden text-left" id="form-error">Please enter a valid work email address.</span>
+</div>
+<button class="h-[40px] px-6 bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md rounded border border-tertiary transition-colors flex items-center justify-center whitespace-nowrap shadow-sm focus:outline-none" id="waitlist-submit" type="submit">
+<span id="btn-text">Get Early Access</span>
+<span class="material-symbols-outlined text-[18px] animate-spin hidden" id="btn-spinner">progress_activity</span>
+</button>
+</form>
+<!-- Success Message Container -->
+<div class="mt-4 p-4 rounded bg-secondary-container text-tertiary font-label-md text-label-md border border-outline-variant/60 hidden text-left flex items-start gap-2.5 max-w-md" id="form-success">
+<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">You're on the early access list.</span>
+<p class="text-secondary font-body-sm text-body-sm mt-0.5">We'll reach out directly with onboarding details and schedule your workspace setup.</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-6">
+          For B2B teams that would rather close deals than fill spreadsheets.
+        </p>
+</div>
+</div>
+</section>
+<!-- COMPREHENSIVE FOOTER CONTENT -->
+<footer class="w-full py-12 border-t border-surface-container-highest bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-5 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<img alt="Security Review Ready Wordmark" class="w-7 h-7 object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1W_zxpoF80YkNJiYhAuf3hiGXMrA1VOnNYBnRk9UlTU1hFOR69sWnmLWRFXkVjCx3MF1_dMvSYpKI6Y1abx3g_3vYwu8V22vmQ1TeM491-jZ_Dm3zFzL4nVwpRHLOXfyEumKJR5VwOdCqwKkdyB_rP-ENiBa3NnJudk7cdsfuW1tJqfxBnwGHdXtx4DoAFQKZ6xK25ipV43nxFAGBuFCTz80jro6vtYgw6l9wZ0GGNOHEfXPkSl4LORKb47"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Security Review Ready</span>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-sm">
+            A simpler way to handle customer security reviews. Grounded in your evidence, verified by your team.
+          </p>
+</div>
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 font-label-md text-label-md">
+<div class="flex flex-col gap-2.5">
+<span class="font-code-snippet text-code-snippet text-secondary uppercase">Product</span>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#how-it-works">How it works</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#parallel-pipeline">Pipeline Engine</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#security">Security &amp; Privacy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a>
+</div>
+<div class="flex flex-col gap-2.5">
+<span class="font-code-snippet text-code-snippet text-secondary uppercase">Standards</span>
+<span class="text-secondary">SOC 2 Type II</span>
+<span class="text-secondary">CAIQ v4.0.2</span>
+<span class="text-secondary">ISO 27001</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<span class="font-code-snippet text-code-snippet text-secondary uppercase">Contact</span>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="mailto:hello@securityreviewready.com">hello@securityreviewready.com</a>
+<span class="text-secondary font-label-sm text-label-sm">San Francisco, CA</span>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-6 border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-secondary">
+<div>
+          © 2025 Security Review Ready. All rights reserved.
+        </div>
+<div class="flex items-center gap-6">
+<button class="hover:text-on-surface transition-colors focus:outline-none" onclick="alert('Security Review Ready Privacy Policy: We do not sell data or train models on user inputs.')" type="button">Privacy Policy</button>
+<button class="hover:text-on-surface transition-colors focus:outline-none" onclick="alert('Security Review Ready Terms: Enterprise review software provided under early access SLA.')" type="button">Terms of Service</button>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- ========================================================================= -->
+<!-- JAVASCRIPT: CORE ENGINE SIMULATION & MOTION ANIMATIONS -->
+<!-- ========================================================================= -->
+<script>
+  (function() {
+    // 1. Parallel Questionnaire Live Progression Simulator
+    const vendorData = [
+      { id: 'v1', pctEl: 'v1-pct', barEl: 'v1-bar', base: 92, max: 98, total: 140 },
+      { id: 'v2', pctEl: 'v2-pct', barEl: 'v2-bar', base: 84, max: 94, total: 45 },
+      { id: 'v3', pctEl: 'v3-pct', barEl: 'v3-bar', base: 78, max: 89, total: 80 },
+      { id: 'v4', pctEl: 'v4-pct', barEl: 'v4-bar', base: 65, max: 76, total: 180 }
+    ];
+
+    let currentTicks = 0;
+    const telemetrySpeed = document.getElementById('telemetry-speed');
+    const engineTimer = document.getElementById('engine-timer');
+    const logStream = document.getElementById('engine-log-stream');
+
+    const sampleLogs = [
+      '<div class="text-on-surface flex items-center gap-1.5 truncate"><span class="text-primary-container">✓</span> [SOC 2 p.48] → Matched to Acme Corp REQ-42</div>',
+      '<div class="text-secondary flex items-center gap-1.5 truncate"><span class="text-primary-container">⚡</span> Verifying AES-256 KMS key rotation policy...</div>',
+      '<div class="text-tertiary flex items-center gap-1.5 truncate"><span class="text-primary-container">✓</span> Parallel dispatching to 4 vendor queues</div>',
+      '<div class="text-on-surface flex items-center gap-1.5 truncate"><span class="text-primary-container">✓</span> [Trust URL] Extracted 99.98% uptime SLA citation</div>',
+      '<div class="text-secondary flex items-center gap-1.5 truncate"><span class="text-primary-container">⚡</span> Matching HIPAA Audit Log standard to Sec 8.1...</div>',
+      '<div class="text-tertiary flex items-center gap-1.5 truncate"><span class="text-primary-container">✓</span> Global Bank CAIQ REQ-114 drafted with 99% match</div>'
+    ];
+
+    function runEngineCycle() {
+      currentTicks++;
+      
+      // Update progress percentages smoothly
+      vendorData.forEach(v => {
+        const pctEl = document.getElementById(v.pctEl);
+        const barEl = document.getElementById(v.barEl);
+        if (pctEl && barEl) {
+          // oscillates or increments
+          const cyclePct = v.base + ((currentTicks % 6) * 1.2);
+          const formattedPct = Math.min(Math.round(cyclePct), v.max);
+          pctEl.textContent = formattedPct + '% filled';
+          barEl.style.width = formattedPct + '%';
+        }
+      });
+
+      // Update telemetry
+      if (telemetrySpeed) {
+        const speeds = ['48 answers/min', '52 answers/min', '56 answers/min', '44 answers/min'];
+        telemetrySpeed.textContent = speeds[currentTicks % speeds.length];
+      }
+      if (engineTimer) {
+        const latencies = ['0.11s latency', '0.14s latency', '0.09s latency', '0.12s latency'];
+        engineTimer.textContent = latencies[currentTicks % latencies.length];
+      }
+
+      // Rotate live log lines
+      if (logStream) {
+        const idx1 = currentTicks % sampleLogs.length;
+        const idx2 = (currentTicks + 1) % sampleLogs.length;
+        const idx3 = (currentTicks + 2) % sampleLogs.length;
+        logStream.innerHTML = sampleLogs[idx1] + sampleLogs[idx2] + sampleLogs[idx3];
+      }
+    }
+
+    // Run cycle every 3.5 seconds
+    const intervalId = setInterval(runEngineCycle, 3500);
+
+    // Interactive Trigger Pulse Button
+    const triggerBtn = document.getElementById('btn-trigger-pulse');
+    if (triggerBtn) {
+      triggerBtn.addEventListener('click', () => {
+        runEngineCycle();
+        const cards = document.querySelectorAll('.doc-card');
+        cards.forEach((c, i) => {
+          setTimeout(() => {
+            c.classList.add('border-primary-container', 'bg-surface-container-low');
+            setTimeout(() => {
+              c.classList.remove('border-primary-container', 'bg-surface-container-low');
+            }, 600);
+          }, i * 120);
+        });
+      });
+    }
+
+    // 2. Secondary Workspace Interactive Questionnaire Simulator
+    const qData = [
+      {
+        q: "Is customer data encrypted at rest?",
+        answer: "Yes. Customer data is encrypted at rest using AES-256 with key management via AWS KMS, per Section 4.2 of our verified Security Policy. Encryption keys are rotated automatically on an annual basis with strict multi-party access authorization.",
+        source: "Security Policy.pdf",
+        meta: "Section 4.2: Data Encryption & Key Management",
+        match: "98% match"
+      },
+      {
+        q: "How is access to production systems controlled?",
+        answer: "Access is limited strictly to authorized SRE personnel using hardware-backed MFA (FIDO2) via an ephemeral bastion host. Single Sign-On (SSO) with Okta is enforced across all cloud services.",
+        source: "Access Control Policy v2.4",
+        meta: "Section 3.1: Principle of Least Privilege",
+        match: "99% match"
+      },
+      {
+        q: "Do you maintain an incident response policy?",
+        answer: "Yes. We maintain a documented Incident Response Policy that is tested at least annually via tabletop exercises. High-severity incidents require post-mortem analysis and customer notification within 48 hours.",
+        source: "SOC 2 Type II Report",
+        meta: "Criterion CC7.3: Incident Management",
+        match: "96% match"
+      }
+    ];
+
+    const qButtons = document.querySelectorAll('.hero-q-btn');
+    const qTextEl = document.getElementById('hero-active-q-text');
+    const qAnsEl = document.getElementById('hero-active-answer');
+    const qSourceEl = document.getElementById('hero-source-file');
+    const approveBtn = document.getElementById('hero-btn-approve');
+
+    qButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        // Toggle active border classes
+        qButtons.forEach(b => {
+          b.classList.remove('border-primary-container', 'bg-surface-container-lowest');
+          b.classList.add('border-surface-container-highest', 'bg-surface-container-low');
+        });
+        btn.classList.add('border-primary-container', 'bg-surface-container-lowest');
+        btn.classList.remove('border-surface-container-highest', 'bg-surface-container-low');
+
+        if (qData[index]) {
+          qTextEl.textContent = qData[index].q;
+          qAnsEl.textContent = qData[index].answer;
+          qSourceEl.textContent = qData[index].source;
+        }
+      });
+    });
+
+    if (approveBtn) {
+      approveBtn.addEventListener('click', () => {
+        approveBtn.classList.remove('bg-primary-container');
+        approveBtn.classList.add('bg-secondary-container', 'text-tertiary', 'border-outline-variant');
+        approveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Approved</span>';
+        setTimeout(() => {
+          approveBtn.classList.add('bg-primary-container');
+          approveBtn.classList.remove('bg-secondary-container', 'text-tertiary', 'border-outline-variant');
+          approveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Approve answer</span>';
+        }, 2500);
+      });
+    }
+
+    // 3. Transformation 3-stage tabs
+    const stageTabs = document.querySelectorAll('.stage-tab');
+    const stagePanels = document.querySelectorAll('.stage-panel');
+
+    stageTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const stage = tab.getAttribute('data-stage');
+        
+        // Reset tabs
+        stageTabs.forEach(t => {
+          t.classList.remove('border-primary-container', 'bg-surface-container-lowest');
+          t.classList.add('hover:bg-surface-container-low');
+          const badge = t.querySelector('span');
+          badge.classList.remove('bg-primary-container', 'text-on-primary');
+          badge.classList.add('bg-surface-variant', 'text-secondary');
+        });
+
+        // Activate clicked tab
+        tab.classList.add('border-primary-container', 'bg-surface-container-lowest');
+        tab.classList.remove('hover:bg-surface-container-low');
+        const activeBadge = tab.querySelector('span');
+        activeBadge.classList.add('bg-primary-container', 'text-on-primary');
+        activeBadge.classList.remove('bg-surface-variant', 'text-secondary');
+
+        // Toggle stage panels
+        stagePanels.forEach(panel => {
+          panel.classList.add('hidden');
+          panel.classList.remove('block');
+        });
+        const activePanel = document.getElementById('stage-panel-' + stage);
+        if (activePanel) {
+          activePanel.classList.remove('hidden');
+          activePanel.classList.add('block');
+        }
+      });
+    });
+
+    // Stage 3 interactive approve button
+    const stage3Btn = document.getElementById('stage3-approve-btn');
+    const stage3Badge = document.getElementById('stage3-badge');
+    const stage3Label = document.getElementById('stage3-btn-label');
+
+    if (stage3Btn) {
+      stage3Btn.addEventListener('click', () => {
+        stage3Badge.textContent = 'Ready for review';
+        stage3Badge.classList.remove('bg-surface-variant', 'text-secondary');
+        stage3Badge.classList.add('bg-secondary-container', 'text-tertiary');
+        stage3Label.textContent = 'Approved ✓';
+        stage3Btn.classList.add('opacity-80');
+      });
+    }
+
+    // 4. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const trigger = item.querySelector('.faq-trigger');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.material-symbols-outlined');
+
+      trigger.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+        // Close others
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-item .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 5. Functional Waitlist Form with Validation & Loading State
+    const waitlistForm = document.getElementById('waitlist-form');
+    const waitlistEmail = document.getElementById('waitlist-email');
+    const formError = document.getElementById('form-error');
+    const formSuccess = document.getElementById('form-success');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const submitBtn = document.getElementById('waitlist-submit');
+
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailVal = waitlistEmail.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailVal || !emailRegex.test(emailVal)) {
+          formError.classList.remove('hidden');
+          waitlistEmail.classList.add('border-error');
+          return;
+        }
+
+        formError.classList.add('hidden');
+        waitlistEmail.classList.remove('border-error');
+
+        // Loading state
+        btnText.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          btnText.classList.remove('hidden');
+          btnSpinner.classList.add('hidden');
+          submitBtn.disabled = false;
+          waitlistForm.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+        }, 800);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low border-t border-surface-container-highest mt-margin"><div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">© 2025 Security Review Ready. Editorial &amp; Technical Precision.</span></div><div class="flex items-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#security">SOC 2 Baseline</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#security">CAIQ v4</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#security">ISO 27001</a></div></div></footer></body></html>
