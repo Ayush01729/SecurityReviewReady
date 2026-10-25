@@ -45,9 +45,9 @@ const FAQS: FaqItem[] = [
       "Early-stage to growth B2B SaaS teams (seed to Series B) selling into mid-market and enterprise accounts where procurement requires formal vendor risk assessments (CAIQ, SIG, or custom RFPs).",
   },
   {
-    question: "How can I get early access?",
+    question: "How can I get my first questionnaire run?",
     answer:
-      "We are onboarding pilot customers in rolling cohorts. Submit your work email in the early access form below and our founding team will reach out within 24 hours to schedule your workspace onboarding.",
+      "Drop your work email in the form above. You will immediately receive instructions to upload your security documentation and first client questionnaire. We'll parse your evidence and return your completed, source-cited responses in under 24 hours — 100% free.",
   },
 ];
 

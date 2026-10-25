@@ -38,8 +38,8 @@ export function Hero() {
         to_email: trimmed,
         reply_to: trimmed,
         from_name: trimmed,
-        name: trimmed.split("@")[0] || "Early Access Subscriber",
-        message: `New early access waitlist signup from SecurityReviewReady Hero: ${trimmed}`,
+        name: trimmed.split("@")[0] || "Subscriber",
+        message: `New 24h questionnaire run request from SecurityReviewReady Hero: ${trimmed}`,
         submitted_at: new Date().toISOString(),
         source: "SecurityReviewReady Hero Input",
       };
@@ -82,30 +82,34 @@ export function Hero() {
             all enterprise buyers.
           </p>
 
-          {/* Action Area: Unified Early Access Input + Secondary Discovery Link */}
+          {/* Action Area: Unified Input + Secondary Discovery Link */}
           <div className="pt-2 w-full max-w-xl">
             {submitted ? (
               <div className="p-4 sm:p-5 rounded-xl bg-white border border-[#28664A]/30 text-left flex items-start gap-3.5 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-[#28664A] shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <span className="font-sans font-semibold text-[14px] text-[#1A1C19] block">
-                    You&apos;re on the priority onboarding list.
+                    Congrats!! Early access Activated
                   </span>
                   <p className="font-sans text-[13px] text-[#566155] mt-1 leading-relaxed">
-                    We sent a confirmation to <strong className="text-[#1A1C19]">{email}</strong>. Our
-                    team will reach out within 24 hours with your onboarding details.
+                    Check your inbox at <strong className="text-[#1A1C19]">{email}</strong> — we&apos;ve
+                    sent instructions to upload your first questionnaire for 24-hour turnaround (100%
+                    free).
                   </p>
                   <button
                     type="button"
                     onClick={handleReset}
                     className="mt-2.5 text-[12px] font-mono text-[#28664A] hover:underline cursor-pointer focus:outline-none"
                   >
-                    ← Register another email
+                    ← Submit another email
                   </button>
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2.5">
+                <p className="font-sans text-[14.5px] sm:text-[15.5px] font-semibold text-[#1A1C19] leading-snug">
+                  Drop your work email and we&apos;ll run your first client security questionnaire in 24 hours — 100% free.
+                </p>
                 <form onSubmit={handleSubmit} className="w-full">
                   <div className="p-1.5 rounded-xl bg-white border border-[#E7E5DE] focus-within:border-[#28664A] focus-within:ring-2 focus-within:ring-[#28664A]/15 shadow-[0_2px_8px_rgba(32,34,31,0.06)] transition-all flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                     <div className="flex-1 flex items-center px-3 min-h-[46px]">
@@ -131,7 +135,7 @@ export function Hero() {
                       {loading ? (
                         <RotateCw className="w-4 h-4 text-white animate-spin" />
                       ) : (
-                        <span>Get Early Access</span>
+                        <span>Run My Questionnaire</span>
                       )}
                     </button>
                   </div>

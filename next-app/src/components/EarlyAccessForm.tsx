@@ -38,8 +38,8 @@ export function EarlyAccessForm() {
         to_email: trimmed,
         reply_to: trimmed,
         from_name: trimmed,
-        name: trimmed.split("@")[0] || "Early Access Subscriber",
-        message: `New early access waitlist signup from SecurityReviewReady: ${trimmed}`,
+        name: trimmed.split("@")[0] || "Subscriber",
+        message: `New 24h questionnaire run request from SecurityReviewReady: ${trimmed}`,
         submitted_at: new Date().toISOString(),
         source: "SecurityReviewReady Landing Page",
       };
@@ -72,16 +72,15 @@ export function EarlyAccessForm() {
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="rounded-xl bg-[#F4F4EF] border border-[#28664A]/25 p-8 sm:p-12 max-w-3xl mx-auto text-center flex flex-col items-center shadow-sm">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DAE6D6] text-[#1A4C35] font-mono text-[11px] font-medium mb-4">
-            Rolling Early Access Cohort
+            24-Hour Turnaround · 100% Free
           </div>
 
           <h2 className="font-sans text-[28px] sm:text-[36px] md:text-[42px] font-medium text-[#1A1C19] tracking-[-0.025em] leading-[1.15] mb-3">
-            Stop answering the same security questions from scratch.
+            Drop your work email and we&apos;ll run your first questionnaire in 24 hours — 100% free.
           </h2>
 
           <p className="font-sans text-[16px] sm:text-[17px] text-[#566155] max-w-xl mb-8 leading-relaxed">
-            Get your documentation working for you, so your next enterprise customer review takes
-            minutes instead of days.
+            Stop answering the same security questions from scratch. We&apos;ll ingest your documentation and return your first completed questionnaire with verified citations.
           </p>
 
           {submitted ? (
@@ -89,18 +88,19 @@ export function EarlyAccessForm() {
               <CheckCircle2 className="w-5 h-5 text-[#28664A] shrink-0 mt-0.5" />
               <div className="flex-1">
                 <span className="font-sans font-semibold text-[14px] text-[#1A1C19] block">
-                  You&apos;re on the priority onboarding list.
+                  Congrats!! Early access Activated
                 </span>
                 <p className="font-sans text-[13px] text-[#566155] mt-1 leading-relaxed">
-                  We sent a confirmation to <strong className="text-[#1A1C19]">{email}</strong>. Our
-                  team will reach out within 24 hours with your onboarding details.
+                  Check your inbox at <strong className="text-[#1A1C19]">{email}</strong> — we&apos;ve
+                  sent instructions to upload your first questionnaire for 24-hour turnaround (100%
+                  free).
                 </p>
                 <button
                   type="button"
                   onClick={handleReset}
                   className="mt-3 text-[12px] font-mono text-[#28664A] hover:underline cursor-pointer focus:outline-none"
                 >
-                  ← Register another email
+                  ← Submit another email
                 </button>
               </div>
             </div>
@@ -136,14 +136,14 @@ export function EarlyAccessForm() {
                 {loading ? (
                   <RotateCw className="w-4 h-4 text-white animate-spin" />
                 ) : (
-                  <span>Get Early Access</span>
+                  <span>Run My Questionnaire</span>
                 )}
               </button>
             </form>
           )}
 
           <p className="font-sans text-[12.5px] text-[#696B66] mt-6">
-            For B2B teams that would rather close enterprise deals than fill spreadsheets.
+            Instant setup. No credit card required. Completed in 24 hours.
           </p>
         </div>
       </div>

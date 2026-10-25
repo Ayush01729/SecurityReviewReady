@@ -47,7 +47,7 @@ export function Navbar() {
             href="#early-access"
             className="inline-flex items-center justify-center h-[38px] px-4 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[13px] font-medium rounded border border-[#1B4D36] transition-colors shadow-[0_1px_3px_rgba(32,34,31,0.04)] focus:outline-none focus:ring-2 focus:ring-[#28664A]/20"
           >
-            Get Early Access
+            Run My Questionnaire
           </a>
         </div>
 
@@ -113,7 +113,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex w-full items-center justify-center h-[38px] px-4 bg-[#28664A] text-white text-[13px] font-medium rounded border border-[#1B4D36]"
             >
-              Get Early Access
+              Run My Questionnaire
             </a>
           </div>
         </div>
