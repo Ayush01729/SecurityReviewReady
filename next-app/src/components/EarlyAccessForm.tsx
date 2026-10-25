@@ -72,15 +72,16 @@ export function EarlyAccessForm() {
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="rounded-xl bg-[#F4F4EF] border border-[#28664A]/25 p-8 sm:p-12 max-w-3xl mx-auto text-center flex flex-col items-center shadow-sm">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DAE6D6] text-[#1A4C35] font-mono text-[11px] font-medium mb-4">
-            24-Hour Turnaround · 100% Free
+            Rolling Early Access Cohort
           </div>
 
           <h2 className="font-sans text-[28px] sm:text-[36px] md:text-[42px] font-medium text-[#1A1C19] tracking-[-0.025em] leading-[1.15] mb-3">
-            Drop your work email and we&apos;ll run your first questionnaire in 24 hours — 100% free.
+            Stop answering the same security questions from scratch.
           </h2>
 
           <p className="font-sans text-[16px] sm:text-[17px] text-[#566155] max-w-xl mb-8 leading-relaxed">
-            Stop answering the same security questions from scratch. We&apos;ll ingest your documentation and return your first completed questionnaire with verified citations.
+            Get your documentation working for you, so your next enterprise customer review takes
+            minutes instead of days.
           </p>
 
           {submitted ? (
@@ -143,7 +144,7 @@ export function EarlyAccessForm() {
           )}
 
           <p className="font-sans text-[12.5px] text-[#696B66] mt-6">
-            Instant setup. No credit card required. Completed in 24 hours.
+            For B2B teams that would rather close enterprise deals than fill spreadsheets.
           </p>
         </div>
       </div>
