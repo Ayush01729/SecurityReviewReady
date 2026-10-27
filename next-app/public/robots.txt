@@ -1,0 +1,9 @@
+# Allow all web crawlers including Googlebot & Googlebot-Image
+User-agent: *
+Allow: /
+
+# Specifically allow Googlebot-Image to index favicons and preview images
+User-agent: Googlebot-Image
+Allow: /
+
+Sitemap: https://securityreviewready.com/sitemap.xml

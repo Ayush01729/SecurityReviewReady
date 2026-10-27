@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "generate:og": "node scripts/generate-og.js",
+    "generate:favicons": "node scripts/generate-favicons.js",
     "start": "next start",
     "lint": "eslint",
     "deploy": "gh-pages -d out --dotfiles"
