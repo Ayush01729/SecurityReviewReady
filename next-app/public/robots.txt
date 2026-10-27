@@ -1,5 +1,9 @@
-# Allow all web crawlers including Googlebot & Googlebot-Image
+# Allow all web crawlers
 User-agent: *
+Allow: /
+
+# Specifically allow Twitterbot to scrape preview cards and favicons
+User-agent: Twitterbot
 Allow: /
 
 # Specifically allow Googlebot-Image to index favicons and preview images
