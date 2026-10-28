@@ -280,7 +280,7 @@ export function EvidenceInspector() {
                     <span className="font-medium text-[#1A1C19]">
                       {activeQuestion.sourceSection}
                     </span>{" "}
-                    — &ldquo;{activeQuestion.sourceQuote}&rdquo;
+                    : &ldquo;{activeQuestion.sourceQuote}&rdquo;
                   </div>
                 </div>
               </div>

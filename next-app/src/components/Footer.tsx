@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ShieldCheck, X } from "lucide-react";
 
 export function Footer() {
@@ -10,72 +11,94 @@ export function Footer() {
     <footer className="py-12 border-t border-[#E7E5DE] bg-white text-[#566155]">
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          {/* Brand Column (5 cols) */}
-          <div className="md:col-span-5 flex flex-col gap-3">
-            <div className="flex items-center gap-2.5">
+          {/* Brand Column (4 cols) */}
+          <div className="md:col-span-4 flex flex-col gap-3">
+            <Link href="/" className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded bg-[#28664A] text-white flex items-center justify-center border border-[#1B4D36]">
                 <ShieldCheck className="w-4 h-4 text-white stroke-[2.2]" />
               </div>
               <span className="font-sans text-[16px] font-semibold text-[#1A1C19] tracking-tight">
                 Security Review Ready
               </span>
-            </div>
+            </Link>
             <p className="font-sans text-[13.5px] text-[#566155] max-w-sm leading-relaxed">
               A simpler, dependable way to handle customer security reviews. Grounded in your verified
               evidence, approved by your team.
             </p>
           </div>
 
-          {/* Links Columns (7 cols) */}
-          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 text-[13px]">
+          {/* Links Columns (8 cols) */}
+          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-[13px]">
+            {/* Product */}
             <div className="flex flex-col gap-2.5">
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
                 Product
               </span>
-              <a href="#how-it-works" className="hover:text-[#1A1C19] transition-colors">
+              <Link href="/#how-it-works" className="hover:text-[#1A1C19] transition-colors">
                 How It Works
-              </a>
-              <a href="#parallel-pipeline" className="hover:text-[#1A1C19] transition-colors">
-                Parallel Engine
-              </a>
-              <a href="#inspector" className="hover:text-[#1A1C19] transition-colors">
-                Evidence Inspector
-              </a>
-              <a href="#calculator" className="hover:text-[#1A1C19] transition-colors">
+              </Link>
+              <Link href="/security" className="hover:text-[#1A1C19] transition-colors">
+                Security & Governance
+              </Link>
+              <Link href="/#calculator" className="hover:text-[#1A1C19] transition-colors">
                 ROI Calculator
-              </a>
-              <a href="#security" className="hover:text-[#1A1C19] transition-colors">
-                Security & Privacy
-              </a>
-              <a href="#faq" className="hover:text-[#1A1C19] transition-colors">
+              </Link>
+              <Link href="/#faq" className="hover:text-[#1A1C19] transition-colors">
                 FAQ
-              </a>
+              </Link>
             </div>
 
+            {/* Resources */}
             <div className="flex flex-col gap-2.5">
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
-                Standards
+                Resources
               </span>
-              <span className="text-[#696B66]">SOC 2 Type II</span>
-              <span className="text-[#696B66]">CAIQ v4.0.2</span>
-              <span className="text-[#696B66]">ISO/IEC 27001</span>
-              <span className="text-[#696B66]">HIPAA Security</span>
-              <span className="text-[#696B66]">NIST 800-53</span>
+              <Link href="/resources" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
+                All Resources
+              </Link>
+              <Link href="/resources/vendor-security-questionnaire-guide" className="hover:text-[#1A1C19] transition-colors">
+                Questionnaire Guide
+              </Link>
+              <Link href="/resources/caiq-v4-guide" className="hover:text-[#1A1C19] transition-colors">
+                CAIQ v4 Guide
+              </Link>
+              <Link href="/resources/sig-vs-sig-lite" className="hover:text-[#1A1C19] transition-colors">
+                SIG vs SIG Lite
+              </Link>
+              <Link href="/resources/how-to-answer-security-questionnaires-fast" className="hover:text-[#1A1C19] transition-colors">
+                Fast Response Guide
+              </Link>
             </div>
 
+            {/* Comparisons */}
+            <div className="flex flex-col gap-2.5">
+              <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
+                Compare
+              </span>
+              <Link href="/compare" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
+                Compare Hub
+              </Link>
+              <Link href="/compare/conveyor-alternative" className="hover:text-[#1A1C19] transition-colors">
+                vs Conveyor
+              </Link>
+              <Link href="/compare/whistic-alternative" className="hover:text-[#1A1C19] transition-colors">
+                vs Whistic
+              </Link>
+            </div>
+
+            {/* Contact & Standards */}
             <div className="flex flex-col gap-2.5">
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
                 Contact
               </span>
               <a
-                href="mailto:ayush@securityreviewready.com"
+                href="mailto:team@securityreviewready.com"
                 className="hover:text-[#1A1C19] transition-colors font-mono text-[12px]"
               >
-                ayush@securityreviewready.com
+                team@securityreviewready.com
               </a>
-              {/* <span className="text-[#696B66] text-[12px]">San Francisco, CA</span> */}
               <div className="mt-2 pt-2 border-t border-[#E7E5DE] text-[11px] text-[#074E34] font-medium">
-                SOC 2 Baseline Compliant
+                SOC 2 & CAIQ Compliant
               </div>
             </div>
           </div>

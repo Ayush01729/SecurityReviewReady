@@ -24,40 +24,88 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
     background-color: #faf9f6;
     color: #1a1c19;
   }
-  
+
   ::selection {
     background-color: #dae6d6;
     color: #074e34;
   }
 }
 
+/* Smooth modern page transitions & GPU compositor acceleration */
+.smooth-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes smoothFadeIn {
+  from {
+    opacity: 0.9;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: smoothFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Animations for Engine Ingestion & Dispatch */
 @keyframes dashStream {
-  to { stroke-dashoffset: -40; }
+  to {
+    stroke-dashoffset: -40;
+  }
 }
+
 @keyframes pulseGlow {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.06); }
+
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
 }
+
 @keyframes radarRing {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .stream-line-in {
   stroke-dasharray: 6 6;
   animation: dashStream 1.8s linear infinite;
+  will-change: stroke-dashoffset;
 }
+
 .stream-line-out {
   stroke-dasharray: 6 6;
   animation: dashStream 1.4s linear infinite;
+  will-change: stroke-dashoffset;
 }
+
 .engine-pulse {
   animation: pulseGlow 3s ease-in-out infinite;
+  will-change: transform, opacity;
 }
+
 .radar-ring {
   animation: radarRing 12s linear infinite;
+  will-change: transform;
 }

@@ -47,7 +47,7 @@ const FAQS: FaqItem[] = [
   {
     question: "How can I get my first questionnaire run?",
     answer:
-      "Drop your work email in the form above. You will immediately receive instructions to upload your security documentation and first client questionnaire. We'll parse your evidence and return your completed, source-cited responses in under 24 hours — 100% free.",
+      "Drop your work email in the form above. You will immediately receive instructions to upload your security documentation and first client questionnaire. We'll parse your evidence and return your completed, source-cited responses in under 24 hours (100% free).",
   },
 ];
 

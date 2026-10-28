@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Security Review Ready — Security Questionnaire Engine",
+  title: "Security Review Ready: Security Questionnaire Engine",
   description:
     "Security Review Ready is an AI security questionnaire engine for B2B SaaS teams. Complete customer security reviews faster with 100% verified source citations.",
   keywords: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Security Review Ready — Security Questionnaire Engine",
+    title: "Security Review Ready: Security Questionnaire Engine",
     description:
       "Stop putting deals on hold for repetitive questionnaires. 100% cited source evidence and human-in-the-loop review.",
     url: siteUrl,
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Security Review Ready — Security Questionnaire Engine for B2B Teams",
+        alt: "Security Review Ready: Security Questionnaire Engine for B2B Teams",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Security Review Ready — Security Questionnaire Engine",
+    title: "Security Review Ready: Security Questionnaire Engine",
     description:
       "Stop putting deals on hold for repetitive questionnaires. 100% cited source evidence and human-in-the-loop review.",
     images: ["/og-image.png"],
@@ -95,20 +95,144 @@ const jsonLd = {
         "AI security questionnaire engine for B2B SaaS teams to complete customer security reviews faster with verified citations.",
     },
     {
+      "@type": "Organization",
+      "@id": "https://securityreviewready.com/#organization",
+      "name": "Security Review Ready",
+      "url": "https://securityreviewready.com/",
+      "logo": "https://securityreviewready.com/icon.svg",
+      "description":
+        "Enterprise vendor security assessment automation and questionnaire workspace for B2B SaaS teams.",
+      "email": "team@securityreviewready.com",
+      "sameAs": [
+        "https://twitter.com/securityreviewready",
+        "https://linkedin.com/company/securityreviewready",
+        "https://github.com/securityreviewready"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "team@securityreviewready.com",
+        "url": "https://securityreviewready.com/#early-access"
+      }
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://securityreviewready.com/#software",
       "name": "Security Review Ready",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
+      "applicationSubCategory": "Security Questionnaire Automation",
+      "operatingSystem": "Web, Cloud",
       "url": "https://securityreviewready.com/",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
+        "name": "Early Access Pilot",
+        "availability": "https://schema.org/InStock"
       },
+      "featureList": [
+        "100% Verified Source Evidence Citations",
+        "Human-in-the-Loop Review & One-Click Approval",
+        "Multi-Tab Complex Excel Formula Preservation",
+        "Continuous Auto-Sync for SOC 2, ISO 27001, and Trust Centers",
+        "Vendor Portal Helper for OneTrust, Whistic, and ServiceNow"
+      ],
       "description":
         "Ingests security policies, live trust center URLs, and SOC 2 audits to continuously fill customer security questionnaires for enterprise buyers.",
     },
+    {
+      "@type": "FAQPage",
+      "@id": "https://securityreviewready.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Security Review Ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Security Review Ready is a purpose-built workspace that helps B2B SaaS teams complete customer security reviews faster. It ingests your verified security documentation (policies, SOC 2 reports, trust centers) and generates accurate, source-cited responses to incoming enterprise questionnaires."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You upload or link your security documentation once. When a prospective enterprise customer sends a questionnaire (spreadsheet, portal, or form), Security Review Ready matches each requirement against your verified evidence, drafts grounded responses, and points your reviewer directly to the exact source paragraph with page numbers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it automatically send answers to customers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We enforce a strict 'human-in-the-loop' safeguard. Suggested answers remain drafts until someone from your team reviews and approves them. You never risk sending an unverified claim or unapproved commitment to an enterprise buyer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents and sources can I connect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can connect public trust center URLs, internal security policies (PDF, Markdown, Word), SOC 2 Type II audit reports, ISO 27001 certifications, CAIQ v4 spreadsheets, and previously completed vendor questionnaires."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the answers reviewed by a human?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, always. The platform is designed around rapid human verification. Instead of writing from scratch or searching multiple tabs, your reviewer simply validates the grounded citation and approves with a single click."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my company's information secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We enforce strict multi-tenant data isolation, AES-256 encryption at rest, TLS 1.3 in transit, and role-based permissions. Your sensitive security policies are strictly never used to train public or foundational third-party AI models."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is this built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Early-stage to growth B2B SaaS teams (seed to Series B) selling into mid-market and enterprise accounts where procurement requires formal vendor risk assessments (CAIQ, SIG, or custom RFPs)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I get my first questionnaire run?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Drop your work email in the form on our site. You will immediately receive instructions to upload your security documentation and first client questionnaire. We'll parse your evidence and return your completed, source-cited responses in under 24 hours (100% free)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://securityreviewready.com/#howto",
+      "name": "How to Complete Enterprise Security Questionnaires with Security Review Ready",
+      "description": "Streamline vendor security reviews from days to minutes with verified citations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Index Verified Evidence",
+          "text": "Upload SOC 2 Type II audits, ISO 27001 policies, and trust center documentation into your private workspace."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Ingest Customer Questionnaire",
+          "text": "Upload the buyer's Excel spreadsheet (SIG, CAIQ, or bespoke portal questions) to trigger automated evidence matching."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Human-in-the-Loop Review & Export",
+          "text": "Validate drafted answers against exact cited paragraphs with page numbers, approve with one click, and export without broken formulas."
+        }
+      ]
+    }
   ],
 };
 
@@ -120,6 +244,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${geist.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM context and documentation" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

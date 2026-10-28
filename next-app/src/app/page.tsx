@@ -18,7 +18,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-[#FAF9F6]">
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow page-transition">
         {/* Hero Section */}
         <Hero />
 

@@ -92,7 +92,7 @@ export function Hero() {
                     Congrats!! Early access Activated
                   </span>
                   <p className="font-sans text-[13px] text-[#566155] mt-1 leading-relaxed">
-                    Check your inbox at <strong className="text-[#1A1C19]">{email}</strong> — we&apos;ve
+                    Check your inbox at <strong className="text-[#1A1C19]">{email}</strong>: we&apos;ve
                     sent instructions to upload your first questionnaire for 24-hour turnaround (100%
                     free).
                   </p>
@@ -108,7 +108,7 @@ export function Hero() {
             ) : (
               <div className="flex flex-col gap-2.5">
                 <p className="font-sans text-[14.5px] sm:text-[15.5px] font-semibold text-[#1A1C19] leading-snug">
-                  Drop your work email and we&apos;ll run your first client security questionnaire in 24 hours — 100% free.
+                  Drop your work email and we&apos;ll run your first client security questionnaire in 24 hours (100% free).
                 </p>
                 <form onSubmit={handleSubmit} className="w-full">
                   <div className="p-1.5 rounded-xl bg-white border border-[#E7E5DE] focus-within:border-[#28664A] focus-within:ring-2 focus-within:ring-[#28664A]/15 shadow-[0_2px_8px_rgba(32,34,31,0.06)] transition-all flex flex-col sm:flex-row items-stretch sm:items-center gap-2">

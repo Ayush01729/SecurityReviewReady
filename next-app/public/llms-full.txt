@@ -1,0 +1,32 @@
+# Security Review Ready: Full LLM Context & Specifications
+
+> Comprehensive product context, architecture, supported frameworks, data security standards, and workflow specifications for Security Review Ready (https://securityreviewready.com).
+
+## 1. What is Security Review Ready?
+Security Review Ready is an AI-assisted security review workspace designed for B2B SaaS engineering, compliance, and sales teams. Enterprise buyers frequently require prospective software vendors to complete extensive, multi-hundred-question security due diligence questionnaires before closing a contract. 
+
+Security Review Ready ingests verified organizational policies, SOC 2 Type II audit reports, ISO certifications, and trust centers, allowing teams to complete questionnaires in minutes while maintaining complete human verification and auditability.
+
+## 2. Technical Architecture & Citation Grounding
+- **Grounded Retrieval (RAG):** When an incoming question is ingested, the engine queries the indexed compliance repository using dense semantic search and lexical matching.
+- **Strict Hallucination Prevention:** The model is constrained to generate claims only if an explicit source document is cited. Every response is paired with:
+  1. Source document name (e.g., "SOC 2 Type II Audit Report 2025.pdf")
+  2. Exact section and paragraph excerpt
+  3. Page number reference
+- **Human-in-the-Loop Safeguard:** Suggested responses are presented as editable drafts. Enterprise teams approve or modify answers before exporting to the customer's preferred format.
+
+## 3. Supported Formats & Workflows
+- **Spreadsheets:** Native Microsoft Excel (.xlsx, .xls), CSV, and Google Sheets, preserving formulas, cross-sheet references, and dropdowns.
+- **Portals:** Vendor risk portals (OneTrust, ServiceNow, Whistic, Loopio, Conveyor) via browser extensions and clipboard helpers.
+- **Document Exporters:** Standardized exports with audit trail metadata.
+
+## 4. Security & Compliance Posture
+- **Encryption:** AES-256 for all stored artifacts; TLS 1.3 for data in transit.
+- **Zero Training Guarantee:** Customer security policies, SOC 2 reports, and answers are never used to train public or foundational third-party AI models.
+- **Access Control:** Multi-tenant database isolation with role-based access control (RBAC).
+
+## 5. Contact & Company Information
+- **Website:** https://securityreviewready.com
+- **Category:** Cybersecurity / Enterprise Compliance Automation
+- **Contact:** team@securityreviewready.com
+

@@ -92,7 +92,7 @@ export function EarlyAccessForm() {
                   Congrats!! Early access Activated
                 </span>
                 <p className="font-sans text-[13px] text-[#566155] mt-1 leading-relaxed">
-                  Check your inbox at <strong className="text-[#1A1C19]">{email}</strong> — we&apos;ve
+                  Check your inbox at <strong className="text-[#1A1C19]">{email}</strong>: we&apos;ve
                   sent instructions to upload your first questionnaire for 24-hour turnaround (100%
                   free).
                 </p>

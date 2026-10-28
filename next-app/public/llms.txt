@@ -1,0 +1,25 @@
+# Security Review Ready
+
+> Security Review Ready is an AI-powered security questionnaire automation engine for B2B SaaS teams. It ingests verified compliance documents (SOC 2 Type II reports, ISO 27001 certifications, internal security policies, and live trust center URLs) and drafts accurate, 100% source-cited responses to customer security questionnaires (CAIQ v4, SIG, SIG Lite, VSA, and custom Excel workbooks) with human-in-the-loop review safeguards.
+
+## Core Capabilities
+- [Questionnaire Automation](https://securityreviewready.com/#how-it-works): Parses incoming spreadsheets, vendor portals, and web forms to auto-fill answers.
+- [Source Citation Engine](https://securityreviewready.com/#parallel-pipeline): Every generated answer includes exact paragraph, document name, and page number citations to eliminate hallucinations.
+- [Multi-Tab Excel Preservation](https://securityreviewready.com/#calculator): Preserves formulas, dropdown validation, and formatting in complex enterprise workbooks.
+- [Human-in-the-Loop Verification](https://securityreviewready.com/#how-it-works): Answers remain drafts until an internal reviewer approves them with one click.
+- [Enterprise Security & Governance](https://securityreviewready.com/security): AES-256 encryption at rest, TLS 1.3 in transit, multi-tenant isolation, and a strict guarantee that customer data is never used to train public AI models.
+
+## Detailed Guides and Framework Specifications
+- [Resource Hub](https://securityreviewready.com/resources): Index of guides, playbooks, and templates.
+- [Vendor Security Questionnaire Guide](https://securityreviewready.com/resources/vendor-security-questionnaire-guide): Comprehensive 30-question checklist, control domains, and vendor tiering rubrics.
+- [CAIQ v4 Framework Guide](https://securityreviewready.com/resources/caiq-v4-guide): Cloud Security Alliance CCM 4.0 mapping, v3 vs v4 differences, and response strategies.
+- [SIG vs SIG Lite Guide](https://securityreviewready.com/resources/sig-vs-sig-lite): Shared Assessments Standardized Information Gathering comparison and domain overview.
+- [Fast Questionnaire Playbook](https://securityreviewready.com/resources/how-to-answer-security-questionnaires-fast): 5-step playbook to complete enterprise security reviews in minutes.
+
+## Software Comparisons
+- [Comparison Hub](https://securityreviewready.com/compare): Side-by-side evaluation against legacy tools.
+- [Conveyor Alternative](https://securityreviewready.com/compare/conveyor-alternative): Why B2B SaaS teams choose Security Review Ready over Conveyor.
+- [Whistic Alternative](https://securityreviewready.com/compare/whistic-alternative): Open evidence model versus proprietary vendor network profiles.
+
+## Full Documentation
+- [Full Context Specification](https://securityreviewready.com/llms-full.txt): Complete architecture, data handling, and framework specifications.

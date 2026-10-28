@@ -1,13 +1,38 @@
-# Allow all web crawlers
+# robots.txt for securityreviewready.com
+
 User-agent: *
 Allow: /
 
-# Specifically allow Twitterbot to scrape preview cards and favicons
+# Specifically allow search and citation crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: Twitterbot
 Allow: /
 
-# Specifically allow Googlebot-Image to index favicons and preview images
 User-agent: Googlebot-Image
 Allow: /
+
+# AI Search & Retrieval Crawlers (Allowed for search indexing and answers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Content-Signal preference declaration
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 Sitemap: https://securityreviewready.com/sitemap.xml
