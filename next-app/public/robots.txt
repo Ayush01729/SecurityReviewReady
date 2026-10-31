@@ -20,6 +20,9 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Claude-SearchBot
 Allow: /
 
@@ -34,5 +37,8 @@ Allow: /
 
 # Content-Signal preference declaration
 Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# Agentic Resource Discovery
+Agentmap: https://securityreviewready.com/.well-known/ard.json
 
 Sitemap: https://securityreviewready.com/sitemap.xml

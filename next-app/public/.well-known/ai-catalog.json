@@ -1,25 +1,59 @@
 {
-  "$schema": "https://json-schemas.dev/ai-catalog.json",
-  "name": "Security Review Ready",
-  "description": "AI security questionnaire automation engine for B2B SaaS teams to complete customer vendor security reviews faster with verified source citations.",
-  "url": "https://securityreviewready.com",
-  "contact": {
-    "email": "team@securityreviewready.com",
-    "url": "https://securityreviewready.com"
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Security Review Ready",
+    "documentationUrl": "https://securityreviewready.com/llms.txt",
+    "logoUrl": "https://securityreviewready.com/icon-192.png"
   },
-  "capabilities": [
+  "entries": [
     {
-      "name": "security_questionnaire_answering",
-      "description": "Automatically matches customer security questions against verified SOC 2 reports and security policies with exact paragraph citations."
+      "identifier": "urn:air:securityreviewready.com:service:questionnaire-engine",
+      "displayName": "Security Review Ready Questionnaire Engine",
+      "type": "text/markdown",
+      "url": "https://securityreviewready.com/llms.txt",
+      "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes vendor assessments with verified source citations.",
+      "tags": [
+        "security-questionnaire",
+        "soc-2",
+        "compliance",
+        "ai-agent",
+        "vendor-assessment"
+      ],
+      "capabilities": [
+        "questionnaire_answering",
+        "evidence_citation",
+        "excel_formula_preservation"
+      ],
+      "representativeQueries": [
+        "automate security questionnaire with verified citations",
+        "how does security review ready work",
+        "complete enterprise vendor security assessment"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-31T00:00:00Z"
     },
     {
-      "name": "excel_formula_preservation",
-      "description": "Parses and outputs multi-tab Excel security assessment workbooks without breaking raw formulas or dropdown validation."
+      "identifier": "urn:air:securityreviewready.com:docs:full-context",
+      "displayName": "Security Review Ready Full Documentation",
+      "type": "text/markdown",
+      "url": "https://securityreviewready.com/llms-full.txt",
+      "description": "Comprehensive agent context, system specifications, and compliance architecture.",
+      "tags": [
+        "documentation",
+        "specifications",
+        "compliance-engine"
+      ],
+      "capabilities": [
+        "caiq_v4_mapping",
+        "sig_lite_assessment",
+        "audit_readiness"
+      ],
+      "representativeQueries": [
+        "security review ready full system documentation",
+        "supported questionnaire formats and compliance frameworks"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-31T00:00:00Z"
     }
-  ],
-  "documentation": {
-    "llms_txt": "https://securityreviewready.com/llms.txt",
-    "llms_full_txt": "https://securityreviewready.com/llms-full.txt"
-  }
+  ]
 }
-

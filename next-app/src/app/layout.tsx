@@ -282,6 +282,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${geist.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <head>
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM context and documentation" />
+        <link rel="ard" href="/.well-known/ard.json" />
+        <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

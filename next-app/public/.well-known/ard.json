@@ -1,0 +1,60 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Security Review Ready",
+    "documentationUrl": "https://securityreviewready.com/llms.txt",
+    "logoUrl": "https://securityreviewready.com/icon-192.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:securityreviewready.com:service:questionnaire-engine",
+      "displayName": "Security Review Ready Questionnaire Engine",
+      "type": "text/markdown",
+      "url": "https://securityreviewready.com/llms.txt",
+      "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes vendor assessments with verified source citations.",
+      "tags": [
+        "security-questionnaire",
+        "soc-2",
+        "compliance",
+        "ai-agent",
+        "vendor-assessment"
+      ],
+      "capabilities": [
+        "questionnaire_answering",
+        "evidence_citation",
+        "excel_formula_preservation"
+      ],
+      "representativeQueries": [
+        "automate security questionnaire with verified citations",
+        "how does security review ready work",
+        "complete enterprise vendor security assessment"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-31T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:securityreviewready.com:docs:full-context",
+      "displayName": "Security Review Ready Full Documentation",
+      "type": "text/markdown",
+      "url": "https://securityreviewready.com/llms-full.txt",
+      "description": "Comprehensive agent context, system specifications, and compliance architecture.",
+      "tags": [
+        "documentation",
+        "specifications",
+        "compliance-engine"
+      ],
+      "capabilities": [
+        "caiq_v4_mapping",
+        "sig_lite_assessment",
+        "audit_readiness"
+      ],
+      "representativeQueries": [
+        "security review ready full system documentation",
+        "supported questionnaire formats and compliance frameworks"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-31T00:00:00Z"
+    }
+  ]
+}
+
