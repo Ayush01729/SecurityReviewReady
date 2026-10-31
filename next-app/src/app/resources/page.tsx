@@ -43,6 +43,42 @@ const breadcrumbSchema = {
 
 const ARTICLES = [
   {
+    slug: "security-questionnaire-automation",
+    title: "Security Questionnaire Automation: How Modern SaaS Teams Cut Response Time by 90%",
+    description:
+      "A comprehensive technical guide to eliminating vendor risk bottlenecks, preserving multi-tab Excel calculation formulas, and scaling customer reviews with verified citations.",
+    tag: "Automation & Engineering",
+    readTime: "10 min read",
+    highlight: "Covers 3 generations of questionnaire tooling",
+  },
+  {
+    slug: "best-security-questionnaire-automation-software",
+    title: "Best Security Questionnaire Automation Software & Tools (2026 Comparison)",
+    description:
+      "Objective evaluation of leading platforms including Security Review Ready, Conveyor, Whistic, Loopio, and Responsive across citation fidelity, macro retention, and pricing.",
+    tag: "Buyer's Guide & Tools",
+    readTime: "11 min read",
+    highlight: "Side-by-side feature comparison matrix",
+  },
+  {
+    slug: "ai-agents-for-security-questionnaires",
+    title: "AI Agents for Security Questionnaires: Grounded Citations vs LLM Hallucinations",
+    description:
+      "Why naive ChatGPT prompts create contractual breach liabilities on vendor assessments, and how deterministic RAG agent pipelines ensure 100% audit-proof evidence citations.",
+    tag: "AI Architecture & Risk",
+    readTime: "9 min read",
+    highlight: "Hallucination prevention & tenant security",
+  },
+  {
+    slug: "security-questionnaire-examples",
+    title: "15 IT Security Questionnaire Examples and How Enterprise Teams Answer Them",
+    description:
+      "Real-world breakdowns of 15 common inquiries across encryption, access control, penetration testing, and disaster recovery with auditor intent and verified responses.",
+    tag: "Control Matrix Reference",
+    readTime: "12 min read",
+    highlight: "15 audit-proof answer templates",
+  },
+  {
     slug: "vendor-security-questionnaire-guide",
     title: "The Complete Guide to Vendor Security Questionnaires: Checklist & 30-Question Template",
     description:

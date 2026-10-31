@@ -227,7 +227,7 @@ export default function SecurityPage() {
                   We welcome responsible disclosure from security researchers and customer compliance teams. If you discover a vulnerability or have a security assessment question, contact our security lead directly.
                 </p>
                 <div className="font-mono text-xs text-[#074E34] bg-white px-3 py-2 rounded border border-[#E7E5DE] inline-block">
-                  Security Contact: team@securityreviewready.com
+                  Security Contact: ayush@securityreviewready.com
                 </div>
               </div>
             </div>

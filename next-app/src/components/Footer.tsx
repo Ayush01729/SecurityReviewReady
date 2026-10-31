@@ -34,8 +34,11 @@ export function Footer() {
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
                 Product
               </span>
-              <Link href="/#how-it-works" className="hover:text-[#1A1C19] transition-colors">
+              <Link href="/how-it-works" className="hover:text-[#1A1C19] transition-colors">
                 How It Works
+              </Link>
+              <Link href="/demo" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
+                Book a Demo
               </Link>
               <Link href="/security" className="hover:text-[#1A1C19] transition-colors">
                 Security & Governance
@@ -54,19 +57,19 @@ export function Footer() {
                 Resources
               </span>
               <Link href="/resources" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
-                All Resources
+                All Resources & Guides
+              </Link>
+              <Link href="/resources/security-questionnaire-automation" className="hover:text-[#1A1C19] transition-colors">
+                Questionnaire Automation
+              </Link>
+              <Link href="/resources/best-security-questionnaire-automation-software" className="hover:text-[#1A1C19] transition-colors">
+                Top Automation Software
+              </Link>
+              <Link href="/resources/security-questionnaire-examples" className="hover:text-[#1A1C19] transition-colors">
+                15 Real Examples & Answers
               </Link>
               <Link href="/resources/vendor-security-questionnaire-guide" className="hover:text-[#1A1C19] transition-colors">
-                Questionnaire Guide
-              </Link>
-              <Link href="/resources/caiq-v4-guide" className="hover:text-[#1A1C19] transition-colors">
-                CAIQ v4 Guide
-              </Link>
-              <Link href="/resources/sig-vs-sig-lite" className="hover:text-[#1A1C19] transition-colors">
-                SIG vs SIG Lite
-              </Link>
-              <Link href="/resources/how-to-answer-security-questionnaires-fast" className="hover:text-[#1A1C19] transition-colors">
-                Fast Response Guide
+                Vendor Questionnaire Guide
               </Link>
             </div>
 
@@ -92,10 +95,10 @@ export function Footer() {
                 Contact
               </span>
               <a
-                href="mailto:team@securityreviewready.com"
+                href="mailto:ayush@securityreviewready.com"
                 className="hover:text-[#1A1C19] transition-colors font-mono text-[12px]"
               >
-                team@securityreviewready.com
+                ayush@securityreviewready.com
               </a>
               <div className="mt-2 pt-2 border-t border-[#E7E5DE] text-[11px] text-[#074E34] font-medium">
                 SOC 2 & CAIQ Compliant

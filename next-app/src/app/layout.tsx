@@ -93,6 +93,43 @@ const jsonLd = {
       "alternateName": ["SecurityReviewReady", "SRR"],
       "description":
         "AI security questionnaire engine for B2B SaaS teams to complete customer security reviews faster with verified citations.",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "@id": "https://securityreviewready.com/how-it-works",
+          "url": "https://securityreviewready.com/how-it-works",
+          "name": "How It Works",
+          "description": "3-stage AI security questionnaire engine architecture, evidence ingestion, and human verification."
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://securityreviewready.com/demo",
+          "url": "https://securityreviewready.com/demo",
+          "name": "Book a Demo",
+          "description": "Schedule a personalized 15-minute walkthrough of the Security Review Ready evidence citation engine."
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://securityreviewready.com/resources",
+          "url": "https://securityreviewready.com/resources",
+          "name": "Resources and Guides",
+          "description": "Security review playbooks, CAIQ v4 checklists, and vendor questionnaire templates."
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://securityreviewready.com/compare",
+          "url": "https://securityreviewready.com/compare",
+          "name": "Compare Alternatives",
+          "description": "Side-by-side feature and citation accuracy comparisons against Conveyor and Whistic."
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://securityreviewready.com/security",
+          "url": "https://securityreviewready.com/security",
+          "name": "Security and Governance",
+          "description": "SOC 2 Type II audit, AES-256 KMS encryption, and zero public AI model training architecture."
+        }
+      ]
     },
     {
       "@type": "Organization",
@@ -102,7 +139,7 @@ const jsonLd = {
       "logo": "https://securityreviewready.com/icon.svg",
       "description":
         "Enterprise vendor security assessment automation and questionnaire workspace for B2B SaaS teams.",
-      "email": "team@securityreviewready.com",
+      "email": "ayush@securityreviewready.com",
       "sameAs": [
         "https://twitter.com/securityreviewready",
         "https://linkedin.com/company/securityreviewready",
@@ -111,7 +148,7 @@ const jsonLd = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "team@securityreviewready.com",
+        "email": "ayush@securityreviewready.com",
         "url": "https://securityreviewready.com/#early-access"
       }
     },
