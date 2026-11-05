@@ -287,9 +287,9 @@ export function EnginePipelineVisual() {
           />
         </svg>
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch min-w-0">
           {/* COLUMN 1: MULTI-SOURCE INGESTION */}
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-3">
+          <div className="lg:col-span-4 min-w-0 flex flex-col justify-between space-y-3">
             <div className="flex items-center justify-between pb-2 border-b border-[#E7E5DE]">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#28664A]"></span>
@@ -360,7 +360,7 @@ export function EnginePipelineVisual() {
           </div>
 
           {/* COLUMN 2: EVIDENCE MATCHING ENGINE */}
-          <div className="lg:col-span-4 flex flex-col justify-center items-center py-4 lg:py-0">
+          <div className="lg:col-span-4 min-w-0 flex flex-col justify-center items-center py-4 lg:py-0">
             <div className="w-full h-full rounded-xl border border-[#28664A]/30 bg-[#F4F4EF] p-5 flex flex-col justify-between relative shadow-md overflow-hidden">
               {/* Radar Background animation */}
               <div className="absolute -inset-10 flex items-center justify-center pointer-events-none opacity-20">
@@ -437,7 +437,7 @@ export function EnginePipelineVisual() {
           </div>
 
           {/* COLUMN 3: PARALLEL QUESTIONNAIRE QUEUES */}
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-3">
+          <div className="lg:col-span-4 min-w-0 flex flex-col justify-between space-y-3">
             <div className="flex items-center justify-between pb-2 border-b border-[#E7E5DE]">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#28664A]"></span>
@@ -450,24 +450,24 @@ export function EnginePipelineVisual() {
               </span>
             </div>
 
-            <div className="space-y-2.5 flex-grow flex flex-col justify-between">
+            <div className="space-y-2.5 flex-grow flex flex-col justify-between min-w-0">
               {vendors.map((v) => (
                 <div
                   key={v.id}
-                  className="p-3 rounded-lg border border-[#E7E5DE] bg-white shadow-sm hover:border-[#28664A]/80 transition-all duration-200"
+                  className="p-3 rounded-lg border border-[#E7E5DE] bg-white shadow-sm hover:border-[#28664A]/80 transition-all duration-200 min-w-0 overflow-hidden"
                 >
                   <div className="flex items-center justify-between mb-1.5">
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#28664A]"></span>
-                      <span className="font-sans text-[13px] font-semibold text-[#1A1C19]">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <span className="w-2 h-2 rounded-full bg-[#28664A] shrink-0"></span>
+                      <span className="font-sans text-[13px] font-semibold text-[#1A1C19] truncate">
                         {v.name}
                       </span>
                     </div>
-                    <span className="font-mono text-[11px] text-[#1A4C35] font-medium">
+                    <span className="font-mono text-[11px] text-[#1A4C35] font-medium shrink-0 ml-2">
                       {v.percent}% filled
                     </span>
                   </div>
-                  <p className="font-sans text-[12px] text-[#566155] mb-2 truncate">
+                  <p className="font-sans text-[12px] text-[#566155] mb-2 truncate min-w-0 block">
                     &ldquo;{v.sampleQuestion}&rdquo; →{" "}
                     <span className="text-[#074E34] font-medium">{v.sampleAnswer}</span>
                   </p>

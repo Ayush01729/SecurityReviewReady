@@ -69,9 +69,9 @@ export function FrameworkMatrix() {
         </div>
 
         {/* Tabular Matrix */}
-        <div className="rounded-lg border border-[#E7E5DE] bg-white overflow-hidden shadow-[0_1px_3px_rgba(32,34,31,0.04)]">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+        <div className="rounded-lg border border-[#E7E5DE] bg-white overflow-hidden shadow-[0_1px_3px_rgba(32,34,31,0.04)] w-full max-w-full">
+          <div className="overflow-x-auto w-full max-w-full">
+            <table className="w-full min-w-[560px] text-left border-collapse">
               <thead>
                 <tr className="border-b border-[#E7E5DE] bg-[#F4F4EF] text-[12px] font-mono text-[#566155]">
                   <th className="py-3 px-5 font-semibold">Framework / Standard</th>

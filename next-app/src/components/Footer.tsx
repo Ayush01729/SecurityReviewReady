@@ -95,10 +95,10 @@ export function Footer() {
                 Contact
               </span>
               <a
-                href="mailto:ayush@securityreviewready.com"
+                href="mailto:team@securityreviewready.com"
                 className="hover:text-[#1A1C19] transition-colors font-mono text-[12px]"
               >
-                ayush@securityreviewready.com
+                team@securityreviewready.com
               </a>
               <div className="mt-2 pt-2 border-t border-[#E7E5DE] text-[11px] text-[#074E34] font-medium">
                 SOC 2 & CAIQ Compliant

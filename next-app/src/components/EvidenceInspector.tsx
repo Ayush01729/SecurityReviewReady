@@ -120,9 +120,9 @@ export function EvidenceInspector() {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#E2E3DE]"></span>
               </div>
               <div className="h-4 w-px bg-[#E2E3DE] mx-1"></div>
-              <div className="flex items-center gap-1.5 text-[#566155] text-[12px]">
-                <Shield className="w-3.5 h-3.5 text-[#28664A]" />
-                <span className="text-[#1A1C19] font-medium">
+              <div className="flex items-center gap-1.5 text-[#566155] text-[12px] min-w-0">
+                <Shield className="w-3.5 h-3.5 text-[#28664A] shrink-0" />
+                <span className="text-[#1A1C19] font-medium truncate">
                   Verified Evidence & Human Approval Inspector
                 </span>
               </div>

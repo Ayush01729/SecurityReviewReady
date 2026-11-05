@@ -139,7 +139,7 @@ const jsonLd = {
       "logo": "https://securityreviewready.com/icon.svg",
       "description":
         "Enterprise vendor security assessment automation and questionnaire workspace for B2B SaaS teams.",
-      "email": "ayush@securityreviewready.com",
+      "email": "team@securityreviewready.com",
       "sameAs": [
         "https://twitter.com/securityreviewready",
         "https://linkedin.com/company/securityreviewready",
@@ -148,7 +148,7 @@ const jsonLd = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "ayush@securityreviewready.com",
+        "email": "team@securityreviewready.com",
         "url": "https://securityreviewready.com/#early-access"
       }
     },

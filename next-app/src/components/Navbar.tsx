@@ -9,13 +9,13 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-[#E7E5DE] smooth-gpu">
-      <div className="max-w-[1240px] mx-auto px-3.5 sm:px-6 h-16 flex items-center justify-between gap-2">
+      <div className="max-w-[1240px] mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-1.5 sm:gap-3">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none shrink-0">
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#28664A] text-white flex items-center justify-center border border-[#1B4D36] shadow-sm shrink-0">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 group focus:outline-none shrink-0">
+          <div className="w-6.5 h-6.5 sm:w-8 sm:h-8 rounded bg-[#28664A] text-white flex items-center justify-center border border-[#1B4D36] shadow-sm shrink-0">
             <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white stroke-[2.2]" />
           </div>
-          <span className="font-sans font-medium text-[14.5px] sm:text-[17px] text-[#1A1C19] tracking-tight group-hover:text-[#074E34] transition-colors whitespace-nowrap">
+          <span className="font-sans font-medium text-[13px] sm:text-[17px] text-[#1A1C19] tracking-tight group-hover:text-[#074E34] transition-colors whitespace-nowrap">
             Security Review Ready
           </span>
         </Link>
@@ -39,11 +39,11 @@ export function Navbar() {
           </Link>
         </nav>
 
-        {/* Right Actions: Always Visible on Mobile & Desktop */}
+        {/* Right Actions: "Book a Demo" CTA + Hamburger Toggle */}
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           <Link
             href="/demo"
-            className="inline-flex items-center justify-center h-[30px] sm:h-[38px] px-2.5 sm:px-4 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[11.5px] sm:text-[13px] font-medium rounded border border-[#1B4D36] transition-colors shadow-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#28664A]/20"
+            className="inline-flex items-center justify-center h-[29px] sm:h-[38px] px-2.5 sm:px-4 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[11px] sm:text-[13px] font-medium rounded border border-[#1B4D36] transition-colors shadow-sm whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#28664A]/20"
           >
             Book a Demo
           </Link>
@@ -98,11 +98,11 @@ export function Navbar() {
           >
             FAQ
           </Link>
-          <div className="pt-2">
+          <div className="pt-2 border-t border-[#E7E5DE] mt-1">
             <Link
               href="/demo"
               onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex w-full items-center justify-center h-[38px] px-4 bg-[#28664A] text-white text-[13px] font-medium rounded border border-[#1B4D36]"
+              className="inline-flex w-full items-center justify-center h-[42px] px-4 bg-[#28664A] hover:bg-[#1B4D36] text-white text-[14px] font-medium rounded-lg border border-[#1B4D36] shadow-sm transition-colors"
             >
               Book a Demo
             </Link>
