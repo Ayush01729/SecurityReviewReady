@@ -4,6 +4,19 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ShieldCheck, X } from "lucide-react";
 
+function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+    </svg>
+  );
+}
+
 export function Footer() {
   const [modalContent, setModalContent] = useState<string | null>(null);
 
@@ -25,6 +38,18 @@ export function Footer() {
               A simpler, dependable way to handle customer security reviews. Grounded in your verified
               evidence, approved by your team.
             </p>
+            <div className="flex items-center gap-3 pt-1">
+              <a
+                href="https://www.linkedin.com/company/security-review-ready"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#F4F4EF] hover:bg-[#DAE6D6] text-[#566155] hover:text-[#074E34] text-[12px] font-medium border border-[#E7E5DE] transition-colors"
+                aria-label="Security Review Ready on LinkedIn"
+              >
+                <LinkedinIcon className="w-3.5 h-3.5 text-[#28664A]" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
 
           {/* Links Columns (8 cols) */}
@@ -111,6 +136,16 @@ export function Footer() {
         <div className="mt-12 pt-6 border-t border-[#E7E5DE] flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-[#696B66]">
           <div>© 2026 Security Review Ready. All rights reserved.</div>
           <div className="flex items-center gap-6">
+            <a
+              href="https://www.linkedin.com/company/security-review-ready"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#074E34] transition-colors flex items-center gap-1.5"
+              aria-label="Follow Security Review Ready on LinkedIn"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5 text-[#28664A]" />
+              <span>LinkedIn</span>
+            </a>
             <button
               type="button"
               onClick={() =>
