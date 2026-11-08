@@ -20,6 +20,7 @@
 - [Comparison Hub](https://securityreviewready.com/compare): Side-by-side evaluation against legacy tools.
 - [Conveyor Alternative](https://securityreviewready.com/compare/conveyor-alternative): Why B2B SaaS teams choose Security Review Ready over Conveyor.
 - [Whistic Alternative](https://securityreviewready.com/compare/whistic-alternative): Open evidence model versus proprietary vendor network profiles.
+- [Panorays Alternative](https://securityreviewready.com/compare/panorays-alternative): Buyer-side risk scoring vs vendor questionnaire response automation and Whistic vs Panorays breakdown.
 
 ## Full Documentation
 - [Full Context Specification](https://securityreviewready.com/llms-full.txt): Complete architecture, data handling, and framework specifications.

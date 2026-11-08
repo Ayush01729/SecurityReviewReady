@@ -18,17 +18,19 @@ import {
   HelpCircle,
   TrendingDown,
   BarChart3,
+  XCircle,
+  ListChecks,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security Questionnaire Automation: 2026 SaaS Implementation Guide | Security Review Ready",
+  title: "Security Questionnaire Automation: Practitioner's Guide to Cutting Response Time by 90% (2026) | Security Review Ready",
   description:
-    "Learn how security questionnaire automation eliminates deal slippage, cuts response time from weeks to minutes, and ensures 100% citation accuracy without hallucinations.",
+    "A practitioner's guide to security questionnaire automation: before/after time breakdowns, a 10-point tool evaluation checklist, common mistakes to avoid, and how grounded citation engines work.",
   alternates: {
     canonical: "/resources/security-questionnaire-automation",
   },
   openGraph: {
-    title: "Security Questionnaire Automation: 2026 SaaS Implementation Guide",
+    title: "Security Questionnaire Automation: Practitioner's Guide to Cutting Response Time by 90% (2026)",
     description:
       "A complete technical guide to automating enterprise vendor security assessments, CAIQ workbooks, and custom RFPs using grounded evidence citations.",
     url: "https://securityreviewready.com/resources/security-questionnaire-automation",
@@ -65,9 +67,9 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Security Questionnaire Automation: How Modern SaaS Teams Cut Response Time by 90%",
+  "headline": "Security Questionnaire Automation: Practitioner's Guide to Cutting Response Time by 90% (2026)",
   "description":
-    "An exhaustive technical and operational guide on automating customer security reviews, preserving Excel formulas, and eliminating repetitive compliance bottlenecks.",
+    "A practitioner's guide to security questionnaire automation covering before/after time breakdowns, a 10-point evaluation checklist, common mistakes, and how grounded citation engines work.",
   "author": {
     "@type": "Organization",
     "name": "Security Review Ready",
@@ -82,7 +84,7 @@ const articleSchema = {
     },
   },
   "datePublished": "2026-10-31",
-  "dateModified": "2026-10-31",
+  "dateModified": "2026-11-08",
 };
 
 const faqSchema = {
@@ -111,6 +113,22 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes, specialized questionnaire engines write strictly to designated response cells while preserving native Excel workbook structures, cross-sheet calculation formulas, and dropdown validation macros.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use security questionnaire automation without a SOC 2 report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Upload your existing information security policy, penetration test executive summary, privacy policy, and architecture overview. The engine works with whatever verified documentation you provide. A SOC 2 report dramatically improves coverage, but it is not a prerequisite.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle questions where my company does not meet the control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer transparently. The automation tool should flag the gap rather than guessing. Write a clear compensating control explanation: state what you do instead, why it achieves the same risk objective, and when you plan to implement the requested control if it is on your roadmap.",
       },
     },
   ],
@@ -154,14 +172,14 @@ export default function SecurityQuestionnaireAutomationPage() {
               <span className="px-2.5 py-0.5 rounded bg-[#EBF3EF] text-[#074E34] font-medium">
                 Technical Playbook
               </span>
-              <span>Updated October 2026</span>
-              <span>10 min read</span>
+              <span>Updated November 2026</span>
+              <span>14 min read</span>
             </div>
             <h1 className="font-sans text-3xl sm:text-4xl lg:text-[44px] font-semibold tracking-tight text-[#1A1C19] leading-tight">
-              Security Questionnaire Automation: How Modern SaaS Teams Cut Response Time by 90%
+              Security Questionnaire Automation: Practitioner&apos;s Guide to Cutting Response Time by 90% (2026)
             </h1>
             <p className="mt-4 text-base sm:text-lg text-[#566155] leading-relaxed">
-              Why manual vendor risk assessments stall mid-market and enterprise sales cycles, how response automation engines work under the hood, and a step-by-step implementation guide for fast-growing software companies.
+              What automation actually does (and what it does not), a realistic before/after time breakdown, a 10-point tool evaluation checklist, and 5 common mistakes that create liability instead of efficiency.
             </p>
           </header>
 
@@ -190,6 +208,116 @@ export default function SecurityQuestionnaireAutomationPage() {
                   Reduction in turnaround time achieved via citation automation
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Section: What Automation Does and Does Not Do */}
+          <section className="space-y-6 text-[#1A1C19] mb-12">
+            <h2 className="font-sans text-2xl font-semibold text-[#1A1C19] tracking-tight">
+              What Security Questionnaire Automation Actually Does (and What It Does Not)
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed text-[#566155]">
+              Before evaluating any tool, establish a shared mental model with your security and legal teams. Automation does specific, bounded things well and falls apart when pushed outside those bounds.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {/* DOES column */}
+              <div className="p-5 rounded-lg bg-[#EBF3EF]/40 border border-[#C2DDD0]">
+                <h3 className="font-sans text-base font-semibold text-[#074E34] mb-3 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-[#28664A]" />
+                  What it DOES
+                </h3>
+                <ul className="space-y-3 text-sm text-[#1A1C19]">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#28664A] shrink-0 mt-0.5" />
+                    <span>Pre-fills response cells with citations drawn directly from your SOC 2 / ISO 27001 / internal policies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#28664A] shrink-0 mt-0.5" />
+                    <span>Flags unanswered questions and gaps where you have no matching documentation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#28664A] shrink-0 mt-0.5" />
+                    <span>Preserves multi-tab Excel formulas, scoring macros, and dropdown validation while writing only to response cells</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* DOES NOT column */}
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE]">
+                <h3 className="font-sans text-base font-semibold text-[#1A1C19] mb-3 flex items-center gap-2">
+                  <XCircle className="w-5 h-5 text-[#BA1A1A]" />
+                  What it DOES NOT
+                </h3>
+                <ul className="space-y-3 text-sm text-[#566155]">
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-4 h-4 text-[#BA1A1A] shrink-0 mt-0.5" />
+                    <span>Send answers to customers without a human review and approval step</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-4 h-4 text-[#BA1A1A] shrink-0 mt-0.5" />
+                    <span>Generate answers from internet data, training data, or any source outside your uploaded documentation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <XCircle className="w-4 h-4 text-[#BA1A1A] shrink-0 mt-0.5" />
+                    <span>Replace your security engineer&apos;s judgment on nuanced or context-dependent control questions</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Section: Before vs After */}
+          <section className="space-y-6 text-[#1A1C19] mb-12">
+            <h2 className="font-sans text-2xl font-semibold text-[#1A1C19] tracking-tight">
+              Before vs. After: Realistic Time Breakdown
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed text-[#566155]">
+              These figures reflect a typical 150 to 250-question enterprise vendor risk assessment. Your actual numbers will vary based on documentation maturity and questionnaire complexity, but the ratios are consistent across teams we work with.
+            </p>
+
+            <div className="overflow-x-auto rounded-xl border border-[#E7E5DE] shadow-sm">
+              <table className="w-full text-sm bg-white">
+                <thead>
+                  <tr className="border-b border-[#E7E5DE] bg-[#FAF9F6]">
+                    <th className="text-left px-5 py-3 font-semibold text-[#1A1C19] font-sans">Step</th>
+                    <th className="text-center px-5 py-3 font-semibold text-[#BA1A1A] font-sans whitespace-nowrap">Before (Manual)</th>
+                    <th className="text-center px-5 py-3 font-semibold text-[#28664A] font-sans whitespace-nowrap">After (Automated)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E7E5DE]">
+                  <tr className="hover:bg-[#FAF9F6] transition-colors">
+                    <td className="px-5 py-4 text-[#1A1C19] font-medium">Receiving and parsing the spreadsheet</td>
+                    <td className="px-5 py-4 text-center text-[#566155]">2 to 3 hours</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-medium">10 minutes</td>
+                  </tr>
+                  <tr className="hover:bg-[#FAF9F6] transition-colors">
+                    <td className="px-5 py-4 text-[#1A1C19] font-medium">Mapping questions to your documentation</td>
+                    <td className="px-5 py-4 text-center text-[#566155]">8 to 15 hours</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-medium">Automated</td>
+                  </tr>
+                  <tr className="hover:bg-[#FAF9F6] transition-colors">
+                    <td className="px-5 py-4 text-[#1A1C19] font-medium">Drafting initial answers</td>
+                    <td className="px-5 py-4 text-center text-[#566155]">6 to 12 hours</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-medium">Automated with citations</td>
+                  </tr>
+                  <tr className="hover:bg-[#FAF9F6] transition-colors">
+                    <td className="px-5 py-4 text-[#1A1C19] font-medium">Internal review and approval</td>
+                    <td className="px-5 py-4 text-center text-[#566155]">4 to 8 hours</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-medium">30 to 60 minutes</td>
+                  </tr>
+                  <tr className="hover:bg-[#FAF9F6] transition-colors">
+                    <td className="px-5 py-4 text-[#1A1C19] font-medium">Re-exporting to native Excel format</td>
+                    <td className="px-5 py-4 text-center text-[#566155]">1 to 2 hours</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-medium">1 click</td>
+                  </tr>
+                  <tr className="bg-[#FAF9F6] border-t-2 border-[#E7E5DE]">
+                    <td className="px-5 py-4 text-[#1A1C19] font-semibold">Total elapsed calendar time</td>
+                    <td className="px-5 py-4 text-center text-[#BA1A1A] font-semibold">2 to 3 weeks</td>
+                    <td className="px-5 py-4 text-center text-[#28664A] font-semibold">Under 24 hours</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
@@ -241,7 +369,7 @@ export default function SecurityQuestionnaireAutomationPage() {
                   <span className="w-6 h-6 rounded-full bg-[#FAF9F6] text-[#566155] border border-[#E7E5DE] text-xs font-mono font-bold flex items-center justify-center">
                     G1
                   </span>
-                  Generation 1: Static Knowledge Banks & Shared Spreadsheets
+                  Generation 1: Static Knowledge Banks &amp; Shared Spreadsheets
                 </h3>
                 <p className="text-xs sm:text-sm text-[#566155] leading-relaxed">
                   Teams maintain a master document containing past questionnaire responses. Reviewers manually search keywords, copy answers, and paste them into new workbooks. <em>Result:</em> Content ages rapidly, personnel changes create knowledge gaps, and subtle wording variations cause missed answers.
@@ -256,7 +384,7 @@ export default function SecurityQuestionnaireAutomationPage() {
                   Generation 2: Keyword-Matching RFP Repositories
                 </h3>
                 <p className="text-xs sm:text-sm text-[#566155] leading-relaxed">
-                  Software tools parse questions and perform lexical keyword matching against a library of pre-approved text snippets. <em>Result:</em> Misses intent when questions are worded differently (for example, failing to connect "cryptographic controls" with "data encryption"). Furthermore, answers lack citations, forcing reviewers to verify original policy files manually.
+                  Software tools parse questions and perform lexical keyword matching against a library of pre-approved text snippets. <em>Result:</em> Misses intent when questions are worded differently (for example, failing to connect &quot;cryptographic controls&quot; with &quot;data encryption&quot;). Furthermore, answers lack citations, forcing reviewers to verify original policy files manually.
                 </p>
               </div>
 
@@ -292,7 +420,7 @@ export default function SecurityQuestionnaireAutomationPage() {
                   Semantic Vector Retrieval
                 </h3>
                 <p className="text-xs text-[#566155] leading-relaxed">
-                  Converts narrative audit statements into multi-dimensional embeddings. Recognizes that "Do you enforce TLS 1.3 across external ingress?" matches controls regarding "network transmission encryption."
+                  Converts narrative audit statements into multi-dimensional embeddings. Recognizes that &quot;Do you enforce TLS 1.3 across external ingress?&quot; matches controls regarding &quot;network transmission encryption.&quot;
                 </p>
               </div>
 
@@ -367,7 +495,25 @@ export default function SecurityQuestionnaireAutomationPage() {
                     Upload the Inbound Customer Questionnaire
                   </h3>
                   <p className="text-xs sm:text-sm text-[#566155] leading-relaxed">
-                    Upload the buyer's original assessment workbook without modifying formatting. Whether the file is a standard Cloud Security Alliance CAIQ v4, a Shared Assessments SIG Lite spreadsheet, or a bespoke 150-question custom Excel file, the ingestion engine identifies requirement cells automatically.
+                    Upload the buyer&apos;s original assessment workbook without modifying formatting. Whether the file is a standard{" "}
+                    <a
+                      href="https://cloudsecurityalliance.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#28664A] underline underline-offset-2 hover:text-[#074E34] transition-colors"
+                    >
+                      Cloud Security Alliance
+                    </a>{" "}
+                    CAIQ v4, a{" "}
+                    <a
+                      href="https://sharedassessments.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#28664A] underline underline-offset-2 hover:text-[#074E34] transition-colors"
+                    >
+                      Shared Assessments
+                    </a>{" "}
+                    SIG Lite spreadsheet, or a bespoke 150-question custom Excel file, the ingestion engine identifies requirement cells automatically.
                   </p>
                 </div>
               </div>
@@ -392,7 +538,7 @@ export default function SecurityQuestionnaireAutomationPage() {
                 </span>
                 <div>
                   <h3 className="font-sans text-base font-semibold text-[#1A1C19] mb-1">
-                    Human-in-the-Loop Verification & Native Export
+                    Human-in-the-Loop Verification &amp; Native Export
                   </h3>
                   <p className="text-xs sm:text-sm text-[#566155] leading-relaxed">
                     A sales engineer or security lead opens the verification split-view. Reviewing a question takes five seconds because the supporting document and paragraph are highlighted directly beside the draft. Approve responses with one click and export the native spreadsheet back to procurement.
@@ -402,7 +548,181 @@ export default function SecurityQuestionnaireAutomationPage() {
             </div>
           </section>
 
-          {/* Section 5: FAQs */}
+          {/* Section 5: 10-Point Checklist */}
+          <section className="space-y-6 text-[#1A1C19] mb-12">
+            <h2 className="font-sans text-2xl font-semibold text-[#1A1C19] tracking-tight flex items-center gap-2">
+              <ListChecks className="w-6 h-6 text-[#28664A]" />
+              10-Point Checklist for Evaluating Automation Tools
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed text-[#566155]">
+              Not all automation tools are equivalent. This checklist surfaces the questions that separate genuinely trustworthy platforms from tools that create legal and operational risk. Run every vendor through it before signing a contract.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                {
+                  number: "01",
+                  question: "Does it cite exact document paragraphs and page numbers, not just document names?",
+                  detail: "Document-name-only citations save no verification time. You need line-level traceability to validate answers in seconds, not minutes.",
+                },
+                {
+                  number: "02",
+                  question: "Does it preserve native Excel formulas, dropdowns, and scoring macros on export?",
+                  detail: "Many procurement teams use weighted scoring workbooks. If the export breaks those macros, the buyer cannot process your submission.",
+                },
+                {
+                  number: "03",
+                  question: "Does it work with your existing evidence (SOC 2, policies) or require a specific compliance platform?",
+                  detail: "Tools that lock you into a proprietary GRC platform add months of onboarding before you can answer a single questionnaire.",
+                },
+                {
+                  number: "04",
+                  question: "Does it flag gaps where you have no matching evidence, rather than guessing?",
+                  detail: "A tool that invents answers to fill gaps is worse than no automation at all. Gap flagging is a mandatory safety requirement, not a nice-to-have.",
+                },
+                {
+                  number: "05",
+                  question: "Is there a human-in-the-loop approval step before anything is sent to customers?",
+                  detail: "Automated submissions without human sign-off are a contractual and reputational risk. The approval workflow should be enforced by the platform, not just recommended.",
+                },
+                {
+                  number: "06",
+                  question: "Where is your data stored and is it isolated from other customers' data?",
+                  detail: "Ask for the specific cloud region, storage service, and tenant isolation architecture. Vague answers about &quot;enterprise-grade security&quot; are a red flag.",
+                },
+                {
+                  number: "07",
+                  question: "Is your documentation ever used to train public AI models? Get this in writing.",
+                  detail: "Some vendors use customer data to improve shared models. If your SOC 2 or policies become training data, you have a confidentiality breach.",
+                },
+                {
+                  number: "08",
+                  question: "Can it handle vendor portals (OneTrust, Whistic, ServiceNow) in addition to Excel?",
+                  detail: "Portal-based questionnaires are increasingly common in enterprise procurement. Excel-only tools cannot support deals through these platforms.",
+                },
+                {
+                  number: "09",
+                  question: "How long does onboarding and first completion take? (Under 24 hours vs. weeks matters for active deals)",
+                  detail: "If you receive a questionnaire with a 5-day deadline, a tool requiring 3 weeks of onboarding is not usable. Ask for the median time-to-first-completion from other customers.",
+                },
+                {
+                  number: "10",
+                  question: "What happens to your data if you cancel? Can you export it immediately?",
+                  detail: "Data portability and deletion guarantees should be explicit in the contract, not buried in a vague &quot;we may retain data for 90 days&quot; clause.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.number}
+                  className="flex items-start gap-4 p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm"
+                >
+                  <span className="w-9 h-9 rounded-full bg-[#EBF3EF] text-[#074E34] font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    {item.number}
+                  </span>
+                  <div>
+                    <p className="font-semibold text-sm text-[#1A1C19] mb-1">{item.question}</p>
+                    <p
+                      className="text-xs text-[#566155] leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: item.detail }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 6: 5 Common Mistakes */}
+          <section className="space-y-6 text-[#1A1C19] mb-12">
+            <h2 className="font-sans text-2xl font-semibold text-[#1A1C19] tracking-tight">
+              5 Common Mistakes Teams Make When Automating
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed text-[#566155]">
+              These errors show up repeatedly, often from teams that have done the right thing by investing in automation but undermined the effort by cutting corners on implementation.
+            </p>
+
+            <div className="space-y-4">
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-mono font-bold text-[#BA1A1A]">M1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-sm font-semibold text-[#1A1C19] mb-1">
+                      Using ChatGPT or a generic LLM to draft answers
+                    </h3>
+                    <p className="text-xs text-[#566155] leading-relaxed">
+                      Generic language models generate plausible-sounding but ungrounded answers. When a control claim turns out to be false (for example, claiming SOC 2 CC6.1 coverage you do not have), that is a written misrepresentation to a prospective customer. The liability risk is substantial in enterprise contracts that include vendor attestation clauses.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-mono font-bold text-[#BA1A1A]">M2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-sm font-semibold text-[#1A1C19] mb-1">
+                      Not having a human review step before submitting
+                    </h3>
+                    <p className="text-xs text-[#566155] leading-relaxed">
+                      Even grounded AI makes errors, particularly on nuanced control questions involving scope boundaries or compensating controls. Skipping human sign-off to &quot;save time&quot; at the final step undermines the entire purpose of building a defensible response process.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-mono font-bold text-[#BA1A1A]">M3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-sm font-semibold text-[#1A1C19] mb-1">
+                      Maintaining a static answer library instead of live document indexing
+                    </h3>
+                    <p className="text-xs text-[#566155] leading-relaxed">
+                      A frozen answer library is accurate on the day it was written. When your SOC 2 renews, your encryption policy updates, or a vendor changes, the library silently becomes wrong. Live document indexing re-reads your source files each time, so answers reflect your current state.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-mono font-bold text-[#BA1A1A]">M4</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-sm font-semibold text-[#1A1C19] mb-1">
+                      Ignoring gap questions
+                    </h3>
+                    <p className="text-xs text-[#566155] leading-relaxed">
+                      Unanswered or blank items on a vendor questionnaire are frequently scored worse by procurement teams than a transparent &quot;No, here is our compensating control.&quot; When the tool flags a gap, that is an action item, not something to leave blank. Address every flagged item before submitting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-lg bg-white border border-[#E7E5DE] shadow-sm">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-mono font-bold text-[#BA1A1A]">M5</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans text-sm font-semibold text-[#1A1C19] mb-1">
+                      Starting the automation process after the buyer has already set a response deadline
+                    </h3>
+                    <p className="text-xs text-[#566155] leading-relaxed">
+                      First-time use of any questionnaire automation tool requires at minimum 48 hours: document upload, ingestion, review of initial outputs, and correction of any formatting or mapping issues. If you receive a questionnaire with a 72-hour deadline and have never used the tool, you will likely miss it. Set up your documentation index before the next questionnaire arrives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 7: FAQs */}
           <section className="bg-white rounded-xl border border-[#E7E5DE] p-6 sm:p-8 mb-12 shadow-sm">
             <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-6 flex items-center gap-2">
               <HelpCircle className="w-5 h-5 text-[#28664A]" />
@@ -427,12 +747,30 @@ export default function SecurityQuestionnaireAutomationPage() {
                 </p>
               </div>
 
-              <div>
+              <div className="border-b border-[#E7E5DE]/60 pb-5">
                 <h3 className="font-semibold text-[#1A1C19] mb-2">
                   Can we automate questionnaires without a completed SOC 2 Type II report?
                 </h3>
                 <p className="text-xs text-[#566155] leading-relaxed">
                   Yes. You can index internal information security policies, ISO 27001 documentation, penetration testing summary letters, privacy policies, and live trust center URLs. The engine utilizes whatever verified evidence you provide.
+                </p>
+              </div>
+
+              <div className="border-b border-[#E7E5DE]/60 pb-5">
+                <h3 className="font-semibold text-[#1A1C19] mb-2">
+                  Can I use security questionnaire automation without a SOC 2 report?
+                </h3>
+                <p className="text-xs text-[#566155] leading-relaxed">
+                  Yes. Upload your existing information security policy, penetration test executive summary, privacy policy, and architecture overview. The engine works with whatever verified documentation you provide. A SOC 2 report dramatically improves coverage, but it is not a prerequisite.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-[#1A1C19] mb-2">
+                  How do I handle questions where my company does not meet the control?
+                </h3>
+                <p className="text-xs text-[#566155] leading-relaxed">
+                  Answer transparently. The automation tool should flag the gap rather than guessing. Write a clear compensating control explanation: state what you do instead, why it achieves the same risk objective, and when you plan to implement the requested control if it is on your roadmap. Procurement reviewers consistently score a clear &quot;No, here is what we do instead&quot; higher than a blank or evasive response.
                 </p>
               </div>
             </div>
@@ -453,4 +791,3 @@ export default function SecurityQuestionnaireAutomationPage() {
     </div>
   );
 }
-

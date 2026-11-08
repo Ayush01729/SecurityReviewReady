@@ -58,6 +58,14 @@ const COMPARISONS = [
       "Compare vendor network lock-in, AI evidence grounding, setup speed, and pricing models between Security Review Ready and Whistic.",
     badge: "Enterprise Alternative",
   },
+  {
+    slug: "panorays-alternative",
+    competitor: "Panorays",
+    title: "Panorays Alternative & Whistic vs Panorays Breakdown",
+    summary:
+      "Understand the difference between buyer-side third-party cyber risk scoring (Panorays) and vendor questionnaire response engines.",
+    badge: "Risk Platform Comparison",
+  },
 ];
 
 export default function CompareHubPage() {
