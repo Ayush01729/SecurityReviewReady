@@ -3,19 +3,19 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { InlineCta } from "@/components/InlineCta";
-import { Scale, ArrowRight, ShieldCheck, CheckCircle2, XCircle } from "lucide-react";
+import { Scale, ArrowRight, ShieldCheck, CheckCircle2, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Compare Security Questionnaire Automation Software | Security Review Ready",
+  title: "Compare Security Questionnaire Automation Software (2026)",
   description:
-    "Evaluate Security Review Ready against legacy questionnaire tools. See side-by-side feature matrices, citation accuracy comparisons, and pricing models.",
+    "Evaluate Security Review Ready against legacy questionnaire platforms like Conveyor, Whistic, and Panorays. See feature matrices, citation fidelity, and pricing models.",
   alternates: {
     canonical: "/compare",
   },
   openGraph: {
-    title: "Compare Security Questionnaire Automation Software | Security Review Ready",
+    title: "Compare Security Questionnaire Automation Software (2026)",
     description:
-      "Honest, side-by-side comparisons of Security Review Ready against Conveyor, Whistic, and legacy vendor risk platforms.",
+      "Honest, side-by-side comparisons of Security Review Ready against Conveyor, Whistic, Panorays, and legacy vendor risk platforms.",
     url: "https://securityreviewready.com/compare",
     siteName: "Security Review Ready",
     type: "website",
@@ -37,6 +37,29 @@ const breadcrumbSchema = {
       "position": 2,
       "name": "Compare Software",
       "item": "https://securityreviewready.com/compare",
+    },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between vendor network profiles and open response software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vendor network platforms (like Whistic) require both buyers and sellers to register on a proprietary platform to exchange profiles. Open response software (like Security Review Ready) works directly with whatever format the buyer sends, including custom Excel files, Word documents, and external web portals.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How does Security Review Ready differ from third-party risk assessment platforms like Panorays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Panorays is built for enterprise buyers to assess external attack surface risk and score supplier security posture. Security Review Ready is built for software vendors who need to rapidly answer incoming customer questionnaires with verified audit citations.",
+      },
     },
   ],
 };
@@ -63,7 +86,7 @@ const COMPARISONS = [
     competitor: "Panorays",
     title: "Panorays Alternative & Whistic vs Panorays Breakdown",
     summary:
-      "Understand the difference between buyer-side third-party cyber risk scoring (Panorays) and vendor questionnaire response engines.",
+      "Understand the difference between buyer-side third-party cyber risk scoring (Panorays), profile networks (Whistic), and vendor response automation.",
     badge: "Risk Platform Comparison",
   },
 ];
@@ -74,6 +97,10 @@ export default function CompareHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
 
@@ -95,15 +122,15 @@ export default function CompareHubPage() {
               Software Evaluation Hub
             </div>
             <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[#1A1C19] max-w-3xl leading-tight">
-              Compare Security Review Ready Against Incumbents
+              Compare Security Questionnaire Automation Software
             </h1>
             <p className="mt-4 text-base sm:text-lg text-[#566155] max-w-2xl leading-relaxed">
-              Choosing the right security questionnaire software directly impacts sales velocity and reviewer sanity. Explore our detailed comparisons below.
+              Choosing the right security questionnaire software directly impacts sales velocity and reviewer sanity. Explore our detailed comparisons below to find the best fit for your team stage.
             </p>
           </div>
 
           {/* Comparisons Cards */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {COMPARISONS.map((comp) => (
               <Link
                 key={comp.slug}
@@ -117,10 +144,10 @@ export default function CompareHubPage() {
                       {comp.badge}
                     </span>
                   </div>
-                  <h2 className="font-sans text-xl font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors leading-snug mb-3">
+                  <h2 className="font-sans text-lg font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors leading-snug mb-3">
                     {comp.title}
                   </h2>
-                  <p className="font-sans text-sm text-[#566155] leading-relaxed mb-6">
+                  <p className="font-sans text-xs text-[#566155] leading-relaxed mb-6">
                     {comp.summary}
                   </p>
                 </div>
@@ -165,10 +192,36 @@ export default function CompareHubPage() {
               <div>
                 <h3 className="font-semibold text-[#1A1C19] mb-1.5 flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#28664A]" />
-                  Your Data is 100% safe
+                  Zero Buyer Friction
                 </h3>
                 <p className="text-xs text-[#566155] leading-relaxed">
-                  We enforce AES-256 encryption at rest, TLS 1.3 in transit, and multi-tenant isolation. Your compliance documentation is strictly never used to train public AI models.
+                  Enterprise buyers are not forced to register on any third-party network. We output answers natively into the buyer original workbook.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQs */}
+          <section className="bg-white rounded-xl border border-[#E7E5DE] p-6 sm:p-8 mb-16 shadow-sm">
+            <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-4 flex items-center gap-2">
+              <HelpCircle className="w-5 h-5 text-[#28664A]" />
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4 text-sm">
+              <div className="border-b border-[#E7E5DE]/60 pb-4">
+                <h3 className="font-semibold text-[#1A1C19] mb-1">
+                  What is the difference between vendor network profiles and open response software?
+                </h3>
+                <p className="text-xs text-[#566155] leading-relaxed">
+                  Vendor network platforms (like Whistic) require both buyers and sellers to register on a proprietary platform to exchange profiles. Open response software (like Security Review Ready) works directly with whatever format the buyer sends, including custom Excel files, Word documents, and external web portals.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#1A1C19] mb-1">
+                  How does Security Review Ready differ from third-party risk assessment platforms like Panorays?
+                </h3>
+                <p className="text-xs text-[#566155] leading-relaxed">
+                  Panorays is built for enterprise buyers to assess external attack surface risk and score supplier security posture. Security Review Ready is built for software vendors who need to rapidly answer incoming customer questionnaires with verified audit citations.
                 </p>
               </div>
             </div>
@@ -188,4 +241,3 @@ export default function CompareHubPage() {
     </div>
   );
 }
-
