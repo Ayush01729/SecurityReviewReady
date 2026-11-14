@@ -55,6 +55,18 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://securityreviewready.com/compare/conveyor-alternative#article",
+  "headline": "Conveyor Alternative: Why B2B SaaS Teams Choose Security Review Ready",
+  "description": "Compare Security Review Ready vs Conveyor: transparent citations, complex Excel formula support, zero hallucination guardrails, and rapid onboarding.",
+  "datePublished": "2026-10-15T00:00:00Z",
+  "dateModified": "2026-11-15T00:00:00Z",
+  "author": { "@type": "Organization", "name": "Security Review Ready" },
+  "publisher": { "@type": "Organization", "name": "Security Review Ready", "url": "https://securityreviewready.com" },
+};
+
 const COMPARISON_ROWS = [
   {
     feature: "Exact Source Citations",
@@ -100,6 +112,10 @@ export default function ConveyorAlternativePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Navbar />
 
