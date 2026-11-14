@@ -26,25 +26,37 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Security Review Ready: Security Questionnaire Engine",
+  title: "Security Questionnaire Automation for B2B SaaS | Security Review Ready",
   description:
-    "Security Review Ready is an AI security questionnaire engine for B2B SaaS teams. Complete customer security reviews faster with 100% verified source citations.",
+    "Security Review Ready automates security questionnaires for B2B SaaS teams. Complete CAIQ, SIG, DDQ, and custom vendor assessments in minutes with 100% verified source citations and zero hallucinations.",
   keywords: [
     "Security Questionnaire Automation",
+    "Security Questionnaire Software",
+    "vCISO Security Questionnaire",
+    "Fractional CISO Questionnaire Automation",
+    "AI Security Questionnaire",
+    "Vendor Security Assessment Automation",
+    "Vendor Risk Questionnaire Automation",
+    "DDQ Automation",
+    "Security Review Automation",
     "SOC 2 Vendor Assessment",
     "CAIQ v4",
+    "SIG Questionnaire",
     "Enterprise Security Review",
     "B2B SaaS Compliance",
-    "SIG Questionnaire",
+    "Conveyor Alternative",
+    "Whistic Alternative",
+    "Wolfia Alternative",
+    "Vanta Questionnaire Alternative",
   ],
   authors: [{ name: "Security Review Ready" }],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Security Review Ready: Security Questionnaire Engine",
+    title: "Security Questionnaire Automation for B2B SaaS | Security Review Ready",
     description:
-      "Stop putting deals on hold for repetitive questionnaires. 100% cited source evidence and human-in-the-loop review.",
+      "Complete CAIQ, SIG, DDQ, and custom vendor security questionnaires in minutes. 100% verified source citations, zero hallucinations, human-in-the-loop review.",
     url: siteUrl,
     siteName: "Security Review Ready",
     locale: "en_US",
@@ -61,9 +73,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Security Review Ready: Security Questionnaire Engine",
+    title: "Security Questionnaire Automation for B2B SaaS | Security Review Ready",
     description:
-      "Stop putting deals on hold for repetitive questionnaires. 100% cited source evidence and human-in-the-loop review.",
+      "Complete CAIQ, SIG, DDQ, and custom vendor security questionnaires in minutes. 100% verified source citations, zero hallucinations.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -164,18 +176,24 @@ const jsonLd = {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "name": "Early Access Pilot",
+        "name": "Free Pilot — First Security Questionnaire",
+        "description": "Complete your first customer security questionnaire free in under 24 hours.",
         "availability": "https://schema.org/InStock"
       },
       "featureList": [
-        "100% Verified Source Evidence Citations",
-        "Human-in-the-Loop Review & One-Click Approval",
+        "100% Verified Source Evidence Citations — every answer cites document name, section, and page number",
+        "Zero Hallucination Guardrails — refuses to generate any claim without a cited source",
         "Multi-Tab Complex Excel Formula Preservation",
-        "Continuous Auto-Sync for SOC 2, ISO 27001, and Trust Centers",
-        "Vendor Portal Helper for OneTrust, Whistic, and ServiceNow"
+        "CAIQ v4, SIG, SIG Lite, VSA, DDQ questionnaire support",
+        "SOC 2 Type II and ISO 27001 evidence ingestion",
+        "Human-in-the-Loop Review and One-Click Approval Workflow",
+        "Continuous Auto-Sync for Trust Centers and Security Policies",
+        "Vendor Portal Helper for OneTrust, Whistic, Conveyor, and ServiceNow"
       ],
       "description":
-        "Ingests security policies, live trust center URLs, and SOC 2 audits to continuously fill customer security questionnaires for enterprise buyers.",
+        "AI security questionnaire automation engine that ingests SOC 2 reports, ISO 27001 certificates, and trust center documentation to draft verified, source-cited responses to CAIQ, SIG, DDQ, and custom vendor security assessments.",
+      "category": "Security Questionnaire Automation Software",
+      "releaseNotes": "Free pilot tier: submit your first customer security questionnaire and receive source-cited responses in under 24 hours.",
     },
     {
       "@type": "FAQPage",
@@ -244,29 +262,6 @@ const jsonLd = {
             "@type": "Answer",
             "text": "Drop your work email in the form on our site. You will immediately receive instructions to upload your security documentation and first client questionnaire. We'll parse your evidence and return your completed, source-cited responses in under 24 hours (100% free)."
           }
-        }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "@id": "https://securityreviewready.com/#howto",
-      "name": "How to Complete Enterprise Security Questionnaires with Security Review Ready",
-      "description": "Streamline vendor security reviews from days to minutes with verified citations.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Index Verified Evidence",
-          "text": "Upload SOC 2 Type II audits, ISO 27001 policies, and trust center documentation into your private workspace."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Ingest Customer Questionnaire",
-          "text": "Upload the buyer's Excel spreadsheet (SIG, CAIQ, or bespoke portal questions) to trigger automated evidence matching."
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Human-in-the-Loop Review & Export",
-          "text": "Validate drafted answers against exact cited paragraphs with page numbers, approve with one click, and export without broken formulas."
         }
       ]
     }

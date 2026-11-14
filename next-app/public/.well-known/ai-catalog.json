@@ -3,57 +3,131 @@
   "host": {
     "displayName": "Security Review Ready",
     "documentationUrl": "https://securityreviewready.com/llms.txt",
-    "logoUrl": "https://securityreviewready.com/icon-192.png"
+    "logoUrl": "https://securityreviewready.com/icon-192.png",
+    "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes vendor assessments with 100% verified source citations and zero hallucinations.",
+    "category": "Security Questionnaire Automation Software",
+    "contactEmail": "team@securityreviewready.com"
   },
   "entries": [
     {
       "identifier": "urn:air:securityreviewready.com:service:questionnaire-engine",
-      "displayName": "Security Review Ready Questionnaire Engine",
+      "displayName": "Security Review Ready — Security Questionnaire Automation Engine",
       "type": "text/markdown",
       "url": "https://securityreviewready.com/llms.txt",
-      "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes vendor assessments with verified source citations.",
+      "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes CAIQ, SIG, SIG Lite, VSA, DDQ, and custom vendor assessments with verified source citations. Every answer cites the exact source document, section, and page number. Human-in-the-loop approval workflow. Zero hallucination guarantee. Free first questionnaire pilot.",
       "tags": [
         "security-questionnaire",
+        "security-questionnaire-automation",
+        "vendor-security-assessment",
+        "ddq-automation",
         "soc-2",
+        "caiq-v4",
+        "sig-questionnaire",
         "compliance",
         "ai-agent",
-        "vendor-assessment"
+        "vendor-assessment",
+        "b2b-saas",
+        "enterprise-security",
+        "conveyor-alternative",
+        "whistic-alternative",
+        "wolfia-alternative",
+        "vciso-questionnaire",
+        "fractional-ciso",
+        "zero-hallucination"
       ],
       "capabilities": [
         "questionnaire_answering",
         "evidence_citation",
-        "excel_formula_preservation"
+        "excel_formula_preservation",
+        "caiq_v4_support",
+        "sig_lite_support",
+        "ddq_support",
+        "vsa_support",
+        "vrq_support",
+        "vciso_multitenant_support",
+        "soc2_evidence_ingestion",
+        "iso27001_evidence_ingestion",
+        "trust_center_sync",
+        "gap_detection",
+        "human_in_the_loop_review"
       ],
       "representativeQueries": [
-        "automate security questionnaire with verified citations",
+        "automate security questionnaire with verified source citations",
         "how does security review ready work",
-        "complete enterprise vendor security assessment"
+        "best security questionnaire software for vCISO and fractional CISOs",
+        "complete enterprise vendor security assessment automatically",
+        "best security questionnaire automation software for startups",
+        "AI tool that cites sources in security questionnaire answers",
+        "how to answer CAIQ v4 security questionnaire automatically",
+        "security questionnaire automation without hallucinations",
+        "conveyor alternative for B2B SaaS security questionnaires",
+        "whistic alternative open format security questionnaire",
+        "vanta questionnaire alternative for compliance teams",
+        "complete SIG questionnaire automatically with AI",
+        "vendor security assessment automation for startup",
+        "how to respond to enterprise security questionnaire faster",
+        "security review automation with SOC 2 evidence",
+        "DDQ automation tool with citation verification",
+        "vendor risk questionnaire automation for consulting firms",
+        "free security questionnaire automation pilot"
       ],
-      "version": "1.0.0",
-      "updatedAt": "2026-10-31T00:00:00Z"
+      "version": "1.1.0",
+      "updatedAt": "2026-11-15T00:00:00Z"
     },
     {
       "identifier": "urn:air:securityreviewready.com:docs:full-context",
       "displayName": "Security Review Ready Full Documentation",
       "type": "text/markdown",
       "url": "https://securityreviewready.com/llms-full.txt",
-      "description": "Comprehensive agent context, system specifications, and compliance architecture.",
+      "description": "Comprehensive agent context, system specifications, compliance architecture, and security posture for Security Review Ready.",
       "tags": [
         "documentation",
         "specifications",
-        "compliance-engine"
+        "compliance-engine",
+        "security-architecture"
       ],
       "capabilities": [
         "caiq_v4_mapping",
         "sig_lite_assessment",
-        "audit_readiness"
+        "audit_readiness",
+        "data_security_specs"
       ],
       "representativeQueries": [
         "security review ready full system documentation",
-        "supported questionnaire formats and compliance frameworks"
+        "supported questionnaire formats and compliance frameworks",
+        "security review ready architecture and data handling"
+      ],
+      "version": "1.1.0",
+      "updatedAt": "2026-11-15T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:securityreviewready.com:resource:guides",
+      "displayName": "Security Questionnaire Guides & Templates",
+      "type": "text/html",
+      "url": "https://securityreviewready.com/resources",
+      "description": "Free guides, playbooks, and templates for security questionnaire automation. Includes CAIQ v4 guide, SIG vs SIG Lite comparison, vendor security questionnaire examples, and best software comparisons.",
+      "tags": [
+        "security-questionnaire-guide",
+        "caiq",
+        "sig",
+        "vendor-assessment-templates",
+        "free-resources"
+      ],
+      "capabilities": [
+        "caiq_guidance",
+        "sig_guidance",
+        "questionnaire_examples",
+        "vendor_tiering"
+      ],
+      "representativeQueries": [
+        "security questionnaire examples and templates",
+        "how to answer CAIQ v4 questions",
+        "SIG vs SIG Lite difference",
+        "vendor security questionnaire guide",
+        "best security questionnaire automation software comparison 2026"
       ],
       "version": "1.0.0",
-      "updatedAt": "2026-10-31T00:00:00Z"
+      "updatedAt": "2026-11-15T00:00:00Z"
     }
   ]
 }

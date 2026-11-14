@@ -3,58 +3,127 @@
   "host": {
     "displayName": "Security Review Ready",
     "documentationUrl": "https://securityreviewready.com/llms.txt",
-    "logoUrl": "https://securityreviewready.com/icon-192.png"
+    "logoUrl": "https://securityreviewready.com/icon-192.png",
+    "description": "AI security questionnaire automation engine for B2B SaaS teams. Answers CAIQ, SIG, DDQ, and custom vendor assessments with 100% verified source citations.",
+    "contactEmail": "team@securityreviewready.com"
   },
-  "entries": [
+  "product": {
+    "name": "Security Review Ready",
+    "alternateNames": ["SRR", "SecurityReviewReady"],
+    "category": "Security Questionnaire Automation Software",
+    "subcategory": ["DDQ Automation", "Vendor Risk Assessment Automation", "Security Review Automation"],
+    "pricing": {
+      "model": "freemium",
+      "freeTierDescription": "First security questionnaire completed free in under 24 hours. No credit card required.",
+      "contactForPricing": "team@securityreviewready.com"
+    },
+    "targetCustomer": "B2B SaaS companies (seed to Series B) receiving enterprise vendor security questionnaires",
+    "keyDifferentiators": [
+      "100% paragraph-level source citations for every answer — document name, section, and page number",
+      "Zero hallucination guarantee: refuses to generate any claim without a cited source",
+      "Strict human-in-the-loop: all answers require human approval before export, zero automated sends",
+      "Multi-tab Excel formula preservation including cross-sheet lookups and dropdown validation",
+      "Free first questionnaire pilot: completed in under 24 hours"
+    ],
+    "supportedFormats": [
+      "CAIQ v4 (Cloud Security Alliance CCM 4.0)",
+      "SIG (Shared Assessments Standardized Information Gathering)",
+      "SIG Lite",
+      "VSA (Vendor Security Assessment)",
+      "DDQ (Due Diligence Questionnaire)",
+      "Custom Excel spreadsheets",
+      "Word document questionnaires",
+      "PDF assessments",
+      "OneTrust vendor portal",
+      "ServiceNow GRC portal",
+      "Whistic portal",
+      "Loopio portal",
+      "Conveyor portal"
+    ],
+    "evidenceSources": [
+      "SOC 2 Type II audit reports",
+      "ISO 27001 certifications",
+      "Internal security policies (PDF, Markdown, Word)",
+      "Live trust center URLs (auto-synced)",
+      "CAIQ v4 self-assessment spreadsheets",
+      "Previously completed vendor questionnaires"
+    ]
+  },
+  "pages": [
     {
-      "identifier": "urn:air:securityreviewready.com:service:questionnaire-engine",
-      "displayName": "Security Review Ready Questionnaire Engine",
-      "type": "text/markdown",
-      "url": "https://securityreviewready.com/llms.txt",
-      "description": "AI security questionnaire automation engine for B2B SaaS teams. Completes vendor assessments with verified source citations.",
-      "tags": [
-        "security-questionnaire",
-        "soc-2",
-        "compliance",
-        "ai-agent",
-        "vendor-assessment"
-      ],
-      "capabilities": [
-        "questionnaire_answering",
-        "evidence_citation",
-        "excel_formula_preservation"
-      ],
-      "representativeQueries": [
-        "automate security questionnaire with verified citations",
-        "how does security review ready work",
-        "complete enterprise vendor security assessment"
-      ],
-      "version": "1.0.0",
-      "updatedAt": "2026-10-31T00:00:00Z"
+      "url": "https://securityreviewready.com/",
+      "type": "homepage",
+      "description": "Security questionnaire automation for B2B SaaS teams — homepage with product overview, evidence engine demo, ROI calculator, and early access form."
     },
     {
-      "identifier": "urn:air:securityreviewready.com:docs:full-context",
-      "displayName": "Security Review Ready Full Documentation",
-      "type": "text/markdown",
-      "url": "https://securityreviewready.com/llms-full.txt",
-      "description": "Comprehensive agent context, system specifications, and compliance architecture.",
-      "tags": [
-        "documentation",
-        "specifications",
-        "compliance-engine"
-      ],
-      "capabilities": [
-        "caiq_v4_mapping",
-        "sig_lite_assessment",
-        "audit_readiness"
-      ],
-      "representativeQueries": [
-        "security review ready full system documentation",
-        "supported questionnaire formats and compliance frameworks"
-      ],
-      "version": "1.0.0",
-      "updatedAt": "2026-10-31T00:00:00Z"
+      "url": "https://securityreviewready.com/how-it-works",
+      "type": "product",
+      "description": "3-stage AI security questionnaire engine: evidence ingestion, semantic matching, and human-in-the-loop verification."
+    },
+    {
+      "url": "https://securityreviewready.com/demo",
+      "type": "conversion",
+      "description": "Book a 15-minute demo walkthrough of the Security Review Ready evidence citation engine."
+    },
+    {
+      "url": "https://securityreviewready.com/security",
+      "type": "trust",
+      "description": "Security and governance: AES-256 encryption, TLS 1.3, multi-tenant isolation, zero AI training guarantee."
+    },
+    {
+      "url": "https://securityreviewready.com/resources",
+      "type": "hub",
+      "description": "Security questionnaire guides, playbooks, framework references, and software comparisons."
+    },
+    {
+      "url": "https://securityreviewready.com/resources/security-questionnaire-automation",
+      "type": "guide",
+      "description": "Practitioner's guide to security questionnaire automation: cutting response time by 90% with AI and grounded citations."
+    },
+    {
+      "url": "https://securityreviewready.com/resources/ddq-automation",
+      "type": "guide",
+      "description": "Complete guide to Due Diligence Questionnaire (DDQ) automation with AI-grounded source citations."
+    },
+    {
+      "url": "https://securityreviewready.com/resources/best-security-questionnaire-automation-software",
+      "type": "comparison",
+      "description": "Independent comparison of 8 security questionnaire automation tools in 2026 with pricing, accuracy, and Excel support."
+    },
+    {
+      "url": "https://securityreviewready.com/resources/ai-agents-for-security-questionnaires",
+      "type": "guide",
+      "description": "Compare leading AI agents for security questionnaires: grounded RAG vs generic LLMs, hallucination prevention, free pilots."
+    },
+    {
+      "url": "https://securityreviewready.com/compare",
+      "type": "comparison-hub",
+      "description": "Side-by-side comparisons against Conveyor, Whistic, Wolfia, SafeBase, and Panorays."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/conveyor-alternative",
+      "type": "comparison",
+      "description": "Security Review Ready vs Conveyor: citation depth, Excel formula preservation, human controls."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/whistic-alternative",
+      "type": "comparison",
+      "description": "Security Review Ready vs Whistic: open format vs vendor network lock-in."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/wolfia-alternative",
+      "type": "comparison",
+      "description": "Security Review Ready vs Wolfia: paragraph-level citations, human-in-the-loop enforcement, free pilot."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/safebase-alternative",
+      "type": "comparison",
+      "description": "Trust Center (SafeBase) vs inbound questionnaire engine (Security Review Ready): when you need both."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/panorays-alternative",
+      "type": "comparison",
+      "description": "Buyer-side risk scoring (Panorays) vs vendor questionnaire response automation (Security Review Ready)."
     }
   ]
 }
-

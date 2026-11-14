@@ -14,7 +14,29 @@ export function AudienceRoles() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* Segment 0: vCISOs & Fractional CISOs (Primary Audience) */}
+          <div className="p-6 rounded-lg bg-[#FAF9F6] border-2 border-[#28664A]/30 flex flex-col justify-between shadow-[0_2px_8px_rgba(40,102,74,0.06)] relative">
+            <span className="absolute -top-3 right-4 bg-[#28664A] text-white text-[10px] font-mono px-2 py-0.5 rounded font-medium uppercase tracking-wider">
+              Primary Focus
+            </span>
+            <div>
+              <div className="w-8 h-8 rounded bg-[#DAE6D6] flex items-center justify-center text-[#28664A] mb-4">
+                <Users2 className="w-4 h-4" />
+              </div>
+              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] mb-2">
+                vCISOs &amp; Fractional CISOs
+              </h3>
+              <p className="font-sans text-[14px] text-[#566155] leading-relaxed">
+                You juggle multiple client accounts and are overwhelmed by repetitive 200+ question assessments.
+                Isolate client evidence, draft grounded answers with page-level citations, and approve in minutes.
+              </p>
+            </div>
+            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34]">
+              Scale client capacity 5x
+            </div>
+          </div>
+
           {/* Segment 1: Founders */}
           <div className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)]">
             <div>

@@ -82,6 +82,30 @@ const COMPARISONS = [
     badge: "Enterprise Alternative",
   },
   {
+    slug: "wolfia-alternative",
+    competitor: "Wolfia",
+    title: "Security Review Ready vs Wolfia: Citation Depth & Human Controls",
+    summary:
+      "Compare paragraph-level citations, human-in-the-loop enforcement, Excel formula preservation, and free pilot availability between Security Review Ready and Wolfia.",
+    badge: "AI-First Comparison",
+  },
+  {
+    slug: "safebase-alternative",
+    competitor: "SafeBase",
+    title: "SafeBase Alternative: Trust Center vs Questionnaire Engine",
+    summary:
+      "Understand the difference between Trust Center platforms (SafeBase) and inbound questionnaire response engines (Security Review Ready) — and when you need both.",
+    badge: "Platform Type Comparison",
+  },
+  {
+    slug: "vanta-questionnaire-alternative",
+    competitor: "Vanta Questionnaires",
+    title: "Security Review Ready vs Vanta Questionnaires",
+    summary:
+      "Compare dedicated questionnaire automation with exact page-level citations vs bundled GRC platform questionnaire modules.",
+    badge: "GRC vs Dedicated Engine",
+  },
+  {
     slug: "panorays-alternative",
     competitor: "Panorays",
     title: "Panorays Alternative & Whistic vs Panorays Breakdown",

@@ -109,6 +109,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/compare/wolfia-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/compare/safebase-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/compare/vanta-questionnaire-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/resources/ddq-automation`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/vendor-risk-questionnaire`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/vciso-security-questionnaire-automation`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.92,
+    },
   ];
 
   return routes;

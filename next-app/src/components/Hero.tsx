@@ -71,10 +71,14 @@ export function Hero() {
     <section className="pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6">
         <div className="max-w-3xl flex flex-col items-start gap-5">
-          {/* Main Title */}
+          {/* Main Title — keyword-first for SEO, emotional hook as subtitle */}
           <h1 className="font-sans text-[36px] sm:text-[46px] md:text-[56px] leading-[1.12] font-medium text-[#1A1C19] tracking-[-0.03em]">
-            Security questionnaires shouldn&apos;t slow down a deal.
+            Security Questionnaire Automation for B2B&nbsp;SaaS
           </h1>
+
+          <p className="font-sans text-[22px] sm:text-[26px] leading-[1.3] font-medium text-[#1A1C19] -mt-1">
+            Questionnaires shouldn&apos;t slow down a deal.
+          </p>
 
           <p className="font-sans text-[17px] sm:text-[19px] leading-[1.58] text-[#566155] max-w-2xl">
             Feed in your security documentation once. Our engine ingests policies, live

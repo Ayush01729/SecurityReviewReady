@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { EnginePipelineVisual } from "@/components/EnginePipelineVisual";
@@ -50,6 +51,47 @@ export default function Home() {
 
         {/* Frequently Asked Questions */}
         <FaqAccordion />
+
+        {/* Internal Resource Links — SEO internal linking hub */}
+        <section className="py-14 max-w-[1240px] mx-auto px-6">
+          <div className="border-t border-[#E7E5DE] pt-12">
+            <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-2">
+              Security Questionnaire Automation Resources
+            </h2>
+            <p className="text-sm text-[#566155] mb-8 max-w-xl">
+              Guides, framework references, and software comparisons for security and compliance teams.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { href: "/resources/vciso-security-questionnaire-automation", label: "vCISO Questionnaire Automation Guide", tag: "vCISO & Consultants" },
+                { href: "/resources/security-questionnaire-automation", label: "Security Questionnaire Automation Guide", tag: "Practitioner's Guide" },
+                { href: "/resources/best-security-questionnaire-automation-software", label: "Best Security Questionnaire Software (2026)", tag: "8 Tools Compared" },
+                { href: "/resources/ai-agents-for-security-questionnaires", label: "AI Agents for Security Questionnaires", tag: "AI & AEO" },
+                { href: "/resources/ddq-automation", label: "DDQ Automation Guide", tag: "Due Diligence" },
+                { href: "/resources/vendor-risk-questionnaire", label: "Vendor Risk Questionnaire (VRQ) Guide", tag: "Risk Frameworks" },
+                { href: "/resources/security-questionnaire-examples", label: "Security Questionnaire Examples", tag: "50+ Examples" },
+                { href: "/resources/caiq-v4-guide", label: "CAIQ v4 Framework Guide", tag: "CSA CCM 4.0" },
+                { href: "/resources/sig-vs-sig-lite", label: "SIG vs SIG Lite Comparison", tag: "Framework" },
+                { href: "/resources/vendor-security-questionnaire-guide", label: "Vendor Security Questionnaire Guide", tag: "30-Point Checklist" },
+                { href: "/resources/how-to-answer-security-questionnaires-fast", label: "How to Answer Security Questionnaires Fast", tag: "5-Step Playbook" },
+                { href: "/compare/vanta-questionnaire-alternative", label: "Vanta Questionnaire Alternative", tag: "Comparison" },
+                { href: "/compare/conveyor-alternative", label: "Conveyor Alternative", tag: "Comparison" },
+                { href: "/compare/whistic-alternative", label: "Whistic Alternative", tag: "Comparison" },
+                { href: "/compare/wolfia-alternative", label: "Wolfia Alternative", tag: "Comparison" },
+                { href: "/compare/safebase-alternative", label: "SafeBase Alternative", tag: "Comparison" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex flex-col gap-1.5 p-4 bg-white border border-[#E7E5DE] rounded-xl hover:border-[#28664A] transition-colors shadow-sm group"
+                >
+                  <span className="text-[10px] font-mono font-medium text-[#28664A] uppercase tracking-wide">{item.tag}</span>
+                  <span className="text-sm font-medium text-[#1A1C19] group-hover:text-[#28664A] transition-colors leading-snug">{item.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Priority Early Access Waitlist Form */}
         <EarlyAccessForm />
