@@ -66,6 +66,33 @@ const faqSchema = {
 
 const ARTICLES = [
   {
+    slug: "vciso-security-questionnaire-automation",
+    title: "vCISO Security Questionnaire Automation: Scaling Multi-Client Vendor Reviews",
+    description:
+      "A specialized operational guide for Fractional CISOs and cybersecurity consultants managing security reviews, SIG questionnaires, and DDQ assessments across 5–15 simultaneous client environments.",
+    tag: "vCISO & Consulting",
+    readTime: "18 min read",
+    highlight: "Multi-tenant evidence & client playbooks",
+  },
+  {
+    slug: "ddq-automation",
+    title: "DDQ Automation: Automating Due Diligence Questionnaires with Deterministic AI",
+    description:
+      "Eliminate the 40-hour LP and procurement bottleneck. How private equity firms, asset managers, and enterprise SaaS vendors automate investor and vendor due diligence questionnaires.",
+    tag: "Due Diligence & PE",
+    readTime: "15 min read",
+    highlight: "LP & vendor DDQ automation workflow",
+  },
+  {
+    slug: "vendor-risk-questionnaire",
+    title: "Vendor Risk Questionnaire (VRQ) Automation: Complete 2026 Playbook",
+    description:
+      "Complete guide to answering inbound VRQs, SIG, CAIQ, and custom Excel sheets. Includes 10 core control categories and audit-grounded response strategies.",
+    tag: "Vendor Risk (VRQ)",
+    readTime: "14 min read",
+    highlight: "10-domain VRQ answering template",
+  },
+  {
     slug: "security-questionnaire-examples",
     title: "50 Security Questionnaire Examples: Questions & Answers for Vendors & Buyers",
     description:
@@ -210,10 +237,9 @@ export default function ResourcesPage() {
           {/* Articles Grid */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {ARTICLES.map((article) => (
-              <Link
+              <a
                 key={article.slug}
                 href={`/resources/${article.slug}`}
-                prefetch={true}
                 className="bg-white rounded-xl border border-[#E7E5DE] hover:border-[#28664A] transition-all duration-150 p-6 flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer block focus:outline-none focus:ring-2 focus:ring-[#28664A]/30"
               >
                 <div>
@@ -245,7 +271,7 @@ export default function ResourcesPage() {
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </div>
-              </Link>
+              </a>
             ))}
           </section>
 

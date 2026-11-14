@@ -156,10 +156,9 @@ export default function CompareHubPage() {
           {/* Comparisons Cards */}
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {COMPARISONS.map((comp) => (
-              <Link
+              <a
                 key={comp.slug}
                 href={`/compare/${comp.slug}`}
-                prefetch={true}
                 className="bg-white rounded-xl border border-[#E7E5DE] hover:border-[#28664A] transition-all duration-150 p-6 flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer block focus:outline-none focus:ring-2 focus:ring-[#28664A]/30"
               >
                 <div>
@@ -183,7 +182,7 @@ export default function CompareHubPage() {
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </div>
-              </Link>
+              </a>
             ))}
           </section>
 

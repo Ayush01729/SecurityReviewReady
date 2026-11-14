@@ -80,14 +80,14 @@ export default function Home() {
                 { href: "/compare/wolfia-alternative", label: "Wolfia Alternative", tag: "Comparison" },
                 { href: "/compare/safebase-alternative", label: "SafeBase Alternative", tag: "Comparison" },
               ].map((item) => (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   className="flex flex-col gap-1.5 p-4 bg-white border border-[#E7E5DE] rounded-xl hover:border-[#28664A] transition-colors shadow-sm group"
                 >
                   <span className="text-[10px] font-mono font-medium text-[#28664A] uppercase tracking-wide">{item.tag}</span>
                   <span className="text-sm font-medium text-[#1A1C19] group-hover:text-[#28664A] transition-colors leading-snug">{item.label}</span>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

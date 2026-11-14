@@ -81,33 +81,42 @@ export function Footer() {
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
                 Resources & Guides
               </span>
-              <Link href="/resources" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
+              <a href="/resources" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
                 All Resources & Guides
-              </Link>
-              <Link href="/resources/security-questionnaire-examples" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/vciso-security-questionnaire-automation" className="hover:text-[#1A1C19] transition-colors">
+                vCISO Questionnaire Automation
+              </a>
+              <a href="/resources/ddq-automation" className="hover:text-[#1A1C19] transition-colors">
+                DDQ Automation Guide
+              </a>
+              <a href="/resources/vendor-risk-questionnaire" className="hover:text-[#1A1C19] transition-colors">
+                Vendor Risk Questionnaire
+              </a>
+              <a href="/resources/security-questionnaire-examples" className="hover:text-[#1A1C19] transition-colors">
                 50 Examples & Answers
-              </Link>
-              <Link href="/resources/best-security-questionnaire-automation-software" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/best-security-questionnaire-automation-software" className="hover:text-[#1A1C19] transition-colors">
                 Top Automation Software
-              </Link>
-              <Link href="/resources/vendor-security-questionnaire-guide" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/vendor-security-questionnaire-guide" className="hover:text-[#1A1C19] transition-colors">
                 Vendor Questionnaire Guide
-              </Link>
-              <Link href="/resources/security-questionnaire-automation" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/security-questionnaire-automation" className="hover:text-[#1A1C19] transition-colors">
                 Questionnaire Automation
-              </Link>
-              <Link href="/resources/ai-agents-for-security-questionnaires" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/ai-agents-for-security-questionnaires" className="hover:text-[#1A1C19] transition-colors">
                 AI Agents & Notetakers
-              </Link>
-              <Link href="/resources/caiq-v4-guide" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/caiq-v4-guide" className="hover:text-[#1A1C19] transition-colors">
                 Automated CAIQ v4 Guide
-              </Link>
-              <Link href="/resources/sig-vs-sig-lite" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/sig-vs-sig-lite" className="hover:text-[#1A1C19] transition-colors">
                 SIG vs SIG Lite Guide
-              </Link>
-              <Link href="/resources/how-to-answer-security-questionnaires-fast" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/resources/how-to-answer-security-questionnaires-fast" className="hover:text-[#1A1C19] transition-colors">
                 Fast Answering Playbook
-              </Link>
+              </a>
             </div>
 
             {/* Comparisons */}
@@ -115,18 +124,27 @@ export function Footer() {
               <span className="font-mono text-[11px] text-[#696B66] uppercase tracking-wider font-semibold">
                 Compare
               </span>
-              <Link href="/compare" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
+              <a href="/compare" className="hover:text-[#1A1C19] transition-colors font-medium text-[#074E34]">
                 Compare Hub
-              </Link>
-              <Link href="/compare/conveyor-alternative" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/compare/conveyor-alternative" className="hover:text-[#1A1C19] transition-colors">
                 vs Conveyor
-              </Link>
-              <Link href="/compare/whistic-alternative" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/compare/whistic-alternative" className="hover:text-[#1A1C19] transition-colors">
                 vs Whistic
-              </Link>
-              <Link href="/compare/panorays-alternative" className="hover:text-[#1A1C19] transition-colors">
+              </a>
+              <a href="/compare/wolfia-alternative" className="hover:text-[#1A1C19] transition-colors">
+                vs Wolfia
+              </a>
+              <a href="/compare/safebase-alternative" className="hover:text-[#1A1C19] transition-colors">
+                vs SafeBase
+              </a>
+              <a href="/compare/vanta-questionnaire-alternative" className="hover:text-[#1A1C19] transition-colors">
+                vs Vanta
+              </a>
+              <a href="/compare/panorays-alternative" className="hover:text-[#1A1C19] transition-colors">
                 vs Panorays
-              </Link>
+              </a>
             </div>
 
             {/* Contact & Standards */}
