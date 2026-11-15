@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ShieldCheck, X } from "lucide-react";
 
 function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) {

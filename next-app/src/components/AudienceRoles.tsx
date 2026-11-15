@@ -1,5 +1,5 @@
 import React from "react";
-import { User, Terminal, Users2 } from "lucide-react";
+import { User, Terminal, Users2, ArrowRight } from "lucide-react";
 
 export function AudienceRoles() {
   return (
@@ -16,7 +16,10 @@ export function AudienceRoles() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Segment 0: vCISOs & Fractional CISOs (Primary Audience) */}
-          <div className="p-6 rounded-lg bg-[#FAF9F6] border-2 border-[#28664A]/30 flex flex-col justify-between shadow-[0_2px_8px_rgba(40,102,74,0.06)] relative">
+          <a
+            href="/resources/vciso-security-questionnaire-automation"
+            className="p-6 rounded-lg bg-[#FAF9F6] border-2 border-[#28664A]/30 hover:border-[#28664A] transition-all flex flex-col justify-between shadow-[0_2px_8px_rgba(40,102,74,0.06)] hover:shadow-md relative group cursor-pointer block"
+          >
             <span className="absolute -top-3 right-4 bg-[#28664A] text-white text-[10px] font-mono px-2 py-0.5 rounded font-medium uppercase tracking-wider">
               Primary Focus
             </span>
@@ -24,7 +27,7 @@ export function AudienceRoles() {
               <div className="w-8 h-8 rounded bg-[#DAE6D6] flex items-center justify-center text-[#28664A] mb-4">
                 <Users2 className="w-4 h-4" />
               </div>
-              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] mb-2">
+              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors mb-2">
                 vCISOs &amp; Fractional CISOs
               </h3>
               <p className="font-sans text-[14px] text-[#566155] leading-relaxed">
@@ -32,36 +35,50 @@ export function AudienceRoles() {
                 Isolate client evidence, draft grounded answers with page-level citations, and approve in minutes.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34]">
-              Scale client capacity 5x
+            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34] flex items-center justify-between">
+              <span>Scale client capacity 5x</span>
+              <span className="inline-flex items-center gap-1 font-sans text-xs font-medium text-[#28664A] group-hover:text-[#1B4D36]">
+                View Playbook <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </div>
-          </div>
+          </a>
 
           {/* Segment 1: Founders */}
-          <div className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)]">
+          <a
+            href="/resources/how-to-answer-security-questionnaires-fast"
+            className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] hover:border-[#28664A] transition-all flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)] hover:shadow-md group cursor-pointer block"
+          >
             <div>
               <div className="w-8 h-8 rounded bg-[#DAE6D6] flex items-center justify-center text-[#28664A] mb-4">
                 <User className="w-4 h-4" />
               </div>
-              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] mb-2">Founders</h3>
+              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors mb-2">
+                Founders
+              </h3>
               <p className="font-sans text-[14px] text-[#566155] leading-relaxed">
                 You&apos;re answering customer security questions yourself and need that time back to
                 run the business and close revenue. Stop spending Sunday evenings combing through
                 cryptic vendor spreadsheets.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34]">
-              Protect founder bandwidth
+            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34] flex items-center justify-between">
+              <span>Protect founder bandwidth</span>
+              <span className="inline-flex items-center gap-1 font-sans text-xs font-medium text-[#28664A] group-hover:text-[#1B4D36]">
+                Fast Playbook <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </div>
-          </div>
+          </a>
 
           {/* Segment 2: CTOs & Eng Leads */}
-          <div className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)]">
+          <a
+            href="/resources/security-questionnaire-automation"
+            className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] hover:border-[#28664A] transition-all flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)] hover:shadow-md group cursor-pointer block"
+          >
             <div>
               <div className="w-8 h-8 rounded bg-[#DAE6D6] flex items-center justify-center text-[#28664A] mb-4">
                 <Terminal className="w-4 h-4" />
               </div>
-              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] mb-2">
+              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors mb-2">
                 CTOs &amp; Engineering Leads
               </h3>
               <p className="font-sans text-[14px] text-[#566155] leading-relaxed">
@@ -70,18 +87,24 @@ export function AudienceRoles() {
                 velocity uninterrupted.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34]">
-              Zero engineering interruptions
+            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34] flex items-center justify-between">
+              <span>Zero interruptions</span>
+              <span className="inline-flex items-center gap-1 font-sans text-xs font-medium text-[#28664A] group-hover:text-[#1B4D36]">
+                Read Guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </div>
-          </div>
+          </a>
 
           {/* Segment 3: Lean SaaS Teams */}
-          <div className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)]">
+          <a
+            href="/resources/best-security-questionnaire-automation-software"
+            className="p-6 rounded-lg bg-[#FAF9F6] border border-[#E7E5DE] hover:border-[#28664A] transition-all flex flex-col justify-between shadow-[0_1px_3px_rgba(32,34,31,0.02)] hover:shadow-md group cursor-pointer block"
+          >
             <div>
               <div className="w-8 h-8 rounded bg-[#DAE6D6] flex items-center justify-center text-[#28664A] mb-4">
                 <Users2 className="w-4 h-4" />
               </div>
-              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] mb-2">
+              <h3 className="font-sans text-[18px] font-semibold text-[#1A1C19] group-hover:text-[#074E34] transition-colors mb-2">
                 Growth B2B SaaS Teams
               </h3>
               <p className="font-sans text-[14px] text-[#566155] leading-relaxed">
@@ -90,10 +113,13 @@ export function AudienceRoles() {
                 compliance staff.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34]">
-              Scale into enterprise accounts
+            <div className="mt-6 pt-4 border-t border-[#E7E5DE] text-[12px] font-mono text-[#074E34] flex items-center justify-between">
+              <span>Scale into enterprise</span>
+              <span className="inline-flex items-center gap-1 font-sans text-xs font-medium text-[#28664A] group-hover:text-[#1B4D36]">
+                Compare Tools <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

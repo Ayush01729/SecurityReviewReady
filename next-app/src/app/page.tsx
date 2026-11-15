@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { EnginePipelineVisual } from "@/components/EnginePipelineVisual";
