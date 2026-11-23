@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wolfia Alternative: Why B2B SaaS Teams Choose Security Review Ready (2026)",
+  title: "Wolfia Alternative: Comparison & Pricing [2026]",
   description:
     "Compare Security Review Ready vs Wolfia for security questionnaire automation. See differences in citation depth, human review controls, Excel formula preservation, and free pilot availability.",
   alternates: {

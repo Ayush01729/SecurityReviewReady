@@ -22,7 +22,7 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Best Security Questionnaire Automation Software: 8 Tools Compared (2026) | Security Review Ready",
+    "8 Best Security Questionnaire Tools [2026 Compared]",
   description:
     "Independent comparison of the 8 best security questionnaire automation tools in 2026. Includes pricing ranges, citation accuracy, Excel support, and honest limitations for each platform.",
   alternates: {
@@ -72,8 +72,8 @@ const articleSchema = {
   description:
     "Independent comparison of the 8 best security questionnaire automation tools in 2026. Includes pricing ranges, citation accuracy, Excel support, and honest limitations for each platform.",
   author: {
-    "@type": "Organization",
-    name: "Security Review Ready",
+    "@type": "Person",
+    name: "Security Review Ready Team",
     url: "https://securityreviewready.com",
   },
   publisher: {
@@ -85,7 +85,7 @@ const articleSchema = {
     },
   },
   datePublished: "2026-10-31",
-  dateModified: "2026-11-08",
+  dateModified: "2026-11-24",
 };
 
 const faqSchema = {

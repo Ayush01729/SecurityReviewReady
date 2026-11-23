@@ -19,7 +19,7 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Vendor Security Questionnaire: 30 Questions with Answers + Template (2026 Guide) | Security Review Ready",
+    "Vendor Security Questionnaire: 30 Questions & Answers",
   description:
     "Complete vendor security questionnaire guide with 30 real questions, audit-proof answers, and evidence requirements. Covers buyer-side evaluation, vendor tiering, and scoring rubrics.",
   alternates: {

@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "What is CAIQ v4? Automated CAIQ & Questionnaire Automation Guide (2026)",
+  title: "What is CAIQ v4? Automated CAIQ Response Guide [2026]",
   description:
     "Complete guide to CSA CAIQ v4 and automated CAIQ completion: 261 CCM 4.0 controls, real sample answers, difference from v3, and how to automate responses with verified citations.",
   alternates: {

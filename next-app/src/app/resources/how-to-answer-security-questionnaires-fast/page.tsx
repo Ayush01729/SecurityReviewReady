@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Complete Security Questionnaires Fast: 5-Step Playbook (2026)",
+  title: "How to Answer Security Questionnaires Fast [Playbook]",
   description:
     "An operational playbook for B2B SaaS teams to complete customer security questionnaires in hours without deal delays, hallucinations, or broken spreadsheet macros.",
   alternates: {

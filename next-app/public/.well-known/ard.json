@@ -124,6 +124,31 @@
       "url": "https://securityreviewready.com/compare/panorays-alternative",
       "type": "comparison",
       "description": "Buyer-side risk scoring (Panorays) vs vendor questionnaire response automation (Security Review Ready)."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/conveyor-vs-safebase",
+      "type": "comparison",
+      "description": "Conveyor vs SafeBase: Trust center deflection vs AI questionnaire intake comparison."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/hypercomply-alternative",
+      "type": "comparison",
+      "description": "HyperComply alternative: Instant cited AI responses vs outsourced review queues."
+    },
+    {
+      "url": "https://securityreviewready.com/compare/security-questionnaire-software-pricing",
+      "type": "comparison",
+      "description": "2026 Security Questionnaire Software Pricing Guide: Transparent cost matrix and hidden fee analysis."
+    },
+    {
+      "url": "https://securityreviewready.com/solutions/vciso-questionnaire-workspace",
+      "type": "solution",
+      "description": "Multi-client evidence vaults and questionnaire workspace for vCISOs and cyber advisory firms."
+    },
+    {
+      "url": "https://securityreviewready.com/resources/templates/vendor-security-questionnaire-excel",
+      "type": "template",
+      "description": "68-question standard Vendor Security Assessment Questionnaire Excel spreadsheet template."
     }
   ]
 }

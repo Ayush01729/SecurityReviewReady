@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Whistic Alternative: Security Review Ready vs Whistic Comparison (2026)",
+  title: "Whistic Alternative: 2026 Comparison & Breakdown",
   description:
     "Detailed comparison of Security Review Ready vs Whistic. Covers pricing, questionnaire formats, evidence grounding, vendor network model, and when each tool fits your stage.",
   alternates: {

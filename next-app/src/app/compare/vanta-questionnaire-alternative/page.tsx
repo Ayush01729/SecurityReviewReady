@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Vanta Questionnaire Alternative: Security Review Ready vs Vanta Questionnaires (2026)",
+  title: "Vanta Questionnaire Alternative: Breakdown [2026]",
   description:
     "Evaluate Security Review Ready vs Vanta's built-in questionnaire automation. Compare citation depth, non-Vanta evidence ingestion, formula preservation, and cost efficiency.",
   alternates: {

@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Vendor Risk Questionnaire Guide: Frameworks, Scoring & Automated Answering (2026)",
+  title: "Vendor Risk Questionnaire Guide & Frameworks [2026]",
   description:
     "Everything security teams and vCISOs need to know about vendor risk questionnaires (VRQs). Covers core assessment domains, risk tiering, SIG/CAIQ/VSA alignment, and AI automation.",
   alternates: {

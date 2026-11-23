@@ -63,6 +63,14 @@ export default function Home() {
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
+                { href: "/solutions/vciso-questionnaire-workspace", label: "vCISO Questionnaire Workspace", tag: "vCISO & Advisory" },
+                { href: "/compare/security-questionnaire-software-pricing", label: "2026 Software Pricing Guide", tag: "Pricing Matrix" },
+                { href: "/compare/conveyor-vs-safebase", label: "Conveyor vs SafeBase Comparison", tag: "Comparison" },
+                { href: "/resources/templates/vendor-security-questionnaire-excel", label: "Vendor Questionnaire Excel Template", tag: "Free Template" },
+                { href: "/solutions/sales-engineering-security-reviews", label: "Sales Engineering Fast-Track", tag: "Deal Acceleration" },
+                { href: "/compare/hypercomply-alternative", label: "HyperComply Alternative", tag: "Comparison" },
+                { href: "/resources/templates/caiq-v4-excel-template", label: "CAIQ v4 Excel Template", tag: "CSA STAR" },
+                { href: "/resources/templates/sig-lite-questionnaire-spreadsheet", label: "SIG Lite Spreadsheet Template", tag: "Shared Assessments" },
                 { href: "/resources/vciso-security-questionnaire-automation", label: "vCISO Questionnaire Automation Guide", tag: "vCISO & Consultants" },
                 { href: "/resources/security-questionnaire-automation", label: "Security Questionnaire Automation Guide", tag: "Practitioner's Guide" },
                 { href: "/resources/best-security-questionnaire-automation-software", label: "Best Security Questionnaire Software (2026)", tag: "8 Tools Compared" },
@@ -79,6 +87,7 @@ export default function Home() {
                 { href: "/compare/whistic-alternative", label: "Whistic Alternative", tag: "Comparison" },
                 { href: "/compare/wolfia-alternative", label: "Wolfia Alternative", tag: "Comparison" },
                 { href: "/compare/safebase-alternative", label: "SafeBase Alternative", tag: "Comparison" },
+                { href: "/compare/panorays-vs-riskiq", label: "Panorays vs RiskIQ Comparison", tag: "Comparison" },
               ].map((item) => (
                 <a
                   key={item.href}

@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "50 Security Questionnaire Examples: Questions & Answers for Vendors & Buyers (2026)",
+  title: "50 Security Questionnaire Examples + Answers [2026]",
   description:
     "50 real security questionnaire examples with verified answers. Covers vendor responses (access control, encryption, incident response) and 20 buyer questions to ask vendors.",
   alternates: {
@@ -68,8 +68,8 @@ const articleSchema = {
   "description":
     "Real-world examples of enterprise vendor security questionnaire questions, dissecting auditor intent, evidence requirements, and verified answer wording for both vendors and buyers.",
   "author": {
-    "@type": "Organization",
-    "name": "Security Review Ready",
+    "@type": "Person",
+    "name": "Security Review Ready Team",
     "url": "https://securityreviewready.com",
   },
   "publisher": {
@@ -81,7 +81,7 @@ const articleSchema = {
     },
   },
   "datePublished": "2026-10-31",
-  "dateModified": "2026-11-08",
+  "dateModified": "2026-11-24",
 };
 
 const faqSchema = {

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Panorays Alternative & Whistic vs Panorays Comparison (2026)",
+  title: "Panorays Alternative & Whistic Comparison [2026]",
   description:
     "Compare Panorays vs Whistic vs Security Review Ready. Learn how Panorays third-party risk ratings differ from vendor response automation and which fits your workflow.",
   alternates: {

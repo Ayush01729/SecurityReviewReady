@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Agents for Security Questionnaires: Leading Tools, Grounded Citations vs Hallucinations (2026)",
+  title: "AI Agents for Security Questionnaires [2026 Guide]",
   description:
     "Compare leading AI agents for security questionnaires. Understand deterministic RAG vs generic LLMs, how AI notetakers pass reviews, free pilot options, and zero-hallucination guardrails.",
   alternates: {
@@ -71,8 +71,8 @@ const articleSchema = {
   "description":
     "Technical exploration of AI agents in security questionnaire automation, detailing semantic vector retrieval, hallucination prevention, AI notetaker compliance, and leading tools.",
   "author": {
-    "@type": "Organization",
-    "name": "Security Review Ready",
+    "@type": "Person",
+    "name": "Security Review Ready Team",
     "url": "https://securityreviewready.com",
   },
   "publisher": {
@@ -84,7 +84,7 @@ const articleSchema = {
     },
   },
   "datePublished": "2026-10-31",
-  "dateModified": "2026-11-08",
+  "dateModified": "2026-11-24",
 };
 
 const faqSchema = {

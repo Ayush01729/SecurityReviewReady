@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "DDQ Automation: Complete Due Diligence Questionnaires Faster with AI (2026)",
+  title: "DDQ Automation: Complete Guide [Free Template]",
   description:
     "Automate Due Diligence Questionnaire (DDQ) responses with AI-grounded citations. Complete investor, enterprise, and vendor DDQs with verified source citations and human-in-the-loop review.",
   alternates: {
@@ -52,8 +52,8 @@ const articleSchema = {
   "headline": "DDQ Automation: Complete Due Diligence Questionnaires Faster with AI",
   "description": "Complete guide to automating Due Diligence Questionnaire (DDQ) responses using AI with verified source citations.",
   "datePublished": "2026-11-01T00:00:00Z",
-  "dateModified": "2026-11-15T00:00:00Z",
-  "author": { "@type": "Organization", "name": "Security Review Ready" },
+  "dateModified": "2026-11-24T00:00:00Z",
+  "author": { "@type": "Person", "name": "Security Review Ready Team" },
   "publisher": { "@type": "Organization", "name": "Security Review Ready", "url": "https://securityreviewready.com" },
   "wordCount": 2800,
 };

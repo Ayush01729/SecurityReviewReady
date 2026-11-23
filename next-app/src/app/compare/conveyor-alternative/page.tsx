@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Conveyor Alternative: Why B2B SaaS Teams Choose Security Review Ready",
+  title: "Conveyor Alternative: Citation Depth & Pricing [2026]",
   description:
     "Compare Security Review Ready vs Conveyor: transparent citations, complex Excel formula support, zero hallucination guardrails, and rapid onboarding.",
   alternates: {

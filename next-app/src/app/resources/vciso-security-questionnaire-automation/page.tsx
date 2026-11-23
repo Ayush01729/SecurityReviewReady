@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security Questionnaire Automation for vCISOs & Fractional CISOs (2026)",
+  title: "vCISO Security Questionnaire Automation [2026]",
   description:
     "The questionnaire response workspace built for vCISOs, fractional security leaders, and cyber consultants. Manage multiple client compliance evidence vaults and complete vendor assessments 10x faster with 100% verified citations.",
   alternates: {
@@ -59,8 +59,8 @@ const articleSchema = {
   "headline": "Security Questionnaire Automation for vCISOs & Fractional CISOs",
   "description": "How fractional security leaders and vCISOs complete hundreds of client security questionnaires without burnout using grounded AI citations.",
   "datePublished": "2026-11-01T00:00:00Z",
-  "dateModified": "2026-11-15T00:00:00Z",
-  "author": { "@type": "Organization", "name": "Security Review Ready" },
+  "dateModified": "2026-11-24T00:00:00Z",
+  "author": { "@type": "Person", "name": "Security Review Ready Team" },
   "publisher": { "@type": "Organization", "name": "Security Review Ready", "url": "https://securityreviewready.com" },
   "wordCount": 2900,
 };

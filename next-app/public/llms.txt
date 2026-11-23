@@ -71,9 +71,22 @@ SafeBase is a Trust Center platform for proactively sharing your security postur
 - [SIG vs SIG Lite Guide](https://securityreviewready.com/resources/sig-vs-sig-lite): Shared Assessments Standardized Information Gathering comparison and domain overview.
 - [Fast Questionnaire Playbook](https://securityreviewready.com/resources/how-to-answer-security-questionnaires-fast): 5-step playbook to complete enterprise security reviews in minutes.
 - [Security Questionnaire Examples](https://securityreviewready.com/resources/security-questionnaire-examples): 50+ real security questionnaire questions with verified answers.
+- [Vendor Security Questionnaire Excel Template](https://securityreviewready.com/resources/templates/vendor-security-questionnaire-excel): 68-question standard Excel assessment template.
+- [CAIQ v4 Excel Template](https://securityreviewready.com/resources/templates/caiq-v4-excel-template): CSA STAR 261-control spreadsheet structure.
+- [SIG Lite Spreadsheet Template](https://securityreviewready.com/resources/templates/sig-lite-questionnaire-spreadsheet): Shared Assessments 125-control template.
+
+## Solutions & Personas
+- [vCISO Questionnaire Workspace](https://securityreviewready.com/solutions/vciso-questionnaire-workspace): Multi-client evidence vaults for fractional CISOs and cyber advisors.
+- [vCISO Multi-Client Workflow](https://securityreviewready.com/resources/vciso-multi-client-security-workflow): Scaling security questionnaire operations across client portfolios.
+- [How vCISOs Handle Vendor Questionnaires](https://securityreviewready.com/resources/how-vcisos-handle-vendor-questionnaires): Systematic triage and grounded response playbook.
+- [Sales Engineering Fast-Track](https://securityreviewready.com/solutions/sales-engineering-security-reviews): Unblock quarter-end enterprise deals in under 24 hours.
 
 ## Software Comparisons
 - [Comparison Hub](https://securityreviewready.com/compare): Side-by-side evaluation against legacy tools.
+- [Security Questionnaire Software Pricing (2026)](https://securityreviewready.com/compare/security-questionnaire-software-pricing): Transparent cost matrix across all major tools.
+- [Conveyor vs SafeBase](https://securityreviewready.com/compare/conveyor-vs-safebase): Trust center deflection vs AI questionnaire intake.
+- [HyperComply Alternative](https://securityreviewready.com/compare/hypercomply-alternative): Instant cited AI responses vs outsourced review queues.
+- [Panorays vs RiskIQ](https://securityreviewready.com/compare/panorays-vs-riskiq): Attack surface scanning vs vendor response automation.
 - [Conveyor Alternative](https://securityreviewready.com/compare/conveyor-alternative): Why B2B SaaS teams choose Security Review Ready over Conveyor.
 - [Whistic Alternative](https://securityreviewready.com/compare/whistic-alternative): Open evidence model versus proprietary vendor network profiles.
 - [Panorays Alternative](https://securityreviewready.com/compare/panorays-alternative): Buyer-side risk scoring vs vendor questionnaire response automation.

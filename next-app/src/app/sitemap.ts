@@ -145,6 +145,72 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.92,
     },
+    {
+      url: `${baseUrl}/compare/conveyor-vs-safebase`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/hypercomply-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/security-questionnaire-software-pricing`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/compare/panorays-vs-riskiq`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/templates/vendor-security-questionnaire-excel`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/templates/caiq-v4-excel-template`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/templates/sig-lite-questionnaire-spreadsheet`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/solutions/vciso-questionnaire-workspace`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/resources/vciso-multi-client-security-workflow`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/how-vcisos-handle-vendor-questionnaires`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/solutions/sales-engineering-security-reviews`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
   ];
 
   return routes;

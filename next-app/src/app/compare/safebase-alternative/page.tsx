@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SafeBase Alternative: Security Review Ready vs SafeBase (2026)",
+  title: "SafeBase Alternative: Trust Center vs Answering [2026]",
   description:
     "Compare Security Review Ready vs SafeBase for security questionnaire automation. SafeBase is a Trust Center platform; Security Review Ready answers inbound questionnaires in any format with 100% verified citations.",
   alternates: {

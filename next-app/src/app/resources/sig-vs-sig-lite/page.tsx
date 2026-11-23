@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SIG vs SIG Lite: Full Comparison, Question Counts & Automation Guide (2026)",
+  title: "SIG vs SIG Lite: Full Comparison & Questions [2026]",
   description:
     "Comprehensive comparison of Shared Assessments Full SIG vs SIG Lite: question volume (850+ vs 125), control scope across 19 domains, negotiation scripts, and response automation.",
   alternates: {

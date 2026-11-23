@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Security Questionnaire Automation: Practitioner's Guide to Cutting Response Time by 90% (2026) | Security Review Ready",
+  title: "Security Questionnaire Automation: 90% Faster [2026]",
   description:
     "A practitioner's guide to security questionnaire automation: before/after time breakdowns, a 10-point tool evaluation checklist, common mistakes to avoid, and how grounded citation engines work.",
   alternates: {
