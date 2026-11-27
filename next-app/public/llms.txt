@@ -84,6 +84,15 @@ SafeBase is a Trust Center platform for proactively sharing your security postur
 - [Panorays vs Whistic Comparison](https://securityreviewready.com/compare/panorays-vs-whistic): Attack surface monitoring vs vendor profile network evaluation.
 - [AI Notetakers Enterprise Security Review](https://securityreviewready.com/resources/ai-notetakers-enterprise-security-review): How AI meeting assistants pass enterprise customer questionnaires and privacy reviews.
 - [Panorays vs CyberGRX Comparison](https://securityreviewready.com/compare/panorays-vs-cybergrx): Outside-in cyber scanning vs global predictive risk exchange.
+- [Responsive Alternative](https://securityreviewready.com/compare/responsive-alternative): Faster, citation-grounded security questionnaire automation vs legacy enterprise RFP suites.
+- [SecurityScorecard Alternative](https://securityreviewready.com/compare/securityscorecard-questionnaire-alternative): Why outside-in cyber ratings don't answer custom buyer questionnaires and how inside-out automation solves it.
+- [SecurityPal Alternative](https://securityreviewready.com/compare/securitypal-alternative): Pure software automation with verified citations vs expensive outsourced human concierge queues.
+- [Loopio Alternative](https://securityreviewready.com/compare/loopio-alternative): Dedicated security questionnaire automation vs sales RFP software.
+- [Security Questionnaire Software for Startups](https://securityreviewready.com/resources/security-questionnaire-automation-startups): Affordable questionnaire automation under $500/mo for seed to Series B SaaS.
+- [AI Governance Security Questionnaire Guide](https://securityreviewready.com/resources/ai-governance-security-questionnaire-guide): Essential questions enterprise buyers ask about model training, LLM sub-processors, and ISO 42001.
+- [Cloud Security Questionnaire Guide](https://securityreviewready.com/resources/cloud-security-questionnaire-saas-guide): What SaaS enterprise buyers ask about AWS/GCP multi-tenancy, data residency, and cloud encryption.
+- [Security Questionnaire Template](https://securityreviewready.com/resources/security-questionnaire-template): 60-question standardized vendor security assessment template in Excel and PDF formats.
+- [Security Questionnaire Knowledge Base](https://securityreviewready.com/resources/security-questionnaire-knowledge-base): How to architect a centralized, single-source-of-truth knowledge base for automated questionnaire responses.
 
 ## Solutions & Personas
 - [vCISO Questionnaire Workspace](https://securityreviewready.com/solutions/vciso-questionnaire-workspace): Multi-client evidence vaults for fractional CISOs and cyber advisors.

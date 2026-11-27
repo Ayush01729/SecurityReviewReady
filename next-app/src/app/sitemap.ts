@@ -271,6 +271,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/compare/responsive-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/compare/securityscorecard-questionnaire-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/compare/securitypal-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/compare/loopio-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/security-questionnaire-automation-startups`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/resources/ai-governance-security-questionnaire-guide`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/resources/cloud-security-questionnaire-saas-guide`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/resources/security-questionnaire-template`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/resources/security-questionnaire-knowledge-base`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.90,
+    },
   ];
 
   return routes;

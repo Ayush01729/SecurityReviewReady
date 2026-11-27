@@ -98,6 +98,15 @@ export default function Home() {
                 { href: "/compare/panorays-vs-whistic", label: "Panorays vs Whistic Comparison", tag: "Comparison" },
                 { href: "/resources/ai-notetakers-enterprise-security-review", label: "AI Notetaker Enterprise Security Review", tag: "AI Compliance" },
                 { href: "/compare/panorays-vs-cybergrx", label: "Panorays vs CyberGRX Comparison", tag: "Comparison" },
+                { href: "/compare/responsive-alternative", label: "Responsive Alternative", tag: "Comparison" },
+                { href: "/compare/securityscorecard-questionnaire-alternative", label: "SecurityScorecard Alternative", tag: "Comparison" },
+                { href: "/compare/securitypal-alternative", label: "SecurityPal Alternative", tag: "Comparison" },
+                { href: "/compare/loopio-alternative", label: "Loopio Alternative", tag: "Comparison" },
+                { href: "/resources/security-questionnaire-automation-startups", label: "Startups Questionnaire Software (<$500)", tag: "Startup Guide" },
+                { href: "/resources/ai-governance-security-questionnaire-guide", label: "AI Governance Questionnaire Guide", tag: "AI Governance" },
+                { href: "/resources/cloud-security-questionnaire-saas-guide", label: "Cloud Security Questionnaire Guide", tag: "Cloud Security" },
+                { href: "/resources/security-questionnaire-template", label: "Security Questionnaire Template (Excel/PDF)", tag: "Free Template" },
+                { href: "/resources/security-questionnaire-knowledge-base", label: "Security Knowledge Base Architecture", tag: "Architecture" },
               ].map((item) => (
                 <a
                   key={item.href}
