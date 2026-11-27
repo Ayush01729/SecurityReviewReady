@@ -74,6 +74,16 @@ SafeBase is a Trust Center platform for proactively sharing your security postur
 - [Vendor Security Questionnaire Excel Template](https://securityreviewready.com/resources/templates/vendor-security-questionnaire-excel): 68-question standard Excel assessment template.
 - [CAIQ v4 Excel Template](https://securityreviewready.com/resources/templates/caiq-v4-excel-template): CSA STAR 261-control spreadsheet structure.
 - [SIG Lite Spreadsheet Template](https://securityreviewready.com/resources/templates/sig-lite-questionnaire-spreadsheet): Shared Assessments 125-control template.
+- [Due Diligence Questionnaire Checklist](https://securityreviewready.com/resources/due-diligence-questionnaire-checklist): 50-point essential vendor evaluation checklist and scoring rubric.
+- [SOC 2 Security Questionnaire Guide](https://securityreviewready.com/resources/soc-2-security-questionnaire): Trust Service Criteria mapping and grounded audit report response guide.
+- [Speed Up Security Reviews](https://securityreviewready.com/resources/speed-up-security-reviews): 7 proven methods and turnaround benchmarks to accelerate vendor assessments.
+- [Security Questionnaire Response Templates](https://securityreviewready.com/resources/security-questionnaire-response-template): 30 ready-to-use answer templates across core security domains.
+- [Third-Party Risk Assessment Questionnaire](https://securityreviewready.com/resources/third-party-risk-assessment-questionnaire): TPRM frameworks, risk tiering, and regulatory compliance requirements.
+- [Enterprise Security Review Process](https://securityreviewready.com/resources/enterprise-security-review-process): 6-step lifecycle framework for SaaS vendors selling into enterprise procurement.
+- [OneTrust Questionnaire Alternative](https://securityreviewready.com/compare/onetrust-questionnaire-alternative): Focused questionnaire automation alternative to complex GRC suites.
+- [Panorays vs Whistic Comparison](https://securityreviewready.com/compare/panorays-vs-whistic): Attack surface monitoring vs vendor profile network evaluation.
+- [AI Notetakers Enterprise Security Review](https://securityreviewready.com/resources/ai-notetakers-enterprise-security-review): How AI meeting assistants pass enterprise customer questionnaires and privacy reviews.
+- [Panorays vs CyberGRX Comparison](https://securityreviewready.com/compare/panorays-vs-cybergrx): Outside-in cyber scanning vs global predictive risk exchange.
 
 ## Solutions & Personas
 - [vCISO Questionnaire Workspace](https://securityreviewready.com/solutions/vciso-questionnaire-workspace): Multi-client evidence vaults for fractional CISOs and cyber advisors.

@@ -134,6 +134,12 @@ export default function VendorRiskQuestionnairePage() {
               <Link href="/resources/ddq-automation" className="text-sm font-medium text-[#28664A] hover:underline flex items-center gap-1">
                 Explore DDQ Automation <ArrowRight className="w-3.5 h-3.5" />
               </Link>
+              <Link href="/resources/due-diligence-questionnaire-checklist" className="text-sm font-medium text-[#28664A] hover:underline flex items-center gap-1">
+                50-Point Due Diligence Checklist <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link href="/resources/third-party-risk-assessment-questionnaire" className="text-sm font-medium text-[#28664A] hover:underline flex items-center gap-1">
+                Third-Party Risk Assessment Guide <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
               <Link href="/resources/caiq-v4-guide" className="text-sm font-medium text-[#28664A] hover:underline flex items-center gap-1">
                 Read CAIQ v4 Guide <ArrowRight className="w-3.5 h-3.5" />
               </Link>

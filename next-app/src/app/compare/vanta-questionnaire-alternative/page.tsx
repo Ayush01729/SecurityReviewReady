@@ -209,6 +209,40 @@ export default function VantaQuestionnaireAlternativePage() {
             </div>
           </section>
 
+          <section className="mb-14">
+            <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-4">
+              Related Comparisons & Guides
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link
+                href="/compare/onetrust-questionnaire-alternative"
+                className="flex items-start gap-3 p-4 bg-white border border-[#E7E5DE] rounded-xl hover:border-[#28664A] transition-colors shadow-sm group"
+              >
+                <div>
+                  <p className="text-sm font-medium text-[#1A1C19] group-hover:text-[#28664A] transition-colors">
+                    OneTrust Questionnaire Alternative
+                  </p>
+                  <p className="text-xs text-[#566155]">
+                    Compare focused questionnaire automation vs full-suite enterprise GRC complexity.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                href="/compare/security-questionnaire-software-pricing"
+                className="flex items-start gap-3 p-4 bg-white border border-[#E7E5DE] rounded-xl hover:border-[#28664A] transition-colors shadow-sm group"
+              >
+                <div>
+                  <p className="text-sm font-medium text-[#1A1C19] group-hover:text-[#28664A] transition-colors">
+                    2026 Questionnaire Software Pricing
+                  </p>
+                  <p className="text-xs text-[#566155]">
+                    Transparent pricing matrix comparing Vanta, Conveyor, SafeBase, and Security Review Ready.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
           <InlineCta
             source="Vanta Alternative Comparison"
             heading="Complete your next customer questionnaire in 24 hours"

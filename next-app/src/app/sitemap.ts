@@ -211,6 +211,66 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/resources/due-diligence-questionnaire-checklist`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/soc-2-security-questionnaire`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/speed-up-security-reviews`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/resources/security-questionnaire-response-template`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/third-party-risk-assessment-questionnaire`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/enterprise-security-review-process`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/compare/onetrust-questionnaire-alternative`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/panorays-vs-whistic`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/resources/ai-notetakers-enterprise-security-review`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/compare/panorays-vs-cybergrx`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
   ];
 
   return routes;

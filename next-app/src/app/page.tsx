@@ -88,6 +88,16 @@ export default function Home() {
                 { href: "/compare/wolfia-alternative", label: "Wolfia Alternative", tag: "Comparison" },
                 { href: "/compare/safebase-alternative", label: "SafeBase Alternative", tag: "Comparison" },
                 { href: "/compare/panorays-vs-riskiq", label: "Panorays vs RiskIQ Comparison", tag: "Comparison" },
+                { href: "/resources/due-diligence-questionnaire-checklist", label: "Due Diligence Checklist (50-Point)", tag: "DDQ Checklist" },
+                { href: "/resources/soc-2-security-questionnaire", label: "SOC 2 Security Questionnaire Guide", tag: "SOC 2 Guide" },
+                { href: "/resources/speed-up-security-reviews", label: "Speed Up Security Reviews: 7 Methods", tag: "Speed & Efficiency" },
+                { href: "/resources/security-questionnaire-response-template", label: "Security Questionnaire Response Templates", tag: "Free Templates" },
+                { href: "/resources/third-party-risk-assessment-questionnaire", label: "Third-Party Risk Assessment Questionnaire", tag: "TPRM Guide" },
+                { href: "/resources/enterprise-security-review-process", label: "Enterprise Security Review Process", tag: "Enterprise Guide" },
+                { href: "/compare/onetrust-questionnaire-alternative", label: "OneTrust Questionnaire Alternative", tag: "Comparison" },
+                { href: "/compare/panorays-vs-whistic", label: "Panorays vs Whistic Comparison", tag: "Comparison" },
+                { href: "/resources/ai-notetakers-enterprise-security-review", label: "AI Notetaker Enterprise Security Review", tag: "AI Compliance" },
+                { href: "/compare/panorays-vs-cybergrx", label: "Panorays vs CyberGRX Comparison", tag: "Comparison" },
               ].map((item) => (
                 <a
                   key={item.href}

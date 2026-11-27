@@ -244,6 +244,48 @@ export default function WolfiaAlternativePage() {
             </div>
           </section>
 
+          {/* Wolfia vs Conveyor vs Security Review Ready */}
+          <section className="mb-14 bg-white rounded-xl border border-[#E7E5DE] p-6 shadow-sm">
+            <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-3">
+              Wolfia vs Conveyor vs Security Review Ready: Which Fits Your Growth Stage?
+            </h2>
+            <p className="text-sm text-[#566155] leading-relaxed mb-4">
+              Many teams evaluating a <strong>Wolfia alternative</strong> also compare <strong>Conveyor</strong>. While Conveyor focuses heavily on building public customer trust centers to deflect questionnaires, and Wolfia emphasizes automated questionnaire completion through AI, Security Review Ready bridges both worlds with deterministic source citations:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs border border-[#E7E5DE] rounded-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-[#EBF3EF]">
+                    <th className="text-left p-3 font-semibold text-[#074E34]">Platform</th>
+                    <th className="text-left p-3 font-semibold text-[#1A1C19]">Primary Advantage</th>
+                    <th className="text-left p-3 font-semibold text-[#1A1C19]">Pricing Model</th>
+                    <th className="text-left p-3 font-semibold text-[#1A1C19]">Best Suited For</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E7E5DE]">
+                  <tr>
+                    <td className="p-3 font-medium text-[#1A1C19]">Wolfia</td>
+                    <td className="p-3">Automated AI response engine</td>
+                    <td className="p-3">Custom annual contracts</td>
+                    <td className="p-3">Mid-market tech companies</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium text-[#1A1C19]">Conveyor</td>
+                    <td className="p-3">Customer-facing trust centers</td>
+                    <td className="p-3">$10,000–$25,000+/year</td>
+                    <td className="p-3">Teams trying to deflect inbound reviews</td>
+                  </tr>
+                  <tr className="bg-[#FAF9F6]">
+                    <td className="p-3 font-medium text-[#28664A]">Security Review Ready</td>
+                    <td className="p-3 text-[#28664A] font-semibold">100% verified paragraph audit citations + formula preservation</td>
+                    <td className="p-3 text-[#28664A] font-semibold">Free Pilot tier / transparent per-review pricing</td>
+                    <td className="p-3">High-growth B2B SaaS and vCISOs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           {/* Key Decision Factors */}
           <section className="mb-16">
             <h2 className="font-sans text-xl font-semibold text-[#1A1C19] mb-6">
